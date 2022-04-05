@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import List from './list';
+import { DateTime } from './date&Time';
+import Welcome from './ClassComponents/ClassComp';
+import Fun from './FunctionalComponent/new';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <header className="App-header"> */}
+      <List />
+       <DateTime />
+
+
+       <Welcome />
+       <Fun name="eshita"/>
+       <Fun name="harshita"/>
+      {/* </header> */}
+       
+   
     </div>
   );
 }

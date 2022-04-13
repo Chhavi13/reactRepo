@@ -1,0 +1,21 @@
+.primary{
+    color:darkgreen;
+}
+.font-xl{
+    font-size: 40px;
+}
+.header{
+  padding: 20px;
+  text-align: center;
+  background: #caac49;
+  color: white;
+  font-size: 10px;
+}
+.delete-btn{
+    color: red;
+    cursor: pointer;
+}
+.edit-btn{
+    color: rgb(51, 255, 0);
+    cursor: pointer;
+}

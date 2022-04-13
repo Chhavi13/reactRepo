@@ -2,19 +2,19 @@ import React ,{Component}from "react";
 
 class Welcome extends Component{
 
-    constructor(){
-        super()
-        this.state ={
-            data :"chhavi"
-        }
+    // constructor(){
+    //     super()
+    //     this.state ={
+    //         data :"chhavi"
+    //     }
 
-        this.setState ={
-            data:""
-        }
-    }
+    //     this.setState ={
+    //         data:""
+    //     }
+    // }
   
     render(){
-        return <h2>hello {this.state.data} welcome to home </h2>
+        return <h2>hello {this.props.name} welcome to home </h2>
     }
 }
 

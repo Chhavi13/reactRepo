@@ -1,0 +1,251 @@
+body {
+    color: #fff;
+    background: #63738a;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-control {
+    height: 40px;
+    box-shadow: none;
+    color: #969fa4;
+}
+
+.form-control:focus {
+    border-color: #5cb85c;
+}
+
+.form-control,
+.btn {
+    border-radius: 3px;
+}
+
+.signup-form {
+    width: 450px;
+    margin: 0 auto;
+    padding: 30px 0;
+    font-size: 15px;
+}
+
+.signup-form h2 {
+    color: #636363;
+    margin: 0 0 15px;
+    position: relative;
+    text-align: center;
+}
+
+.signup-form h2:before,
+.signup-form h2:after {
+    content: "";
+    height: 2px;
+    width: 30%;
+    background: #d4d4d4;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+}
+
+.signup-form h2:before {
+    left: 0;
+}
+
+.signup-form h2:after {
+    right: 0;
+}
+
+.signup-form .hint-text {
+    color: #999;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.signup-form form {
+    color: #999;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    background: #f2f3f7;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+
+.signup-form .form-group {
+    margin-bottom: 20px;
+}
+
+.signup-form input[type="checkbox"] {
+    margin-top: 3px;
+}
+
+.signup-form .btn {
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 140px;
+    outline: none !important;
+}
+
+.signup-form .row div:first-child {
+    padding-right: 10px;
+}
+
+.signup-form .row div:last-child {
+    padding-left: 10px;
+}
+
+.signup-form a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.signup-form a:hover {
+    text-decoration: none;
+}
+
+.signup-form form a {
+    color: #5cb85c;
+    text-decoration: none;
+}
+
+.signup-form form a:hover {
+    text-decoration: underline;
+}
+
+.main {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    padding: 90px 0 90px 0;
+    background-color: rgb(234, 243, 242);
+
+}
+
+.sub-main {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    /* border: 2px solid #63738a ; */
+   
+    padding: 50px;
+    height: 550px;
+    width: 550px;
+    box-shadow: 5px 4px 3px 3px rgb(207,207,207) ;
+
+    border-radius: 30px;
+   
+    background-color: rgb(190, 237, 241);
+
+}
+.img{
+    padding-top: 10px;
+    justify-content:center;
+    display: flex;
+
+}
+.container-image{
+    background-color: rgb(41, 113, 194);
+    border-radius: 150px;
+    align-items: center;
+    display: flex;
+    height: 120px;
+    width: 120px;
+}
+.profile{
+    width: 120px;
+    height:120px ;
+    border-radius: 150px;
+}
+input{
+    width: 300px;
+    height: 50px;
+  
+    box-shadow: #6eadcf;
+}
+button{
+    width: 300px;
+    height: 50px;
+   background-color: rgb(41, 113, 194);
+   border-radius: 28px;
+   color: #fbfffb;
+   font-size: medium;
+   
+}
+a{
+    color: blue;
+}
+
+.ulNav{
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+    background-color: rgb(13, 31, 192);
+}
+
+.ulNav li{
+    float: left;
+}
+
+
+.ulNav li a{
+   display: block;
+   color: wheat;
+   text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.ulNav li a:hover{
+    background-color: #6eadcf;
+    
+ }
+ .gradient-custom {
+    /* fallback for old browsers */
+    background: #f6d365;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
+    }
+    .main {
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        padding: 90px 0 90px 0;
+        background-color: rgb(234, 243, 242);
+    
+    }
+    
+    .sub-main1 {
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        /* border: 2px solid #63738a ; */
+       
+        padding: 30px;
+        height: 1100px;
+        width: 1100px;
+        box-shadow: 5px 4px 3px 3px rgb(207,207,207) ;
+    
+        border-radius: 30px;
+       
+        background-color: rgb(186, 206, 198);
+    
+    }
+    .img{
+        padding-top: 10px;
+        justify-content:center;
+        display: flex;
+    
+    }
+    .myh2{
+        color:rgb(37, 18, 209);
+    
+        
+    }
+    .active{
+        background-color: rgb(31, 14, 14);
+        border-radius: 10px;
+        
+    }
+    .validation{
+        color: red;
+    }

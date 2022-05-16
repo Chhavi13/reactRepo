@@ -1,14 +1,82 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import { NavLink, useNavigate } from 'react-router-dom';
+import CreatePost from './CreatePost';
+import { ShowPost } from './ShowPost';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate()
+
+  const FetchData = async () => {
+    try {
+      console.log("yess home ", localStorage.getItem('token'))
+      const token = localStorage.getItem('token')
+      let url = "http://localhost:4000/users/getalluser"
+      if (token) {
+        const AuthStr = 'Bearer '.concat(token);
+        axios.get(url, { headers: { Authorization: AuthStr } })
+          .then(response => {
+            // If request is good...
+          //  / console.log(response);
+          })
+          .catch((error) => {
+            console.log('error ' + error);
+          });
+        //   })
+        // console.log(response)
+
+      } else {
+        navigate("/login")
+      }
+
+    } catch (error) {
+      navigate("/login")
+    }
+  }
+
+  useEffect(() => {
+    FetchData()
+  }, [])
+
+
+
+
+
   return (<>
-<div  className='main'>
-      <div  className='sub-main1'>
-      <h2 className='myh2'>WELCOME</h2>
-      </div>
-</div>
+
+    <CreatePost />
+    {/* <Link to="/showpost">ShowPost</Link> */}
   </>
   )
 }
 
 export default Home
+
+
+
+
+
+
+
+
+ // console.log("yess home ", localStorage.getItem('token'))
+    // const token = localStorage.getItem('token')
+    // let url = "http://localhost:4000/users/getalluser"
+    // let options ={
+    //   method:'GET',
+    //   url:url,
+    // headers:{
+    //   'content-type': 'text/json',
+    // ' Authorization':`basic ${localStorage.getItem('token')}`
+
+    // }
+    // }
+
+
+    // let response = await axios.get('http://localhost:4000/users/getalluser',
+    //   {
+    //     headers: {
+    //       ' Authorization': token
+
+    //     }

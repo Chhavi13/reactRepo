@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-
-
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 const Registration = () => {
   const [inputField, setInputField] = useState({
     name: "",
@@ -9,6 +9,8 @@ const Registration = () => {
     password: "",
     cpassword: ""
   })
+  const navigate = useNavigate()
+
   const [ErrField, setErrField] = useState({
     nameErr: "",
     emailErr: "",
@@ -22,26 +24,54 @@ const Registration = () => {
     setInputField({ ...inputField, [name]: value })
     console.log(inputField)
   }
-  const submitButton = (e) => {
+  const submitButton = async(e) => {
     e.preventDefault();
     if (validForm()) {
       console.log("valid")
+      let url ="http://localhost:4000/users/register"
+      // let options ={
+      //   method:'POST',
+      //   url:url,
+      //   headers:{
+      //     'content-type': 'text/json'
+      //   },
+      //   data:inputField
+      // }
+      try{
+    //   debugger
+          let response =await axios.post('http://localhost:4000/users/register',inputField)
+          console.log(response)
+          clearState()
+          if(response.status == 200){
+           alert(" registered successfully")
+           setTimeout(() => {
+            navigate("/login")
+           }, 1000);
+          }
+          
+      }catch(error){
+     //   debugger
+        console.log(error)
+        alert("something went wrong")
+      }
+
     } else {
-      console.log("invalid")
+      console.log("form invalid")
+      alert("form invalid")
     }
 
   }
 
-  //  const clearState = () => {
-  //   setInputField({
-  //     name:"",
-  //     email:"",
-  //     phone:"",
-  //     password:"",
-  //     cpassword:""
+   const clearState = () => {
+    setInputField({
+      name:"",
+      email:"",
+      phone:"",
+      password:"",
+      cpassword:""
 
-  //   });
-  // };
+    });
+  };
 
   const validForm = () => {
     let formIsValid = true

@@ -1,31 +1,51 @@
-import React, { useState } from 'react'
-import axios from 'axios'
-import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import React, { useState, useEffect,useContext } from 'react'
+import { useParams, useNavigate } from 'react-router-dom';
+import { UserContext } from '../App';
+import { ToastContainer, toast } from 'react-toastify';
 
-const CreatePost = () => {
+const EditPost = () => {
+    const navigate = useNavigate()
+    let { id } = useParams()
+    const { state, dispatch } = useContext(UserContext)
 
     const [inputField, setInputField] = useState({
         title: "",
         content: "",
         image: ""
     })
-    const navigate = useNavigate()
+   
+       
 
     const inputHandler = (e) => {
         const { name, value } = e.target
         setInputField({ ...inputField, [name]: value })
         console.log(inputField)
     }
+
+
+    const imageUpload = (event) => {
+        console.log(event.target.files[0])
+        setInputField({ ...inputField, image: event.target.files[0] })
+    }
     const handlePostSubmit = async (e) => {
         e.preventDefault()
         console.log("============", inputField.image)
+        console.log("============", inputField.content)
+        console.log("============", inputField.title)
+        
         const formData = new FormData()
-        formData.append("image", inputField.image, inputField.image.name)
-        formData.append("title", inputField.title)
-        formData.append("content", inputField.content)
 
+        if(inputField.image && inputField.image.name){
+            formData.append("image", inputField.image, inputField.image.name)
+        }
+    
+        formData.append("title", inputField.title )
+        formData.append("content", inputField.content )
+        console.log(formData)
+      
         try {
-            // debugger
+            //  debugger
             const token = localStorage.getItem('token')
             if (token) {
                 const AuthStr = 'Bearer '.concat(token);
@@ -33,9 +53,15 @@ const CreatePost = () => {
                     'content-type': 'application/json',
                     Authorization: AuthStr
                 }
-                let response = await axios.post('http://localhost:4000/posts/createpost', formData, { headers: headers })
-                console.log(response)
+                let response = await axios.put(`http://localhost:4000/posts/updatepost/${id}`, formData,{ headers: headers })
+                console.log("*****************",response)
                 clearState()
+             
+                    toast.success("post upadated successfully")
+                    navigate("/showpost")
+                  
+               
+               
 
             } else {
                 navigate("/login")
@@ -58,16 +84,52 @@ const CreatePost = () => {
     };
 
 
-    const imageUpload = (event) => {
-        console.log(event.target.files[0])
-        setInputField({ ...inputField, image: event.target.files[0] })
+   
+    const fetchData = async (id) => {
+        try {
+            console.log("post get", localStorage.getItem('token'))
+            const token = localStorage.getItem('token')
+            let url = `http://localhost:4000/posts/editpost/${id}`
+            if (token) {
+
+                const AuthStr = 'Bearer '.concat(token);
+                axios.get(url, { headers: { Authorization: AuthStr } })
+                    .then(response => {
+
+                        // If request is good...
+                        console.log("(((((((((((((((((((((", response.data);
+                        setInputField(
+                            response.data
+
+
+                        )
+
+
+                    })
+                    .catch((error) => {
+                        console.log('error ' + error);
+                    });
+
+            } else {
+                navigate("/login")
+            }
+
+        } catch (error) {
+            navigate("/login")
+            console.log(error)
+        }
     }
+
+    useEffect(() => {
+        if (id)
+        fetchData(id);
+    }, [id]);
+
 
     return (
         <>
-            <h1 style={{  color: "chocolate",padding: "8px",marginTop:"5px" ,fontSize:"30px"}}>Create Post</h1>
-            {/* textAlign: "center" */}
-            <div className="card" style={{ width: "800px", alignSelf: "flex-start", marginTop: "20px", marginLeft: "20px" }}>
+        <h1 style={{  color: "chocolate",padding: "8px",marginTop:"5px" ,fontSize:"30px"}}>Update Post</h1>
+        <div className="card" style={{ width: "800px", alignSelf: "flex-start", marginTop: "30px", marginLeft: "20px" }}>
                 <form encType="multipart/form-data" method="post">
                     <div className="card-body">
                         <div className="form-floating">
@@ -92,8 +154,10 @@ const CreatePost = () => {
             </div>
 
 
-
+        
+        
         </>
     )
 }
-export default CreatePost
+
+export default EditPost

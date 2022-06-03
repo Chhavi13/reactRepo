@@ -1,13 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 import profile from '../images/userpic.png'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineLogin } from 'react-icons/ai'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { UserContext } from '../App';
+
+
 
 
 const Login = () => {
+const {state,dispatch}=useContext(UserContext)
 
   const [inputField, setInputField] = useState({
     email: "",
@@ -43,11 +47,14 @@ const Login = () => {
       try {
         //   debugger
         let response = await axios.post('http://localhost:4000/users/login', inputField)
-        console.log(response)
+        console.log("===========%%%%%%%",response.data.data)
         clearState()
         if (response.status == 200) {
           toast.success("login successfully")
+          const user =JSON.stringify(response.data.data)
           localStorage.setItem('token',response.data.data.token)
+          localStorage.setItem('user',user)
+          dispatch({type:"USER",payload:user})
           setTimeout(() => {
             navigate("/")
           }, 1000);

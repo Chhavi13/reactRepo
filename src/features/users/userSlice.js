@@ -1,0 +1,36 @@
+// const  createAsyncThunk  = require('@reduxjs/toolkit').createAsyncThunk
+import { createSlice,createAsyncThunk } from '@reduxjs/toolkit'
+const axios = require('axios')
+
+const initialState ={
+    loading:false,
+    users:[],
+    error:''
+}
+//actions types by default pending , fullfilled, reject
+export const fetchUser = createAsyncThunk('user/fetchUser',()=>{
+ return   axios.get(`https://jsonplaceholder.typicode.com/user`)
+    .then((response)=>response.data.map(user=>user.id))
+
+})
+const userSlice = createSlice({
+    name:'user',
+    initialState,
+    extraReducers:(builder)=>{
+        builder.addCase(fetchUser.pending,(state)=>{
+            state.loading=true
+        })
+        builder.addCase(fetchUser.fulfilled,(state,action)=>{
+            state.loading=false
+            state.users= action.payload
+            state.error=''
+
+        })
+        builder.addCase(fetchUser.rejected,(state,action)=>{
+            state.loading=false
+            state.users= []
+            state.error= action.error.message
+        })
+    }
+})
+export default userSlice.reducer

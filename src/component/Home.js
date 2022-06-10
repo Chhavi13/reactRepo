@@ -1,4 +1,4 @@
-import React, { useEffect, useState ,useContext} from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { NavLink, useNavigate } from 'react-router-dom';
 import CreatePost from './CreatePost';
@@ -8,7 +8,7 @@ import { UserContext } from '../App';
 
 const Home = () => {
   const navigate = useNavigate()
-  const { state, dispatch } = useContext(UserContext)
+  
   const FetchData = async () => {
     try {
       console.log("yess home ", localStorage.getItem('token'))

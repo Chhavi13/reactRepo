@@ -1,4 +1,4 @@
-import React, { useState,useContext } from 'react'
+import React, { useEffect, useState } from 'react'
 import profile from '../images/userpic.png'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
@@ -6,19 +6,26 @@ import { AiOutlineLogin } from 'react-icons/ai'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { UserContext } from '../App';
-
+import { useSelector, useDispatch } from 'react-redux'
+import { loginFun,reset } from '../features/User/userSlice';
 
 
 
 const Login = () => {
-const {state,dispatch}=useContext(UserContext)
+
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const {user,isLoading,isError,isSuccess,message} = useSelector((state)=>state.user)
+  // console.log("user data from redux",user)
+
+
 
   const [inputField, setInputField] = useState({
     email: "",
     password: "",
 
   })
-  const navigate = useNavigate()
+ 
 
   const [ErrField, setErrField] = useState({
 
@@ -29,45 +36,40 @@ const {state,dispatch}=useContext(UserContext)
   const inputHandler = (e) => {
     const { name, value } = e.target
     setInputField({ ...inputField, [name]: value })
-    console.log(inputField)
   }
+  // useEffect(()=>{
+  //   message && toast.error(message)
+  //   console.log("cccccc",message)
+
+  //  },[message])
+  
   const submitButton = async (e) => {
     e.preventDefault();
-    if (validForm()) {
-      console.log("valid")
-      let url = "http://localhost:4000/users/login"
-      // let options ={
-      //   method:'POST',
-      //   url:url,
-      //   headers:{
-      //     'content-type': 'text/json'
-      //   },
-      //   data:inputField
-      // }
-      try {
-        //   debugger
-        let response = await axios.post('http://localhost:4000/users/login', inputField)
-        console.log("===========%%%%%%%",response.data.data)
-        clearState()
-        if (response.status == 200) {
-          toast.success("login successfully")
-          const user =JSON.stringify(response.data.data)
-          localStorage.setItem('token',response.data.data.token)
-          localStorage.setItem('user',user)
-          dispatch({type:"USER",payload:user})
-          setTimeout(() => {
-            navigate("/")
-          }, 1000);
-        }
-        // }else{
-        //   alert()
-        // }
+    let isValid =validForm()
+    console.log(isValid)
+    if (isValid) {
+      try{
+   let response = await dispatch(loginFun(inputField))
+  //  console.log(response)
+   clearState()
+   if(response?.payload?.status ==200){
+     
+    toast.success("login successfully")
 
-      } catch (error) {
-        //   debugger
-        console.log(error)
-        alert("invalid credintial")
-      }
+    const user =JSON.stringify(response.payload.data)
+      const token =response.payload.data.token
+      localStorage.setItem('user',user)
+      localStorage.setItem('token',token)
+        navigate("/")
+         
+   }else{
+    toast.error("invalid credential")
+   }
+   }catch(error){
+     console.log(error)
+     
+     
+   } 
 
     } else {
       console.log("form invalid")
@@ -114,7 +116,7 @@ const {state,dispatch}=useContext(UserContext)
 
   return (
     <div className='main'>
-    
+
       <div className='sub-main'>
         <div>
 
@@ -153,9 +155,50 @@ const {state,dispatch}=useContext(UserContext)
 
 
       </div>
-       
+
     </div>
   )
 }
 
 export default Login
+
+
+
+
+
+//  let url = "http://localhost:4000/users/login"
+      // let options ={
+      //   method:'POST',
+      //   url:url,
+      //   headers:{
+      //     'content-type': 'text/json'
+      //   },
+      //   data:inputField
+      // }
+      //   try {
+      //     //   debugger
+      //     let response = await axios.post('http://localhost:4000/users/login', inputField)
+      //     console.log("===========%%%%%%%",response.data.data)
+      //     clearState()
+      //     if (response.status == 200) {
+      //       toast.success("login successfully")
+      //       const user =JSON.stringify(response.data.data)
+      //       localStorage.setItem('token',response.data.data.token)
+      //       // localStorage.setItem('user',user)
+      //       // dispatch({type:"USER",payload:user})
+      //       
+
+      //       setTimeout(() => {
+      //         navigate("/")
+      //       }, 1000);
+      //     }
+      //     return response
+      //     // }else{
+      //     //   alert()
+      //     // }
+
+      //   } catch (error) {
+      //     //   debugger
+      //     console.log(error)
+      //     alert("invalid credintial")
+      //   }

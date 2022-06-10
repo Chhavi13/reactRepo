@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState, useEffect,useContext } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
 import { UserContext } from '../App';
 import { ToastContainer, toast } from 'react-toastify';
@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 const EditPost = () => {
     const navigate = useNavigate()
     let { id } = useParams()
-    const { state, dispatch } = useContext(UserContext)
+   
 
     const [inputField, setInputField] = useState({
         title: "",
@@ -56,13 +56,9 @@ const EditPost = () => {
                 let response = await axios.put(`http://localhost:4000/posts/updatepost/${id}`, formData,{ headers: headers })
                 console.log("*****************",response)
                 clearState()
-             
-                    toast.success("post upadated successfully")
-                    navigate("/showpost")
-                  
-               
-               
-
+                // toast.success("post upadated successfully")                      
+                navigate("/showpost")
+              
             } else {
                 navigate("/login")
             }
@@ -100,7 +96,6 @@ const EditPost = () => {
                         console.log("(((((((((((((((((((((", response.data);
                         setInputField(
                             response.data
-
 
                         )
 

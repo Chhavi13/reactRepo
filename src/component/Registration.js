@@ -18,115 +18,188 @@ const Registration = () => {
     passwordErr: "",
     cpasswordErr: ""
   })
+  // const [errors, setErrors] = useState({});
+  const [formIsValid, setformIsValid] = useState(false)
 
   const inputHandler = (e) => {
     const { name, value } = e.target
+    validate(name, value)
     setInputField({ ...inputField, [name]: value })
-    console.log(inputField)
+
   }
-  const submitButton = async(e) => {
+  const validate = (name, value) => {
+
+    switch (name) {
+      case 'name':
+        if (value.length < 3) {
+
+          setErrField(prevState => ({
+            ...prevState, nameErr: "enter minimum 3 charcter !"
+          }))
+        }
+        else {
+          setErrField({ nameErr: "" })
+        }
+        break;
+
+      case 'email':
+        if (
+          !new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(value)
+        ) {
+          setErrField(prevState => ({
+            ...prevState, emailErr: "enter strong email  !"
+          }))
+        }
+        else {
+          setErrField({ emailErr: "" })
+        }
+        break;
+
+      case 'password':
+        if (
+          !new RegExp(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/).test(value)
+        ) {
+          setErrField(prevState => ({
+            ...prevState,
+            passwordErr: 'Password should contains atleast 8 charaters and containing uppercase,lowercase and numbers'
+          }))
+        } else {
+
+          setErrField({ passwordErr: "" })
+
+        }
+        break;
+      case 'phone':
+        if (
+          value.length !=10
+        ) {
+          setErrField(prevState => ({
+            ...prevState,
+            phoneErr: 'phone is not valid'
+          }))
+        } else {
+
+          setErrField({ phoneErr: "" })
+
+        }
+        break;
+        case 'cpassword':
+          if (
+            inputField.cpassword != "" && inputField.cpassword != inputField.password
+          ) {
+            setErrField(prevState => ({
+              ...prevState,
+              cpasswordErr: 'password does not matched'
+            }))
+          } else {
+  
+            setErrField({ cpasswordErr: "" })
+  
+          }
+          break;
+      default:
+        break;
+    }
+  }
+  const submitButton = async (e) => {
     e.preventDefault();
     if (validForm()) {
       console.log("valid")
-      let url ="http://localhost:4000/users/register"
-      // let options ={
-      //   method:'POST',
-      //   url:url,
-      //   headers:{
-      //     'content-type': 'text/json'
-      //   },
-      //   data:inputField
-      // }
-      try{
-    //   debugger
-          let response =await axios.post('http://localhost:4000/users/register',inputField)
-          console.log(response)
-          clearState()
-          if(response.status == 200){
-           alert(" registered successfully")
-           setTimeout(() => {
+      // let url ="http://localhost:4000/users/register"
+      try {
+        //   debugger
+        let response = await axios.post('http://localhost:4000/users/register', inputField)
+        console.log(response)
+        clearState()
+        if (response.status == 200) {
+          alert(" registered successfully")
+          setTimeout(() => {
             navigate("/login")
-           }, 1000);
-          }
-          
-      }catch(error){
-     //   debugger
+          }, 1000);
+        }
+
+      } catch (error) {
+        //   debugger
         console.log(error)
         alert("something went wrong")
       }
 
     } else {
       console.log("form invalid")
-      alert("form invalid")
+      // alert("form invalid")
     }
 
   }
 
-   const clearState = () => {
+  const clearState = () => {
     setInputField({
-      name:"",
-      email:"",
-      phone:"",
-      password:"",
-      cpassword:""
+      name: "",
+      email: "",
+      phone: "",
+      password: "",
+      cpassword: ""
 
     });
   };
 
   const validForm = () => {
-    let formIsValid = true
+    setformIsValid(true)
     setErrField({
       nameErr: "",
-    emailErr: "",
-    phoneErr: "",
-    passwordErr: "",
-    cpasswordErr: ""
+      emailErr: "",
+      phoneErr: "",
+      passwordErr: "",
+      cpasswordErr: ""
 
     })
-    if (inputField.name == "") {
-      formIsValid = false
+    if (!inputField.name) {
+      setformIsValid(false)
       setErrField(prevState => ({
         ...prevState, nameErr: "Please Enter Name !"
       }))
-        
+
+
     }
-    if (inputField.email == "") {
-      formIsValid = false
+
+    if (!inputField.email) {
+      setformIsValid(false)
       setErrField(prevState => ({
         ...prevState, emailErr: "Please Enter email !"
       }))
 
     }
-    if (inputField.phone == "") {
-      formIsValid = false
+    if (!inputField.phone ) {
+      setformIsValid(false)
       setErrField(prevState => ({
         ...prevState, phoneErr: "Please Enter phone !"
       }))
 
     }
-    if (inputField.password == "") {
-      formIsValid = false
+
+    if (!inputField.password  && !new RegExp(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/).test(inputField.cpassword)) {
+      setformIsValid(false)
       setErrField(prevState => ({
         ...prevState, passwordErr: "Please Enter password !"
       }))
 
     }
 
-    if (inputField.cpassword == "") {
-      formIsValid = false
+    if (!inputField.cpassword) {
+      setformIsValid(false)
       setErrField(prevState => ({
         ...prevState, cpasswordErr: "Please Enter confirm password !"
       }))
 
-    }
-    if (inputField.cpassword !="" && inputField.cpassword != inputField.password) {
-      formIsValid = false
+    } 
+    //  console.log(!inputField.cpassword)
+    if (inputField.cpassword != "" && inputField.cpassword != inputField.password) {
+      setformIsValid(false)
       setErrField(prevState => ({
         ...prevState, cpasswordErr: " password does not match !"
       }))
 
     }
-   console.log(formIsValid)
+    console.log(formIsValid)
     return formIsValid
   }
 
@@ -140,36 +213,35 @@ const Registration = () => {
         <div className="form-group">
           <div className="row">
             <div className="col"><input type="text" className="form-control" name="name" value={inputField.name} onChange={inputHandler} placeholder="Name" />
-              {ErrField.nameErr.length > 0 && <span className='validation'>{ErrField.nameErr}</span>
-
+              {ErrField?.nameErr?.length > 0 && <span className='validation'>{ErrField.nameErr}</span>
               }
             </div>
           </div><br></br>
           <div className="row">
-            <div className="col"><input type="text" className="form-control" name="phone" value={inputField.phone} onChange={inputHandler} placeholder="Phone" maxLength="10" /></div>
-            {ErrField.phoneErr.length > 0 && <span className='validation'>{ErrField.phoneErr}</span>
+            <div className="col"><input type="number" className="form-control" name="phone" value={inputField.phone} onChange={inputHandler} placeholder="Phone" /></div>
+            {ErrField?.phoneErr?.length > 0 && <span className='validation'>{ErrField.phoneErr}</span>
 
-              }
+            }
 
           </div><br></br>
           <div className="form-group">
             <input type="email" className="form-control" name="email" value={inputField.email} onChange={inputHandler} placeholder="Email" />
-            {ErrField.emailErr.length > 0 && <span className='validation'>{ErrField.emailErr}</span>
+            {ErrField?.emailErr?.length > 0 && <span className='validation'>{ErrField.emailErr}</span>
 
-}
+            }
           </div>
           <div className="form-group">
             <input type="password" className="form-control" name="password" value={inputField.password} onChange={inputHandler} placeholder="Password" />
-            {ErrField.passwordErr.length > 0 && <span className='validation' >{ErrField.passwordErr}</span>
+            {ErrField?.passwordErr?.length > 0 && <span className='validation' >{ErrField.passwordErr}</span>
 
-}
+            }
           </div>
           <div className="form-group">
             <input type="password" className="form-control" name="cpassword" value={inputField.cpassword} onChange={inputHandler} placeholder="Confirm Password" />
-            {ErrField.cpasswordErr.length > 0 && <span className='validation' >{ErrField.cpasswordErr}</span>
+            {ErrField?.cpasswordErr?.length > 0 && <span className='validation' >{ErrField.cpasswordErr}</span>
 
-}
-        
+            }
+
           </div>
 
           <div className="form-group">

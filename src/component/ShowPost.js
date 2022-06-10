@@ -1,21 +1,19 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { NavLink, useNavigate } from 'react-router-dom';
 import { UserContext } from '../App';
-
-
-
-
+import { useSelector } from 'react-redux';
 
 const ShowPost = () => {
     const navigate = useNavigate()
     const [data, setData] = useState([])
-    const { state, dispatch } = useContext(UserContext)
+    const {user,isLoading,isError,isSuccess,message} = useSelector((state)=>state.user)
     // console.log("state", state)
     const FetchData = async () => {
 
 
         try {
+     
             
             console.log("yess home ", localStorage.getItem('token'))
             const token = localStorage.getItem('token')
@@ -25,7 +23,7 @@ const ShowPost = () => {
                 axios.get(url, { headers: { Authorization: AuthStr } })
                     .then(response => {
                         // If request is good...
-                        console.log("only postid aarhi h puri detail ni arhi h post table ki ", response);
+                        // console.log("only postid aarhi h puri detail ni arhi h post table ki ", response);
                         setData(response.data)
                     })
                     .catch((error) => {
@@ -247,12 +245,12 @@ const ShowPost = () => {
                                 {console.log("????",item)}
                                      <div style={{  marginLeft: "20px" }}>
                             <span><h6 style={{ marginLeft: "5px", marginTop: "10px", color: "black" }}>{item.postedBy.name}</h6></span>
-                                <h4 ><span style={{ marginLeft: "10px", fontFamily: 'fantasy', color: 'darkred' }} ></span><span style={{ color: "darkslateblue" }}>{item.title}{item.postedBy.id == state.id && <i className="large material-icons" style={{ marginLeft:"480px"}} onClick={()=>navigate(`/posts/editpost/${item._id}`)} >edit</i>} <span style={{ color: "darkslateblue" }}>{item.postedBy.id == state.id && <i className="large material-icons" onClick={()=>deletePost(item._id)} >delete</i>}</span></span></h4>
+                                <h4 ><span style={{ marginLeft: "10px", fontFamily: 'fantasy', color: 'darkred' }} ></span><span style={{ color: "darkslateblue" }}>{item.title}{item.postedBy._id == user._id && <i className="large material-icons" style={{ marginLeft:"480px"}} onClick={()=>navigate(`/posts/editpost/${item._id}`)} >edit</i>} <span style={{ color: "darkslateblue" }}>{item.postedBy._id == user._id && <i className="large material-icons" onClick={()=>deletePost(item._id)} >delete</i>}</span></span></h4>
                           
                                 <div ><img src={item.image} alt="image" style={{ maxWidth: '50%', marginLeft: "10px" }} /></div><br></br>
                                 <p ><span style={{ marginLeft: "10px", fontFamily: 'fantasy', color: 'darkred' }} ></span><span style={{ color: "darkslateblue" }}><span style={{ color: "black" }}>{item.postedBy.name}</span>&nbsp;{item.content}</span></p>
                                 <div style={{ marginLeft: "15px", height: "30px", color: "blue", maxwidth: "40%" }}>
-                                    {item.likes.includes(state._id)
+                                    {item.likes.includes(user._id)
                                         ? <i className="large material-icons" onClick={() => { unlikepost(item._id) }}>thumb_down</i>
                                         :
                                         <i className="large material-icons" onClick={() => { likepost(item._id) }} >thumb_up</i>

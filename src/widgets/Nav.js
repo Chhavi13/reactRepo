@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { NavLink, Link, useNavigate } from 'react-router-dom'
 import { BiLogOutCircle } from 'react-icons/bi'
 import { UserContext } from '../App';
@@ -9,8 +9,8 @@ import { UserContext } from '../App';
 const Nav = () => {
   const navigate = useNavigate()
 
-  const { state, dispatch } = useContext(UserContext)
-  console.log("99999999999", state)
+ 
+  // console.log("99999999999", state)
   const token = localStorage.getItem("token")
 
   return (
@@ -24,7 +24,7 @@ const Nav = () => {
 
       {token && <li style={{ float: "right" }}><NavLink to='/login' activeclassname="active" onClick={() => {
         localStorage.clear()
-        dispatch({ type: "CLEAR" })
+        // dispatch({ type: "CLEAR" })
         navigate("/login")
 
 

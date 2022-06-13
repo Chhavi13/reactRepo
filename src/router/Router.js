@@ -2,7 +2,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import Home from '../component/Home'
 import Login from '../component/Login'
 import Registration from '../component/Registration'
-import React, {  useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { ProtectedRoute } from '../component/ProtectedRoute'
 import { Error } from '../component/Error'
 import About from '../component/About'
@@ -13,34 +13,30 @@ import { useSelector } from 'react-redux'
 
 const Router = () => {
     const navigate = useNavigate()
-    const user= useSelector((state)=>state.user)
+    const user = useSelector((state) => state.user)
 
-    // useEffect(() => {
-    //   //  const user = JSON.parse(localStorage.getItem("user")) 
-    //     // console.log("token<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>", user)
+    useEffect(() => {
+       const user = JSON.parse(localStorage.getItem("user")) 
+        console.log("token<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>", user)
 
-    //       if(user){
-    //           navigate("/")
-    //       }
-    //       else{
-    //           navigate("/login")
-    //       }
-    // }, [])
+          if(user){
+              navigate("/")
+          }
+          else{
+              navigate("/login")
+          }
+    }, [])
 
     return (
         <>
 
 
             <Routes>
-                {if(user){
-                    return (
-                        <Route exact path='/' element={<ProtectedRoute Component={Home} />}></Route>
-                    )
-                }}
-                  
-                
-                   <Route path='/register' element={< Registration />}></Route>
-               <Route path='/login' element={< Login />}></Route>
+
+
+                <Route exact path='/' element={<ProtectedRoute Component={Home} />}></Route>
+                <Route path='/register' element={< Registration />}></Route>
+                <Route path='/login' element={< Login />}></Route>
                 <Route path='/about' element={<ProtectedRoute Component={About} />}></Route>
                 <Route path="/showpost" element={<ShowPost />}></Route>
                 <Route exact path="/posts/editpost/:id" element={<EditPost />}></Route>

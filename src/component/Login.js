@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { UserContext } from '../App';
 import { useSelector, useDispatch } from 'react-redux'
 import { loginFun,reset } from '../features/User/userSlice';
-
+import CircularProgress from '@mui/material/CircularProgress';
 
 
 const Login = () => {
@@ -25,7 +25,7 @@ const Login = () => {
     password: "",
 
   })
- 
+  const [isSubmit, setIsSubmit] = useState(false)
 
   const [ErrField, setErrField] = useState({
 
@@ -36,6 +36,24 @@ const Login = () => {
   const inputHandler = (e) => {
     const { name, value } = e.target
     setInputField({ ...inputField, [name]: value })
+    let formIsValid = true
+    // if(!inputField.email){
+    //   setErrField(prevState=>({
+    //     ...prevState, emailErr: "Please Enter email !"
+      
+    //   }))
+
+    // }
+  //  else if (!inputField["email"] ) {
+  //     //regular expression for email validation
+  //     var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+  //     if (!pattern.test(inputField["email"])) {
+  //       setErrField["emailErr"] = "*Please enter valid email-ID.";
+  //     }
+  //   }
+    // else{
+    //   setErrField({emailErr:""})
+    // }
   }
   // useEffect(()=>{
   //   message && toast.error(message)
@@ -50,6 +68,7 @@ const Login = () => {
     if (isValid) {
       try{
    let response = await dispatch(loginFun(inputField))
+   setIsSubmit(true)
   //  console.log(response)
    clearState()
    if(response?.payload?.status ==200){
@@ -94,7 +113,7 @@ const Login = () => {
       passwordErr: "",
     })
 
-    if (inputField.email == "") {
+    if (!inputField?.email) {
       formIsValid = false
       setErrField(prevState => ({
         ...prevState, emailErr: "Please Enter email !"
@@ -102,7 +121,7 @@ const Login = () => {
 
     }
 
-    if (inputField.password == "") {
+    if (!inputField?.password ) {
       formIsValid = false
       setErrField(prevState => ({
         ...prevState, passwordErr: "Please Enter password !"
@@ -130,19 +149,20 @@ const Login = () => {
           <br></br>
           <div >
             <input type="text" size="20" name="email" value={inputField.email} onChange={inputHandler} placeholder='username' className='email' required />
-            <div>{ErrField.emailErr.length > 0 && <span className='validation'>{ErrField.emailErr}</span>
+            <div>{ErrField?.emailErr?.length > 0 && <span className='validation'>{ErrField.emailErr}</span>
 
             }</div>
           </div><br></br>
           <div  >
             <input type="password" name="password" value={inputField.password} onChange={inputHandler} placeholder='password' className='email ' required />
-            <div>{ErrField.passwordErr.length > 0 && <span className='validation' >{ErrField.passwordErr}</span>
+            <div>{ErrField?.passwordErr?.length > 0 && <span className='validation' >{ErrField.passwordErr}</span>
 
             }</div>
           </div>
           <div className='btnsb'>
             <br></br>
-            <button type='button' onClick={submitButton} style={{ fontSize: "20px" }}>Login <AiOutlineLogin style={{ fontSize: "30px" }} />
+            <button type='button' onClick={submitButton} style={{ fontSize: "20px" }}>{isSubmit ? <CircularProgress style={{ height: 20, width: 20, color: 'white' }}/>: "Login"}
+            
             </button>
             <ToastContainer />
           </div>
@@ -164,7 +184,7 @@ export default Login
 
 
 
-
+// <AiOutlineLogin style={{ fontSize: "30px" }} />
 
 //  let url = "http://localhost:4000/users/login"
       // let options ={

@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux'
+import CircularProgress from '@mui/material/CircularProgress';
+
 const Registration = () => {
   const [inputField, setInputField] = useState({
     name: "",
@@ -19,14 +22,15 @@ const Registration = () => {
     cpasswordErr: ""
   })
   // const [errors, setErrors] = useState({});
-  const [formIsValid, setformIsValid] = useState(false)
+  // const [formIsValid, setformIsValid] = useState(false)
+  const [isSubmit, setIsSubmit] = useState(false)
 
   const inputHandler = (e) => {
     const { name, value } = e.target
-    validate(name, value)
     setInputField({ ...inputField, [name]: value })
-
+    validate(name, value)
   }
+
   const validate = (name, value) => {
 
     switch (name) {
@@ -64,14 +68,14 @@ const Registration = () => {
             passwordErr: 'Password should contains atleast 8 charaters and containing uppercase,lowercase and numbers'
           }))
         } else {
-
+          //debugger
           setErrField({ passwordErr: "" })
 
         }
         break;
       case 'phone':
         if (
-          value.length !=10
+          value.length != 10
         ) {
           setErrField(prevState => ({
             ...prevState,
@@ -83,45 +87,53 @@ const Registration = () => {
 
         }
         break;
-        case 'cpassword':
-          if (
-            inputField.cpassword != "" && inputField.cpassword != inputField.password
-          ) {
-            setErrField(prevState => ({
-              ...prevState,
-              cpasswordErr: 'password does not matched'
-            }))
-          } else {
-  
-            setErrField({ cpasswordErr: "" })
-  
-          }
-          break;
+
+      case 'cpassword':
+        // debugger
+        if (
+
+          !inputField.cpassword || value !== inputField.password
+        ) {
+          setErrField(prevState => ({
+            ...prevState,
+            cpasswordErr: 'password does not matched'
+          }))
+        } else {
+
+          setErrField({ cpasswordErr: "" })
+
+        }
+        break;
       default:
         break;
     }
   }
   const submitButton = async (e) => {
+    //debugger
     e.preventDefault();
-    if (validForm()) {
+    let isValid = validForm()
+    // debugger
+    if (isValid) {
       console.log("valid")
       // let url ="http://localhost:4000/users/register"
+
       try {
         //   debugger
         let response = await axios.post('http://localhost:4000/users/register', inputField)
         console.log(response)
-        clearState()
+        setIsSubmit(true)
         if (response.status == 200) {
-          alert(" registered successfully")
+          clearState()
+
+          // alert(" registered successfully")
           setTimeout(() => {
             navigate("/login")
           }, 1000);
         }
 
       } catch (error) {
-        //   debugger
         console.log(error)
-        alert("something went wrong")
+        alert(error?.response?.data?.message)
       }
 
     } else {
@@ -143,7 +155,8 @@ const Registration = () => {
   };
 
   const validForm = () => {
-    setformIsValid(true)
+    // setformIsValid(true)
+    let valid = true
     setErrField({
       nameErr: "",
       emailErr: "",
@@ -153,7 +166,8 @@ const Registration = () => {
 
     })
     if (!inputField.name) {
-      setformIsValid(false)
+
+      valid = false;
       setErrField(prevState => ({
         ...prevState, nameErr: "Please Enter Name !"
       }))
@@ -162,45 +176,49 @@ const Registration = () => {
     }
 
     if (!inputField.email) {
-      setformIsValid(false)
+      valid = false;
       setErrField(prevState => ({
         ...prevState, emailErr: "Please Enter email !"
       }))
 
     }
-    if (!inputField.phone ) {
-      setformIsValid(false)
+    if (!inputField.phone) {
+      valid = false;
       setErrField(prevState => ({
         ...prevState, phoneErr: "Please Enter phone !"
       }))
 
     }
 
-    if (!inputField.password  && !new RegExp(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/).test(inputField.cpassword)) {
-      setformIsValid(false)
+    if (!inputField.password && !new RegExp(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/).test(inputField.cpassword)) {
+      valid = false;
       setErrField(prevState => ({
         ...prevState, passwordErr: "Please Enter password !"
       }))
 
+    } else {
+
+      setErrField({ passwordErr: "" })
+
     }
 
     if (!inputField.cpassword) {
-      setformIsValid(false)
+      valid = false;
       setErrField(prevState => ({
         ...prevState, cpasswordErr: "Please Enter confirm password !"
       }))
 
-    } 
+    }
     //  console.log(!inputField.cpassword)
-    if (inputField.cpassword != "" && inputField.cpassword != inputField.password) {
-      setformIsValid(false)
+    if (!inputField.cpassword || inputField.cpassword !== inputField.password) {
+      valid = false;
       setErrField(prevState => ({
         ...prevState, cpasswordErr: " password does not match !"
       }))
 
     }
-    console.log(formIsValid)
-    return formIsValid
+    console.log(valid)
+    return valid;
   }
 
   return (<>
@@ -245,11 +263,11 @@ const Registration = () => {
           </div>
 
           <div className="form-group">
-            <button type='submit' className="btn btn-success btn-lg btn-block">Register Now</button>
+            <button type='submit' className="btn btn-success btn-lg btn-block">{isSubmit ? <CircularProgress style={{ height: 20, width: 20, color: 'white' }} /> : "Register Now"} </button>
           </div>
         </div>
       </form>
-      <div className="text-center">Already have an account? <a href="">Sign in</a></div>
+      <span className="text-center">Already have an account ? <Link to="/login">sign in</Link></span>
     </div>
 
 

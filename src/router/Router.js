@@ -10,22 +10,23 @@ import ShowPost from '../component/ShowPost'
 // import { UserContext } from '../App'
 import EditPost from '../component/EditPost'
 import { useSelector } from 'react-redux'
+import CreatePost from '../component/CreatePost'
 
 const Router = () => {
     const navigate = useNavigate()
     const user = useSelector((state) => state.user)
 
-    useEffect(() => {
-       const user = JSON.parse(localStorage.getItem("user")) 
-        console.log("token<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>", user)
+    // useEffect(() => {
+    //    const user = JSON.parse(localStorage.getItem("user")) 
+    //     console.log("token<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>", user)
 
-          if(user){
-              navigate("/")
-          }
-          else{
-              navigate("/login")
-          }
-    }, [])
+    //       if(user){
+    //           navigate("/")
+    //       }
+    //       else{
+    //           navigate("/login")
+    //       }
+    // }, [])
 
     return (
         <>
@@ -37,7 +38,7 @@ const Router = () => {
                 <Route exact path='/' element={<ProtectedRoute Component={Home} />}></Route>
                 <Route path='/register' element={< Registration />}></Route>
                 <Route path='/login' element={< Login />}></Route>
-                <Route path='/about' element={<ProtectedRoute Component={About} />}></Route>
+                <Route path='/createpost' element={<ProtectedRoute Component={CreatePost} />}></Route>
                 <Route path="/showpost" element={<ShowPost />}></Route>
                 <Route exact path="/posts/editpost/:id" element={<EditPost />}></Route>
                 <Route path="*" element={< Error />}></Route>

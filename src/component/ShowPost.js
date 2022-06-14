@@ -7,14 +7,14 @@ import { useSelector } from 'react-redux';
 const ShowPost = () => {
     const navigate = useNavigate()
     const [data, setData] = useState([])
-    const {user,isLoading,isError,isSuccess,message} = useSelector((state)=>state.user)
+    const { user, isLoading, isError, isSuccess, message } = useSelector((state) => state.user)
     // console.log("state", state)
     const FetchData = async () => {
 
 
         try {
-     
-            
+
+
             console.log("yess home ", localStorage.getItem('token'))
             const token = localStorage.getItem('token')
             let url = "http://localhost:4000/posts/getallposts"
@@ -180,7 +180,7 @@ const ShowPost = () => {
 
                         // If request is good...
                         console.log("(((((((((((((((((((((", response.data.result._id);
-                        const newData =data.filter(item=>{
+                        const newData = data.filter(item => {
                             return item._id !== response.data.result._id
                         })
                         setData(newData)
@@ -235,49 +235,49 @@ const ShowPost = () => {
         <>
             <div className="card" style={{ marginTop: "50px", marginLeft: "30px" }} >
 
-                <div className="card-body"style={{ marginTop: "50px", marginLeft: "20px" }}>
+                <div className="card-body" style={{ marginTop: "50px", marginLeft: "20px" }}>
 
                     {data.map((item) => {
                         //  debugger
                         return (
-                            
+
                             <div className="card" key={item._id} >
-                                {console.log("????",item)}
-                                     <div style={{  marginLeft: "20px" }}>
-                            <span><h6 style={{ marginLeft: "5px", marginTop: "10px", color: "black" }}>{item.postedBy.name}</h6></span>
-                                <h4 ><span style={{ marginLeft: "10px", fontFamily: 'fantasy', color: 'darkred' }} ></span><span style={{ color: "darkslateblue" }}>{item.title}{item.postedBy._id == user._id && <i className="large material-icons" style={{ marginLeft:"480px"}} onClick={()=>navigate(`/posts/editpost/${item._id}`)} >edit</i>} <span style={{ color: "darkslateblue" }}>{item.postedBy._id == user._id && <i className="large material-icons" onClick={()=>deletePost(item._id)} >delete</i>}</span></span></h4>
-                          
-                                <div ><img src={item.image} alt="image" style={{ maxWidth: '50%', marginLeft: "10px" }} /></div><br></br>
-                                <p ><span style={{ marginLeft: "10px", fontFamily: 'fantasy', color: 'darkred' }} ></span><span style={{ color: "darkslateblue" }}><span style={{ color: "black" }}>{item.postedBy.name}</span>&nbsp;{item.content}</span></p>
-                                <div style={{ marginLeft: "15px", height: "30px", color: "blue", maxwidth: "40%" }}>
-                                    {item.likes.includes(user._id)
-                                        ? <i className="large material-icons" onClick={() => { unlikepost(item._id) }}>thumb_down</i>
-                                        :
-                                        <i className="large material-icons" onClick={() => { likepost(item._id) }} >thumb_up</i>
-                                    }
-                                </div>
-                                <h6>{(item.likes.length)} like</h6>
-                                {
+                                {console.log("????", item)}
+                                <div style={{ marginLeft: "20px" }}>
+                                    <span><h6 style={{ marginLeft: "5px", marginTop: "10px", color: "black" }}>{item?.postedBy?.name}</h6></span>
+                                    <h4 ><span style={{ marginLeft: "10px", fontFamily: 'fantasy', color: 'darkred' }} ></span><span style={{ color: "darkslateblue" }}>{item.title}{item?.postedBy?._id == user._id && <i className="large material-icons" style={{ marginLeft: "480px" }} onClick={() => navigate(`/posts/editpost/${item._id}`)} >edit</i>} <span style={{ color: "darkslateblue" }}>{item?.postedBy?._id == user._id && <i className="large material-icons" onClick={() => deletePost(item._id)} >delete</i>}</span></span></h4>
 
-                                    item.comments.map(record => {
-
-                                        return <h6 key={record._id}><span style={{ fontWeight: "500",marginLeft:"10px" }}>{record.postedBy.name}</span>&nbsp;<span style={{ fontWeight: "400" }}>{record.text}</span ></h6>
-                                    })
-                                }
-                                <form onSubmit={(e) => {
-                                    e.preventDefault()
-                                    makeComment(e.target[0].value, item._id)
-                                    e.target[0].value = "";
-
-                                }}>
-                                    <div className="form-floating">
-                                        <input type="text" className="form-control"
-                                            id="floatingTextarea2" style={{ maxWidth: '50%' }} />
-                                        <label htmlFor="floatingTextarea2" style={{ fontSize: "12px" }}>Add a comment..</label>
+                                    <div ><img src={item.image} alt="image" style={{ maxWidth: '50%', marginLeft: "10px" }} /></div><br></br>
+                                    <p ><span style={{ marginLeft: "10px", fontFamily: 'fantasy', color: 'darkred' }} ></span><span style={{ color: "darkslateblue" }}><span style={{ color: "black" }}>{item?.postedBy?.name}</span>&nbsp;{item?.content}</span></p>
+                                    <div style={{ marginLeft: "15px", height: "30px", color: "blue", maxwidth: "40%" }}>
+                                        {item?.likes?.includes(user._id)
+                                            ? <i className="large material-icons" onClick={() => { unlikepost(item?._id) }}>thumb_down</i>
+                                            :
+                                            <i className="large material-icons" onClick={() => { likepost(item?._id) }} >thumb_up</i>
+                                        }
                                     </div>
-                                </form>
-<br></br>
-                                     </div>
+                                    <h6>{(item?.likes?.length)} like</h6>
+                                    {
+
+                                        item?.comments.map(record => {
+
+                                            return <h6 key={record?._id}><span style={{ fontWeight: "500", marginLeft: "10px" }}>{record?.postedBy?.name}</span>&nbsp;<span style={{ fontWeight: "400" }}>{record?.text}</span ></h6>
+                                        })
+                                    }
+                                    <form onSubmit={(e) => {
+                                        e.preventDefault()
+                                        makeComment(e.target[0].value, item._id)
+                                        e.target[0].value = "";
+
+                                    }}>
+                                        <div className="form-floating">
+                                            <input type="text" className="form-control"
+                                                id="floatingTextarea2" style={{ maxWidth: '50%' }} />
+                                            <label htmlFor="floatingTextarea2" style={{ fontSize: "12px" }}>Add a comment..</label>
+                                        </div>
+                                    </form>
+                                    <br></br>
+                                </div>
 
                             </div>
 

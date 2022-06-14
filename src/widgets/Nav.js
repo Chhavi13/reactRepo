@@ -18,9 +18,9 @@ const Nav = () => {
 
 
       {token && <li><NavLink to='/' className={(navData) => navData.isActive ? "active" : ""} >Home</NavLink></li>}{/*active clss in v6  */}
-
-      <li><NavLink to='/register' activeclassname="active"  >Register</NavLink></li>
-      <li><NavLink to='/login' activeclassname="active" >Login</NavLink></li>
+      {token && <li><NavLink to='/createpost' className={(navData) => navData.isActive ? "active" : ""} >Create Post</NavLink></li>}
+    {!token &&  <li><NavLink to='/register' activeclassname="active"  >Register</NavLink></li>} 
+    {!token &&  <li><NavLink to='/login' activeclassname="active" >Login</NavLink></li>} 
 
       {token && <li style={{ float: "right" }}><NavLink to='/login' activeclassname="active" onClick={() => {
         localStorage.clear()

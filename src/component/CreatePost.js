@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
+import { createPost } from '../features/createPostSlice';
+import { useDispatch } from 'react-redux';
 
 const CreatePost = () => {
 
@@ -10,31 +12,46 @@ const CreatePost = () => {
         image: ""
     })
     const navigate = useNavigate()
-
+    const dispatch = useDispatch()
     const inputHandler = (e) => {
         const { name, value } = e.target
         setInputField({ ...inputField, [name]: value })
         console.log(inputField)
     }
     const handlePostSubmit = async (e) => {
+        //debugger
         e.preventDefault()
-        console.log("============", inputField.image)
-        const formData = new FormData()
-        formData.append("image", inputField.image, inputField.image.name)
-        formData.append("title", inputField.title)
-        formData.append("content", inputField.content)
-
         try {
-            // debugger
+            console.log("============", inputField.image)
+            const formData = new FormData()
+            formData.append("image", inputField.image, inputField.image.name)
+            formData.append("title", inputField.title)
+            formData.append("content", inputField.content)
+            console.log("+++++++++++", formData)
+
+
+            debugger
             const token = localStorage.getItem('token')
             if (token) {
                 const AuthStr = 'Bearer '.concat(token);
-                const headers = {
-                    'content-type': 'application/json',
-                    Authorization: AuthStr
-                }
-                let response = await axios.post('http://localhost:4000/posts/createpost', formData, { headers: headers })
-                console.log(response)
+                //    debugger
+                //  let response = await axios.post('http://localhost:4000/posts/createpost', formData, { headers: headers })
+
+                //   let response = await axios.post('http://localhost:4000/posts/createpost',
+                //   {
+                //     formData,
+                //           headers: {
+
+                //                   'content-type': 'multipart/form-data',
+                //                   'Authorization': AuthStr
+                //           },
+
+                //   })
+
+                //   debugger
+
+                let res = await dispatch(createPost({formData, AuthStr}))
+                console.log('api response', res)
                 clearState()
 
             } else {
@@ -65,7 +82,7 @@ const CreatePost = () => {
 
     return (
         <>
-            <h1 style={{  color: "chocolate",padding: "8px",marginTop:"5px" ,fontSize:"30px"}}>Create Post</h1>
+            <h1 style={{ color: "chocolate", padding: "8px", marginTop: "5px", fontSize: "30px" }}>Create Post</h1>
             {/* textAlign: "center" */}
             <div className="card" style={{ width: "800px", alignSelf: "flex-start", marginTop: "20px", marginLeft: "20px" }}>
                 <form encType="multipart/form-data" method="post">

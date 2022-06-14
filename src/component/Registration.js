@@ -32,7 +32,7 @@ const Registration = () => {
   }
 
   const validate = (name, value) => {
-
+   // debugger
     switch (name) {
       case 'name':
         if (value.length < 3) {
@@ -42,7 +42,7 @@ const Registration = () => {
           }))
         }
         else {
-          setErrField({ nameErr: "" })
+          setErrField({ ...ErrField, nameErr: "" })
         }
         break;
 
@@ -55,7 +55,7 @@ const Registration = () => {
           }))
         }
         else {
-          setErrField({ emailErr: "" })
+          setErrField({...ErrField, emailErr: "" })
         }
         break;
 
@@ -69,7 +69,7 @@ const Registration = () => {
           }))
         } else {
           //debugger
-          setErrField({ passwordErr: "" })
+          setErrField({ ... ErrField,passwordErr: "" })
 
         }
         break;
@@ -83,7 +83,7 @@ const Registration = () => {
           }))
         } else {
 
-          setErrField({ phoneErr: "" })
+          setErrField({...ErrField, phoneErr: "" })
 
         }
         break;
@@ -100,7 +100,7 @@ const Registration = () => {
           }))
         } else {
 
-          setErrField({ cpasswordErr: "" })
+          setErrField({...ErrField, cpasswordErr: "" })
 
         }
         break;
@@ -121,13 +121,16 @@ const Registration = () => {
         //   debugger
         let response = await axios.post('http://localhost:4000/users/register', inputField)
         console.log(response)
-        setIsSubmit(true)
-        if (response.status == 200) {
-          clearState()
+      
 
+        if (response.status == 200) {
+          setIsSubmit(true)
+          clearState()
+          
           // alert(" registered successfully")
           setTimeout(() => {
             navigate("/login")
+
           }, 1000);
         }
 
@@ -157,14 +160,7 @@ const Registration = () => {
   const validForm = () => {
     // setformIsValid(true)
     let valid = true
-    setErrField({
-      nameErr: "",
-      emailErr: "",
-      phoneErr: "",
-      passwordErr: "",
-      cpasswordErr: ""
 
-    })
     if (!inputField.name) {
 
       valid = false;
@@ -173,7 +169,7 @@ const Registration = () => {
       }))
 
 
-    }
+    } 
 
     if (!inputField.email) {
       valid = false;
@@ -182,6 +178,7 @@ const Registration = () => {
       }))
 
     }
+
     if (!inputField.phone) {
       valid = false;
       setErrField(prevState => ({
@@ -196,10 +193,6 @@ const Registration = () => {
         ...prevState, passwordErr: "Please Enter password !"
       }))
 
-    } else {
-
-      setErrField({ passwordErr: "" })
-
     }
 
     if (!inputField.cpassword) {
@@ -209,6 +202,7 @@ const Registration = () => {
       }))
 
     }
+
     //  console.log(!inputField.cpassword)
     if (!inputField.cpassword || inputField.cpassword !== inputField.password) {
       valid = false;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import profile from '../images/userpic.png'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AiOutlineLogin } from 'react-icons/ai'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -36,25 +36,54 @@ const Login = () => {
   const inputHandler = (e) => {
     const { name, value } = e.target
     setInputField({ ...inputField, [name]: value })
-    let formIsValid = true
-    // if(!inputField.email){
-    //   setErrField(prevState=>({
-    //     ...prevState, emailErr: "Please Enter email !"
-      
-    //   }))
+    validate(name, value)
 
-    // }
-  //  else if (!inputField["email"] ) {
-  //     //regular expression for email validation
-  //     var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-  //     if (!pattern.test(inputField["email"])) {
-  //       setErrField["emailErr"] = "*Please enter valid email-ID.";
-  //     }
-  //   }
-    // else{
-    //   setErrField({emailErr:""})
-    // }
-  }
+    }
+    const validate = (name, value) => {
+
+      switch (name) {  
+        case 'email':
+          if(!value){
+            setErrField(prevState => ({
+              ...prevState, emailErr: "enter  email  !"
+            }))}
+         else if (
+            !new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(value)
+          ) {
+            setErrField(prevState => ({
+              ...prevState, emailErr: "enter strong email  !"
+            }))
+          }
+          else {
+            setErrField({...ErrField, emailErr: "" })
+          }
+          break;
+  
+        case 'password':
+          if(!value){
+            setErrField(prevState => ({
+              ...prevState, passwordErr: "enter  password  !"
+            }))}
+    
+         else if (
+            !new RegExp(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/).test(value)
+          ) {
+            setErrField(prevState => ({
+              ...prevState,
+              passwordErr: 'Password should contains atleast 8 charaters and containing uppercase,lowercase and numbers'
+            }))
+          } else {
+            //debugger
+            setErrField({ ...ErrField,passwordErr: "" })
+  
+          }
+          break;  
+        
+        default:
+          break;
+      }
+    }
+  
   // useEffect(()=>{
   //   message && toast.error(message)
   //   console.log("cccccc",message)
@@ -63,23 +92,29 @@ const Login = () => {
   
   const submitButton = async (e) => {
     e.preventDefault();
+    
     let isValid =validForm()
     console.log(isValid)
     if (isValid) {
       try{
    let response = await dispatch(loginFun(inputField))
-   setIsSubmit(true)
+  
+
   //  console.log(response)
    clearState()
    if(response?.payload?.status ==200){
+    setIsSubmit(true)
+    //toast.success("login successfully")
      
-    toast.success("login successfully")
-
     const user =JSON.stringify(response.payload.data)
       const token =response.payload.data.token
       localStorage.setItem('user',user)
       localStorage.setItem('token',token)
+      setTimeout(() => {
         navigate("/")
+
+      }, 1000);
+     
          
    }else{
     toast.error("invalid credential")
@@ -108,10 +143,10 @@ const Login = () => {
 
   const validForm = () => {
     let formIsValid = true
-    setErrField({
-      emailErr: "",
-      passwordErr: "",
-    })
+    // setErrField({
+    //   emailErr: "",
+    //   passwordErr: "",
+    // })
 
     if (!inputField?.email) {
       formIsValid = false
@@ -168,7 +203,7 @@ const Login = () => {
           </div>
           <br></br>
           <p className='link'>
-            <a href='#'>forgot password ?</a> or <a href='signup'>Create account </a>
+          <Link to="/forgetpwd">forget password ?</Link>or<Link to="/register">create Account</Link>
           </p>
         </div>
 

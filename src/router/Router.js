@@ -11,6 +11,7 @@ import ShowPost from '../component/ShowPost'
 import EditPost from '../component/EditPost'
 import { useSelector } from 'react-redux'
 import CreatePost from '../component/CreatePost'
+import Userprofile from '../component/Userprofile'
 
 const Router = () => {
     const navigate = useNavigate()
@@ -40,6 +41,7 @@ const Router = () => {
                 <Route path='/login' element={< Login />}></Route>
                 <Route path='/createpost' element={<ProtectedRoute Component={CreatePost} />}></Route>
                 <Route path="/showpost" element={<ShowPost />}></Route>
+                <Route path="/userprofile" element={<Userprofile />}></Route>
                 <Route exact path="/posts/editpost/:id" element={<EditPost />}></Route>
                 <Route path="*" element={< Error />}></Route>
                 {/* <Route path="/login" element={<Login />}></Route> */}

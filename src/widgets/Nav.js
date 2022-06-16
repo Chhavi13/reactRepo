@@ -2,6 +2,8 @@ import React from 'react'
 import { NavLink, Link, useNavigate } from 'react-router-dom'
 import { BiLogOutCircle } from 'react-icons/bi'
 import { UserContext } from '../App';
+import { useSelector } from 'react-redux';
+
 
 
 
@@ -9,10 +11,11 @@ import { UserContext } from '../App';
 const Nav = () => {
   const navigate = useNavigate()
 
- 
-  // console.log("99999999999", state)
-  const token = localStorage.getItem("token")
 
+  const token = localStorage.getItem("token")
+  const user =useSelector((state)=>state.user)
+ 
+   console.log("99999999999", user)
   return (
     <div className='ulNav'>
 
@@ -30,7 +33,7 @@ const Nav = () => {
 
       }}   >Logout <BiLogOutCircle style={{ fontSize: "30px" }} /></NavLink></li>}
 
-      {token && <li style={{ float: "right" }}><NavLink to='/test' activeclassname="active"   ><span >User Profile<i className="large material-icons" style={{ marginTop: "10px" }} >account_circle</i></span></NavLink></li>}
+      {token && <li style={{ float: "right" }}><NavLink to='/userprofile' activeclassname="active"   ><span >{user.user.name}<i className="large material-icons" style={{ marginTop: "10px" }} >account_circle</i></span></NavLink></li>}
 
       {token && <li style={{ float: "left" }}><NavLink to='/showpost' activeclassname="active"   >ShowPost</NavLink></li>}
     </div>

@@ -12,18 +12,20 @@ const initialState = {
 
 }
 
-export const createPost = createAsyncThunk('post/createPost', async ({posts,token}, { rejectWithValue }) => {
+export const createPost = createAsyncThunk('post/createPost', async ({formData,token}, { rejectWithValue }) => {
         try {
-                //debugger
-                let res = await axios.post('http://localhost:4000/posts/createpost',
+               // debugger
+                let res = await axios.post('http://localhost:4000/posts/createpost',formData,
                         {
-                                posts,
                                 headers: {
-                                        'Authorization': `Bearer ${token}`
+                                        'content-type': 'multipart/form-data',
+                                         Authorization: `Bearer ${token}` 
+                                       
+                                     
                                 },
 
                         })
-                        debugger
+                       // debugger
                 return res.data;
                 console.log("call")
         } catch (error) {

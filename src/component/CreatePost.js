@@ -30,10 +30,10 @@ const CreatePost = () => {
             console.log("+++++++++++", formData)
 
 
-            debugger
+           // debugger
             const token = localStorage.getItem('token')
             if (token) {
-                const AuthStr = 'Bearer '.concat(token);
+                // const AuthStr = 'Bearer '.concat(token);
                 //    debugger
                 //  let response = await axios.post('http://localhost:4000/posts/createpost', formData, { headers: headers })
 
@@ -49,8 +49,8 @@ const CreatePost = () => {
                 //   })
 
                 //   debugger
-
-                let res = await dispatch(createPost({formData, AuthStr}))
+                
+                let res = await dispatch(createPost({formData, token }))
                 console.log('api response', res)
                 clearState()
 

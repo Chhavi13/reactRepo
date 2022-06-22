@@ -3,63 +3,146 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getAllPost } from './Post';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 export const PostView = () => {
     const [searchField, setSearchField] = useState("")
+    const [filterResult, setfilterResult] = useState([])
 
     const dispatch = useDispatch()
     const post = useSelector((state) => state.post)
-    // console.log(post.posts.length)
+    // console.log(post.posts)
+    // const [data, showData] = useState([])
+
     useEffect(() => {
+           
         dispatch(getAllPost())
 
     }, [])
+    // useEffect(() => {
+    // setSearchField(f)
+      
+    //    }, [searchField])
+   
+    const handlechange = (e) => {
+        const { value } = e.target
+        setSearchField(value)
+        // debugger
+     
+            if (value) {
+                const filterData = post.posts.filter(item => {
+                    return Object.keys(item).some(key =>
+                        item[key].toString().toLowerCase().includes(value.toString().toLowerCase()))
+                })
+                // debugger
+                setfilterResult(filterData)
+            } else {
+                // debugger
+                setfilterResult(post.posts)
+    
+            }
 
-    const filtered = !searchField
-        ? post.posts
-        : post.posts.filter((data) =>
-         data.title.toLowerCase().includes(searchField.toLowerCase())
-        );
+        
+        
+
+        // const filtered = !value
+        // ? post.posts
+        // :post.posts.filter(item => {
+        //     Object.keys(item).some(key =>
+        //         item[key].toString().toLowerCase().includes(value.toString().toLowerCase()))
+
+        // })
+        // setfilterResult (filtered)
+
+    }
 
     return (
+        <Container>
+            <div className='offset-4' >
+                <div style={{ marginRight: 560, marginTop: 10 }}>
+
+                    <input type="text" placeholder="Search.." value={searchField} onChange={handlechange} /></div>
+
+                &nbsp;
+              
+                {filterResult.map((postData) => (
+                    <div key={postData.id}>
+                        <Card style={{ width: '18rem', }}>
+
+                            <Card.Body>
+
+                                <Card.Img variant="top" src={postData.url} />
+                                <Card.Title>{postData.title}</Card.Title>
+                                <Card.Text>
+                                    {postData.id}
+                                </Card.Text>
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </Card.Text>
+                                <Card.Text>
+                                    {postData.albumId}
+                                </Card.Text>
 
 
-        <div className='offset-4' >
-            <h6>Search data</h6>
-            <input type="text" placeholder="Search.." value={searchField} onChange={(e) => setSearchField(e.target.value)} />
-
-            <Card style={{ width: '18rem', }}>
-
-                <Card.Body>
-
-                    {
-                        (!post.loading && post.posts.length) && filtered.map((postData) => {
-                            if (postData.id <= 50) {
-                                return (
-                                    <div key={postData.id}>
-                                        <Card.Img variant="top" src={postData.url} />
-                                        <Card.Title>{postData.title}</Card.Title>
-                                        <Card.Text>
-                                            {postData.id}
-                                        </Card.Text>
-                                        <Card.Text>
-                                            Some quick example text to build on the card title and make up the
-                                            bulk of the card's content.
-                                        </Card.Text>
-                                        <Card.Text>
-                                            {postData.albumId}
-                                        </Card.Text>
-                                    </div>
-
-                                )
-                            }
-
-                        })}
-                    <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-            </Card>
+                            </Card.Body>
+                        </Card> </div>
+                ))}
 
 
-        </div>
+
+                <Button variant="primary">Go somewhere</Button>
+
+
+            </div>
+        </Container>
+
+
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {/* {filterResult.map((postData) => (
+
+
+                        <div key={postData.id}>
+                            <Card style={{ width: '18rem', }}>
+
+                                <Card.Body>
+
+                                    <Card.Img variant="top" src={postData.url} />
+                                    <Card.Title>{postData.title}</Card.Title>
+                                    <Card.Text>
+                                        {postData.id}
+                                    </Card.Text>
+                                    <Card.Text>
+                                        Some quick example text to build on the card title and make up the
+                                        bulk of the card's content.
+                                    </Card.Text>
+                                    <Card.Text>
+                                        {postData.albumId}
+                                    </Card.Text>
+
+
+                                </Card.Body>
+                            </Card> </div>
+
+
+                    )} */}

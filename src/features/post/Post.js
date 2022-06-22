@@ -16,9 +16,10 @@ export const getAllPost = createAsyncThunk('post/getAllPost', async (token, { re
         })
         //debugger
         // console.log("details", res.data)
-        let PostDetail = res.data
-        // console.log("postdetails", PostDetail)
-        PostDetail.map((post) => post.id)
+        let PostDetail = res.data.slice(0,50)
+        // // console.log("postdetails", PostDetail)
+        // // PostDetail.map((post) => post.id)
+        // debugger
         return PostDetail;
 
     } catch (error) {

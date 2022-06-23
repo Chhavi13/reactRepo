@@ -6,6 +6,7 @@ import './App.css';
 import { UserTable } from './features/user/UserTable';
 import { PostView } from './features/post/postView';
 import Search from './component/Search';
+import CardContainer from './container/cardContainer';
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       {/* <UserView /> */}
       {/* <UserTable /> */}
       {/* <Search /><br></br> */}
-      <PostView />
+      {/* <PostView /> */}
+      <CardContainer/>
     </div>
   );
 }

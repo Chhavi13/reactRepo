@@ -12,40 +12,67 @@ export const PostView = () => {
     const [filterResult, setfilterResult] = useState([])
 
     const dispatch = useDispatch()
-    const post = useSelector((state) => state.post)
-    // console.log(post.posts)
+    const { posts, loading, error } = useSelector((state) => state.post)
+    
+    console.log("post", posts)
     // const [data, showData] = useState([])
+    
+    
+    useEffect(()=>{
+        // debugger
+        if(!loading && (!posts ||!posts.length)&& !error){
+            dispatch(getAllPost())
 
-    useEffect(() => {
-           
-        dispatch(getAllPost())
+        }else{
+            setfilterResult(posts)
+        }
 
-    }, [])
+    },[posts])
+
+    // useEffect(() => {       
+    //  dispatch(getAllPost())
+
+    // }, [])
+
+
+    // async function fetchData() {
+
+    //     const response = await dispatch(getAllPost())
+    //    //console.log("++",response)
+    //    setfilterResult(response.payload)
+    //   }
     // useEffect(() => {
-    // setSearchField(f)
-      
-    //    }, [searchField])
-   
+    // //     debugger
+    // // const data = await dispatch(getAllPost())
+    // //       setfilterResult(data)
+
+    //   fetchData()
+
+
+    // },[])
+
+
+
     const handlechange = (e) => {
         const { value } = e.target
         setSearchField(value)
-        // debugger
-     
-            if (value) {
-                const filterData = post.posts.filter(item => {
-                    return Object.keys(item).some(key =>
-                        item[key].toString().toLowerCase().includes(value.toString().toLowerCase()))
-                })
-                // debugger
-                setfilterResult(filterData)
-            } else {
-                // debugger
-                setfilterResult(post.posts)
-    
-            }
+        //  debugger
 
-        
-        
+        if (value) {
+            const filterData = posts.filter(item => {
+                return Object.keys(item).some(key =>
+                    item[key].toString().toLowerCase().includes(value.toString().toLowerCase()))
+            })
+            //  debugger
+            setfilterResult(filterData)
+        } else {
+            //  debugger
+            setfilterResult(posts)
+
+        }
+
+
+
 
         // const filtered = !value
         // ? post.posts
@@ -59,37 +86,52 @@ export const PostView = () => {
     }
 
     return (
-        <Container>
-            <div className='offset-4' >
+        <>
+       <Container className='container-fluid'>
+        
+             <div className='offset-4' >
                 <div style={{ marginRight: 560, marginTop: 10 }}>
 
                     <input type="text" placeholder="Search.." value={searchField} onChange={handlechange} /></div>
 
                 &nbsp;
-              
-                {filterResult.map((postData) => (
-                    <div key={postData.id}>
-                        <Card style={{ width: '18rem', }}>
+               
 
-                            <Card.Body>
+                    {filterResult.map((postData) => (
+                        <div key={postData.id}>
+                          <Row>
+                          <Col xs={6} md={4}>
+                 <Card style={{ width: '18rem', }}>
 
-                                <Card.Img variant="top" src={postData.url} />
-                                <Card.Title>{postData.title}</Card.Title>
-                                <Card.Text>
+                       <Card.Body>
+
+                            <Card.Img variant="top" src={postData.url} />
+                            <Card.Title>{postData.title}</Card.Title>
+                                    <Card.Text>
                                     {postData.id}
                                 </Card.Text>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </Card.Text>
-                                <Card.Text>
-                                    {postData.albumId}
-                                </Card.Text>
+                        <Card.Text>
+                        Some quick example text to build on the card title and make up the
+                        bulk of the card's content.
+                            </Card.Text>
+                        <Card.Text>
+                        {postData.albumId}
+                            </Card.Text>
 
 
-                            </Card.Body>
-                        </Card> </div>
-                ))}
+                     </Card.Body>
+               </Card>
+
+                       
+                            </Col>
+
+                            
+                            </Row>
+                             </div>
+                       
+                    ))}
+
+                
 
 
 
@@ -97,8 +139,10 @@ export const PostView = () => {
 
 
             </div>
-        </Container>
-
+    
+</Container>
+           
+</>
 
     )
 }
@@ -119,7 +163,7 @@ export const PostView = () => {
 
 
 
- {/* {filterResult.map((postData) => (
+{/* {filterResult.map((postData) => (
 
 
                         <div key={postData.id}>
@@ -146,3 +190,14 @@ export const PostView = () => {
 
 
                     )} */}
+
+                    // pani nhi to pani bhrdo ie agr post ni h to hi dispatch krnaother wise show krdo
+                    // useEffect(()=>{
+                    //     if(!loading && (!posts.length)&& !error){
+                    //         dispatch(getAllPost())
+                
+                    //     }else{
+                    //         setfilterResult(posts)
+                    //     }
+                
+                    // },[posts])

@@ -6,15 +6,18 @@ import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import {useNavigate} from 'react-router-dom'
+import Pagination from '../../component/pagination/Pagination';
 
 export const PostView = () => {
+    //const navigate = useNavigate()
     const [searchField, setSearchField] = useState("")
     const [filterResult, setfilterResult] = useState([])
 
     const dispatch = useDispatch()
     const { posts, loading, error } = useSelector((state) => state.post)
     
-    console.log("post", posts)
+    // console.log("post", posts)
     // const [data, showData] = useState([])
     
     
@@ -72,7 +75,7 @@ export const PostView = () => {
         }
 
 
-
+    
 
         // const filtered = !value
         // ? post.posts
@@ -86,65 +89,65 @@ export const PostView = () => {
     }
 
     return (
-        <>
-       <Container className='container-fluid'>
+         <>
+       <Container className='container my-5 py-5'>
         
-             <div className='offset-4' >
-                <div style={{ marginRight: 560, marginTop: 10 }}>
-
-                    <input type="text" placeholder="Search.." value={searchField} onChange={handlechange} /></div>
-
-                &nbsp;
-               
-
+         <div className='form-row align-items-center'>
+            <input type="text" placeholder="Search.." value={searchField} onChange={handlechange} />
+          </div>&nbsp;
+        
+                <div className='row row-cols-4' >
                     {filterResult.map((postData) => (
-                        <div key={postData.id}>
-                          <Row>
-                          <Col xs={6} md={4}>
-                 <Card style={{ width: '18rem', }}>
-
-                       <Card.Body>
-
+                <div key={postData.id} >    
+                 { (postData.id%2==0)?(<Card style={{ width: '18rem',backgroundColor:"red" }} >
+                       <Card.Body >
                             <Card.Img variant="top" src={postData.url} />
-                            <Card.Title>{postData.title}</Card.Title>
-                                    <Card.Text>
-                                    {postData.id}
-                                </Card.Text>
-                        <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                            <Card.Text>
+                            #{postData.id}
+                           </Card.Text>  <Card.Title>
+                                {postData.title}
+                            </Card.Title>
+                             
+                             <Card.Text>
+                           Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
                             </Card.Text>
-                        <Card.Text>
-                        {postData.albumId}
-                            </Card.Text>
-
-
+                          <Card.Text>
+                           {postData.albumId}
+                          </Card.Text>
+                        <Button variant="primary">Go somewhere</Button>
                      </Card.Body>
-               </Card>
-
-                       
-                            </Col>
-
-                            
-                            </Row>
-                             </div>
-                       
-                    ))}
-
-                
-
-
-
-                <Button variant="primary">Go somewhere</Button>
-
-
-            </div>
-    
-</Container>
-           
-</>
-
-    )
+                 </Card> ) : (<Card style={{ width: '18rem' }} >
+                       <Card.Body >
+                            <Card.Img variant="top" src={postData.url} />
+                            <Card.Text>
+                            #{postData.id}
+                           </Card.Text>  <Card.Title>
+                                {postData.title}
+                            </Card.Title>
+                             
+                             <Card.Text>
+                           Some quick example text to build on the card title and make up the
+                            bulk of the card's content.
+                            </Card.Text>
+                          <Card.Text>
+                           {postData.albumId}
+                          </Card.Text>
+                        <Button variant="primary">Go somewhere</Button>
+                     </Card.Body>
+                 </Card> )
+                 }
+              </div>     
+                                
+                        
+         ))} 
+        </div>
+        <div>
+        <Pagination />   
+        </div>
+       
+</Container>        
+</> )
 }
 
 
@@ -201,3 +204,5 @@ export const PostView = () => {
                     //     }
                 
                     // },[posts])
+
+                    

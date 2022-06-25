@@ -10,7 +10,7 @@ const CardContainer=() =>{
      <Container className='container-fluid'>
      <Row className='row-cols-4'>
     <Col xs={6} md={4}>
-     <PostView/>
+     {/* <PostView/> */}
     </Col>
     <Col xs={6} md={4}>
     

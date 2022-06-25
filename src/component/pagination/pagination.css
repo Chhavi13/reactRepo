@@ -1,0 +1,6 @@
+.button1{
+    display: flex;
+    justify-content: space-between;
+    /* padding-top: 25px; content  inside div shift ya space dene ke liye and div ko pure ko aage piche krne ke liye space dene k liye */
+    margin-top: 25px;
+}

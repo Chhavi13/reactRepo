@@ -48,11 +48,15 @@ const PostView = () => {
 
     }
   }
-  const viewPostDetails = (id: number) => {
-    console.log(id)
-    navigate(`/viewpostdetails/${id}`)
+  const viewPostDetails = (pdata: any) => {
+    // console.log(id)
+    // navigate(`/viewpostdetails/${id}`,{state:posts[id-1]})
 
-
+    console.log("__________s",pdata.id)
+    
+    navigate(`/viewpostdetails`,{state:pdata})
+   
+   
   }
   return (
 
@@ -78,9 +82,9 @@ const PostView = () => {
                     bulk of the card's content.
                   </Card.Text>
                   <Card.Text>
-                    {postData.albumId}
+                    {/* {postData.albumId} */}
                   </Card.Text>
-                  <Button variant="primary" onClick={() => viewPostDetails(postData.id)}>view details</Button>
+                  <Button variant="primary" onClick={() => viewPostDetails(postData)}>view details</Button>
                 </Card.Body>
               </Card>) : (<Card style={{ width: '18rem' }} >
                 <Card.Body >
@@ -96,9 +100,9 @@ const PostView = () => {
                     bulk of the card's content.
                   </Card.Text>
                   <Card.Text>
-                    {postData.albumId}
+                    {/* {postData.albumId} */}
                   </Card.Text>
-                  <Button variant="primary" onClick={() => viewPostDetails(postData.id)}>view details</Button>
+                  <Button variant="primary" onClick={() => viewPostDetails(postData)}>view details</Button>
                 </Card.Body>
               </Card>)
               }
@@ -118,3 +122,4 @@ const PostView = () => {
 
 export default PostView
 
+// navigate(`/viewpostdetails`,{state:{data:posts[id-1]}})

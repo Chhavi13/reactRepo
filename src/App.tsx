@@ -1,56 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import AddTodo from './component/todos/AddTodo';
+import TodoList from './component/todos/TodoList';
+import { Icon } from '@mui/material';
+import { green } from '@mui/material/colors';
+import ResponsiveAppBar from './component/header/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    
+      <BrowserRouter>
+      <ResponsiveAppBar />
+        <Routes>
+          <Route path='/' element={< TodoList />}></Route>
+          <Route path='/addtodo' element={< AddTodo />}></Route>
+        </Routes>
+      </BrowserRouter>
+
     </div>
   );
 }

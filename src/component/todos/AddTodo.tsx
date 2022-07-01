@@ -4,10 +4,13 @@ import { Icon, TextField, Typography, InputAdornment } from '@mui/material';
 import { green } from '@mui/material/colors';
 import { Container } from '@mui/system';
 import AddBoxIcon from '@mui/icons-material/AddBox';
+import { addToDo } from '../../redux/features/todo/TodoSlice';
+import { useDispatch } from 'react-redux';
 
 
 const AddTodo = () => {
     const [inputField, setInputField] = useState("")
+    const dispatch =useDispatch()
 
     const handleChange = (e: any) => {
         const { value } = e.target
@@ -17,7 +20,8 @@ const AddTodo = () => {
 
    const addTodo =(e:any)=>{
      e.preventDefault()
-    console.log(inputField)
+     dispatch(addToDo(inputField))
+
     
    }
 

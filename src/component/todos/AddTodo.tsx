@@ -3,28 +3,31 @@ import Box from '@mui/material/Box';
 import { Icon, TextField, Typography, InputAdornment } from '@mui/material';
 import { Container } from '@mui/system';
 import AddBoxIcon from '@mui/icons-material/AddBox';
-import { addToDo } from '../../redux/features/todo/TodoSlice';
+// import { addToDo } from '../../redux/features/todo/TodoSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import TodoList from './TodoList';
 import "./Todos.css"
+import { createTask } from '../../redux/features/todo/TodoSlice';
 
 
 
 const AddTodo = () => {
-    const [inputField, setInputField] = useState("")
+    const [inputField, setInputField] = useState({
+        content:""
+    })
     const dispatch = useDispatch()
 
     const handleChange = (e: any) => {
-        const { value } = e.target
-        setInputField(value)
+        const {name, value } = e.target
+        setInputField({...inputField,[name]:value})
 
     }
 
     const addTodo = (e: any) => {
         e.preventDefault()
         // console.log(inputField)
-        dispatch(addToDo(inputField))
-        setInputField('')
+        dispatch(createTask(inputField))
+        setInputField({content:""})
         
 
     }
@@ -44,7 +47,7 @@ const AddTodo = () => {
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "darkblue", paddingLeft: 55 }}>
                             what's your plan Today..
                         </Typography>
-                        <TextField id="outlined-basic" label="Add something.." style={{ width: 500 }} value={inputField} variant="outlined" onChange={handleChange} InputProps={{
+                        <TextField id="outlined-basic"name='content' label="Add something.." style={{ width: 500 }} value={inputField.content} variant="outlined" onChange={handleChange} InputProps={{
                             endAdornment: (
                                 <InputAdornment position="end">
                                     <Box

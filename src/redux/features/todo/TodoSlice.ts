@@ -1,48 +1,83 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import axios from "axios";
+
+const baseURL = "http://localhost:8000";
 interface todoList {
     id: number,
     content: any
 }
 type InitialState = {
     todoList: todoList[],
+    responseStatus: string,
+  responseMessage: string,
 }
 const initialState: InitialState = {
-    todoList: [
-        { id: 1, content: "hii" },
-        { id: 2, content: "hello" }
-    ]
+    todoList: []  ,
+    responseStatus: ""  ,
+    responseMessage:""
+    
 }
+
+export const createTask:any = createAsyncThunk(
+    "toDo/createTask",
+    async (task, { rejectWithValue }) => {
+      try {
+        debugger
+        const response = await axios.post(`${baseURL}/api/todo/create`, task);
+        return response.data;
+      } catch (error) {
+        console.log(error)
+        return rejectWithValue(error);
+      }
+    }
+  );
+
+
+  export const getTasks:any = createAsyncThunk(
+    "todo/getTasks",
+    async () => {
+      try {
+        debugger
+        const response = await axios.get(`${baseURL}/api/todos/`);
+        return response.data;
+      } catch (error) {
+        return error
+      }
+    }
+  );
+
 export const toDoSlider = createSlice({
     name: 'toDo',
     initialState,
     reducers: {
-        addToDo: (state, action) => {
-            let newTodo = {
-                id: Date.now(),
-                content: action.payload
-            }
-            //  console.log("new todod",newTodo)
-            state.todoList.push(newTodo);
-            //    console.log("payload slice",state)
+    },
+    extraReducers: {
+        [createTask.pending]: (state, action) => {
+          return {
+            ...state,
+            responseStatus: "pending",
+          }
         },
-
-        removeTodo: (state, action) => {
-            console.log(state.todoList)
-            // debugger
-            state.todoList = state.todoList.filter((item) =>
-                item.id !== action.payload);
+        [createTask.fulfilled]: (state, action) => {
+          return {
+            ...state,
+            tasks: [...state.todoList, action.payload],
+            responseStatus: "success",
+            responseMessage: "Task created successfully",
+          }
         },
-        editTodo: (state, action) => {
-            let { todoList } = state;
-            debugger
-            state.todoList = todoList.map((item) =>
-                item.id === action.payload ? action.payload : item);
-
-
+        [createTask.rejected]: (state, action) => {
+          return {
+            ...state,
+            responseStatus: "rejected",
+            responseMessage: action.payload,
+          }
         }
 
-    },
+
+
+    }
 })
 // Action creators are generated for each case reducer function
-export const { addToDo, removeTodo, editTodo } = toDoSlider.actions
+// export const { addToDo, removeTodo, editTodo } = toDoSlider.actions
 export default toDoSlider.reducer;

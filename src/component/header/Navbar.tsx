@@ -29,7 +29,7 @@ const ResponsiveAppBar = () => {
 
 
   const handleCloseNavMenu = (val: any) => {
-    console.log(val)
+    // console.log(val)
     navigate(val)
 
 

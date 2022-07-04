@@ -19,12 +19,12 @@ const initialState: InitialState = {
 }
 
 export const createTask:any = createAsyncThunk(
-    "toDo/createTask",
+    "todo/createTask",
     async (task, { rejectWithValue }) => {
       try {
-        debugger
-        const response = await axios.post(`${baseURL}/api/todo/create`, task);
-        return response.data;
+       //debugger
+        const response:any = await axios.post(`${baseURL}/api/todo/create`, task);
+        return response.data.response;
       } catch (error) {
         console.log(error)
         return rejectWithValue(error);
@@ -37,7 +37,7 @@ export const createTask:any = createAsyncThunk(
     "todo/getTasks",
     async () => {
       try {
-        debugger
+       // debugger
         const response = await axios.get(`${baseURL}/api/todos/`);
         return response.data;
       } catch (error) {
@@ -45,9 +45,40 @@ export const createTask:any = createAsyncThunk(
       }
     }
   );
+  export const deleteTask:any = createAsyncThunk(
+    "todo/deleteTask",
+    async (id:any,{ rejectWithValue }) => {
+      console.log(id)
+      try {
+       //debugger
+        const response = await axios.delete(`${baseURL}/api/todo/${id}/delete`);
+        return response.data;
+        
+      } catch (error) {
+        // debugger
+        return rejectWithValue(error);
+      }
+    }
+  );
+  export const editTask:any =createAsyncThunk(
+   "todo/editTask",
+  async (task:any,{rejectWithValue}) => {
+    try{
+      // debugger
+   const res = await axios.patch(`${baseURL}/api/todo/${task._id}/update`,task)
+  return res.data;
+      
+    }catch(error){
+      return rejectWithValue(error);
+    }
+    
+  }
+
+
+  )
 
 export const toDoSlider = createSlice({
-    name: 'toDo',
+    name: 'todo',
     initialState,
     reducers: {
     },
@@ -61,7 +92,7 @@ export const toDoSlider = createSlice({
         [createTask.fulfilled]: (state, action) => {
           return {
             ...state,
-            tasks: [...state.todoList, action.payload],
+            todoList: [...state.todoList, action.payload],
             responseStatus: "success",
             responseMessage: "Task created successfully",
           }
@@ -72,11 +103,53 @@ export const toDoSlider = createSlice({
             responseStatus: "rejected",
             responseMessage: action.payload,
           }
+        },
+        [getTasks.pending]: (state, action) => {
+          return {
+            ...state,
+            responseStatus: "pending",
+          }
+        },
+        [getTasks.fulfilled]: (state, action) => {
+          return {
+            ...state,
+            todoList: action.payload,
+            responseStatus: "success",
+          }
+        },
+        [getTasks.rejected]: (state, action) => {
+          return {
+            ...state,
+            responseStatus: "rejected",
+            responseMessage: action.payload,
+          }
+        },
+        [deleteTask.pending]: (state, action) => {
+          return {
+            ...state,
+            responseStatus: "pending",
+          }
+        },
+        [deleteTask.fulfilled]: (state, action) => {
+          // debugger
+          return {
+            ...state,
+            todoList: action.payload,
+            responseStatus: "success",
+          }
+        },
+        [deleteTask.rejected]: (state, action) => {
+          return {
+            ...state,
+            responseStatus: "rejected",
+            responseMessage: action.payload,
+          }
         }
+      },
+     
 
 
-
-    }
+    
 })
 // Action creators are generated for each case reducer function
 // export const { addToDo, removeTodo, editTodo } = toDoSlider.actions

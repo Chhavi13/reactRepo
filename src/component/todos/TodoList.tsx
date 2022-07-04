@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector,useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -11,18 +11,31 @@ import IconButton from '@mui/material/IconButton';
 // import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import { Box } from '@mui/system';
 
-import { FaEdit} from 'react-icons/fa';
-import { AiFillDelete} from 'react-icons/ai';
-import { getTasks } from '../../redux/features/todo/TodoSlice';
+import { FaEdit } from 'react-icons/fa';
+import { AiFillDelete } from 'react-icons/ai';
+import { deleteTask, editTask, getTasks } from '../../redux/features/todo/TodoSlice';
+import AddTodo from './AddTodo';
 
 const TodoList = () => {
   const [checked, setChecked] = React.useState([0]);
+ 
   const todos = useSelector((state: any) => state.todo.todoList);
-  const dispatch =useDispatch()
-  
+  const [data, setData] = useState<any>([])
+  const [toggleSubmit, setToggleSubmit] = useState<any>(true)
+
+
+  const dispatch = useDispatch()
+
   useEffect(() => {
-    dispatch(getTasks());
-  }, [dispatch]);
+    //  debugger
+    if ((!todos || !todos.length)) {
+      dispatch(getTasks());
+
+    } else {
+      setData(todos)
+    }
+
+  }, [todos]);
   // debugger
   // console.log(todos)
 
@@ -39,32 +52,51 @@ const TodoList = () => {
 
     setChecked(newChecked);
   };
-// const editTodos =(id:number)=>{
-//  dispatch(editTodo(id))
-// }
+  const deleteTodos = async (id: any) => {
+    const newData: any = data.filter((item: any) => {
+      // console.log(item)
+      return item._id !== id
+    })
+    setData(newData)
+
+    const res: any = await dispatch(deleteTask(id))
+  }
+
+
+  const editTodos = async (value: any) => {
+    console.log(value)
+
+    // const res :any= await dispatch(editTask(value))
+  setData(value)
+
+
+
+  }
 
 
   return (
+
     <>
       <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'inherite', paddingLeft: 50 }}>
-        {todos.map((value: any) => {
-          const labelId = `checkbox-list-label-${value.id}`;
+        {data.map((value: any) => {
+
+          const labelId = `checkbox-list-label-${value._id}`;
 
           return (
             <ListItem
-              key={value.id}
+              key={value._id}
               secondaryAction={
                 <Box sx={{ paddingLeft: 10, color: "green" }}>
-                  <IconButton edge="end" aria-label="edit">
-                  {/* onClick={()=>editTodos(value.id)} */}
+                  <IconButton edge="end" aria-label="edit"  onClick={()=>editTodos(value)} >
                   
+
                     <FaEdit />
                   </IconButton>
-                  <IconButton edge="end" aria-label="delete" >
-                  {/* onClick={() => dispatch(removeTodo(value.id))} */}
-                    
-                <AiFillDelete />
-                    </IconButton>
+                  <IconButton edge="end" aria-label="delete" onClick={() => deleteTodos(value._id)}>
+
+
+                    <AiFillDelete />
+                  </IconButton>
                 </Box>
 
 
@@ -81,19 +113,39 @@ const TodoList = () => {
                     inputProps={{ 'aria-labelledby': labelId }}
                   />
                 </ListItemIcon>
-                <ListItemText id={labelId} primary={` ${value.content }`} />
+                <ListItemText id={labelId} primary={` ${value.content}`} />
               </ListItemButton>
             </ListItem>
           );
         })}
       </List>
 
-
+       <AddTodo />
     </>
   )
 }
 
 export default TodoList
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // {
@@ -105,3 +157,10 @@ export default TodoList
 
 //       </div>))
 // }
+
+
+   // const newData:any  = data.filter((item:any) => {
+    //   // console.log(item)
+    //   return item._id !== res.payload.response._id
+    // })
+    // setData(newData)

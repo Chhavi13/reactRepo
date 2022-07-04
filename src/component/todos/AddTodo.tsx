@@ -35,7 +35,8 @@ const AddTodo = () => {
     return (
         <>
             <Container maxWidth="xl" className="sm py-4">
-                <Box sx={{ bgcolor: 'cornsilk', height: '100vh', paddingTop: 10 }} >
+                <Box sx={{ bgcolor: 'cornsilk'
+                , paddingTop: 10 }} >
                     <Box
                         component="form"
                         sx={{
@@ -63,7 +64,7 @@ const AddTodo = () => {
                         }} />
                       
                     </Box>
-                    <TodoList />
+                    <TodoList  />
                 </Box>
 
             </Container>

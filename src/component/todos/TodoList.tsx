@@ -7,21 +7,20 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
-// import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutlined';
-// import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import { Box } from '@mui/system';
-
 import { FaEdit } from 'react-icons/fa';
 import { AiFillDelete } from 'react-icons/ai';
-import { deleteTask, editTask, getTasks } from '../../redux/features/todo/TodoSlice';
-import AddTodo from './AddTodo';
+import { deleteTask, getTasks } from '../../redux/features/todo/TodoSlice';
 
-const TodoList = () => {
+
+
+const TodoList = (props: any) => {
   const [checked, setChecked] = React.useState([0]);
- 
+
   const todos = useSelector((state: any) => state.todo.todoList);
+
   const [data, setData] = useState<any>([])
-  const [toggleSubmit, setToggleSubmit] = useState<any>(true)
+
 
 
   const dispatch = useDispatch()
@@ -36,9 +35,7 @@ const TodoList = () => {
     }
 
   }, [todos]);
-  // debugger
-  // console.log(todos)
-
+ 
   const handleToggle = (value: number) => () => {
 
     const currentIndex = checked.indexOf(value);
@@ -64,13 +61,7 @@ const TodoList = () => {
 
 
   const editTodos = async (value: any) => {
-    console.log(value)
-
-    // const res :any= await dispatch(editTask(value))
-  setData(value)
-
-
-
+    props.passData(value)
   }
 
 
@@ -87,14 +78,10 @@ const TodoList = () => {
               key={value._id}
               secondaryAction={
                 <Box sx={{ paddingLeft: 10, color: "green" }}>
-                  <IconButton edge="end" aria-label="edit"  onClick={()=>editTodos(value)} >
-                  
-
+                  <IconButton edge="end" aria-label="edit" onClick={() => editTodos(value)} >
                     <FaEdit />
                   </IconButton>
                   <IconButton edge="end" aria-label="delete" onClick={() => deleteTodos(value._id)}>
-
-
                     <AiFillDelete />
                   </IconButton>
                 </Box>
@@ -120,7 +107,7 @@ const TodoList = () => {
         })}
       </List>
 
-       <AddTodo />
+
     </>
   )
 }

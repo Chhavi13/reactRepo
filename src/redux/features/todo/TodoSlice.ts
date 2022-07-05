@@ -56,6 +56,7 @@ export const createTask:any = createAsyncThunk(
         
       } catch (error) {
         // debugger
+        
         return rejectWithValue(error);
       }
     }
@@ -69,12 +70,11 @@ export const createTask:any = createAsyncThunk(
   return res.data;
       
     }catch(error){
+      console.log(error)
       return rejectWithValue(error);
     }
     
   }
-
-
   )
 
 export const toDoSlider = createSlice({
@@ -144,7 +144,30 @@ export const toDoSlider = createSlice({
             responseStatus: "rejected",
             responseMessage: action.payload,
           }
+        },
+        [editTask.pending]: (state, action) => {
+          return {
+            ...state,
+            responseStatus: "pending",
+          }
+        },
+
+        [editTask.fulfilled]: (state, action) => {
+          
+          return {
+            ...state,
+            todoList: action.payload,
+            responseStatus: "success",
+          }
+        },
+        [editTask.rejected]: (state, action) => {
+          return {
+            ...state,
+            responseStatus: "rejected",
+            responseMessage: action.payload,
+          }
         }
+
       },
      
 

@@ -1,0 +1,74 @@
+.login-pageform.signup_3 {
+  background-color: #DDE1F0;
+}
+.sign3_left_img1 {
+  position: absolute;
+  left: 30px;
+  right: auto;
+  bottom: 10%;
+}
+.sign3_right_img2 {
+  position: absolute;
+  right: 5%;
+  left: auto;
+  top: 12%;
+}
+.signup_3 .third-screen {
+  font-family: Geomanist;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 25px;
+  text-align: center;
+  color: #1f1e2c;
+}
+.vip_code {
+  position: relative;
+}
+.vip_code p {
+  font-family: Geomanist;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #7b798e;
+}
+.vip_code p:before {
+  border: 1px solid #e6e5eb;
+  position: absolute;
+  content: "";
+  width: 72px;
+  top: 10px;
+  right: auto;
+  left: 10px;
+}
+.vip_code p:after {
+  border: 1px solid #e6e5eb;
+  position: absolute;
+  content: "";
+  width: 72px;
+  top: 10px;
+  left: auto;
+  right: 10px;
+}
+@media screen and (max-width: 767px) {
+  .signup_3 {
+    background: #fff;
+  }
+  .vip_code p:before {
+    width: 57px;
+    top: 10px;
+    left: 0px;
+  }
+  .vip_code p:after {
+    width: 57px;
+    top: 10px;
+    right: 0;
+  }
+}
+
+.disable_btn{
+  opacity: 0.5;
+}

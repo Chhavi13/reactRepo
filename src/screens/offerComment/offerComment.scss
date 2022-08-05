@@ -1,0 +1,284 @@
+@import "../../sass/variable.scss";
+
+.para_big_bottom p{
+    padding: 18px 5px;
+    position: relative;
+    width: 100%;
+    font-family: $fontFamily;
+    text-transform: capitalize;
+    font-size: 14px;
+    line-height: 20px;
+    color: #7B798E;
+    margin:0px;
+}
+.para_big_bottom p span{
+    position: absolute;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #7B798E;
+    right: 10px;
+    top: auto;
+    bottom: auto;
+    cursor: pointer;
+}
+.comment_follow_div{
+    padding: 10px 0px;
+}
+.count_follow .MuiAppBar-colorPrimary {
+    background-color: transparent;
+    box-shadow: none;
+    padding:0px;
+    border-bottom: 1px solid #E6E5EB;
+}
+.count_follow .MuiTab-textColorInherit{
+    padding:0px;
+}
+.count_follow .MuiTab-wrapper{
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 13px;
+    color: #000000;
+    width: 100%;
+    padding: 0px;
+    display: block;
+}
+.count_follow .MuiTabs-flexContainer {
+    display: block;
+    width: 100%;
+}
+.count_follow .MuiTab-root{
+    width:50%;
+    min-height: auto;
+}
+.count_follow .second_tab .MuiTab-wrapper{
+    line-height: 45px;
+}
+.count_follow .second_tab .MuiTab-wrapper img{
+    float: right;
+}
+.count_follow .MuiTabs-indicator{
+    display: none;
+}
+.count_follow .tab_data_section h3{
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    color: #3D3B52;
+}
+
+.count_follow .tab_data_section p{
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #7B798E;
+}
+.count_follow .MuiBox-root {
+    padding:20px 10px;
+}
+.count_follow .follow_img{
+    width: 100%;
+    height: 233px;
+    overflow: hidden;
+}
+.count_follow .follow_img img{
+    width:100%;
+    height:100%;
+}
+.count_follow .MuiInput-input{
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 19px;
+    color: #7B798E;
+}
+.count_follow .MuiInput-underline:before{
+    display: none;
+}
+.count_follow .MuiInput-root{
+    width:100%;
+}
+
+.count_follow .MuiInputBase-input:focus{
+    border:0px;
+}
+.count_follow .form_div_follow{
+    position: relative;
+}
+.count_follow .send_btn{
+    position: absolute;
+    right:0px;
+    top:-3px;
+    cursor: pointer;
+}
+.tab_comment_div{
+    padding-bottom: 10px;
+}
+.count_follow #simple-tabpanel-1 .MuiBox-root {
+    padding:20px 0px 0px;
+}
+.tab_comment_div h3{
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 13px;
+    color: #3D3B52;
+}
+.comment_reply_section{
+    padding:10px 5px;
+}
+.comment_border{
+    border-bottom: 1px solid #E6E5EB;
+}
+.comment_reply_section .user-img{
+    height:40px;
+}
+.comment_reply_section .user-img img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+}
+.comment_msg_box{
+    background: #F1EFF7;
+    border-radius: 0px 10px 10px 10px;
+    padding:10px 14px;
+}
+.comment_msg_box h5{
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #000000;
+    margin-bottom: 5px;
+}
+.user_profile{
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: capitalize;
+    color: #7B798E;
+}
+.user_reply{
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #1F1E2C;
+}
+.text_user_right .dropdown_user{
+    width: 15px;
+}
+.text_user_right .dropdown_user .btn, .text_user_right .dropdown_user .btn:focus{
+    background-color: transparent;
+    border:none;
+    box-shadow: none;
+}
+.dropdown-toggle::after{
+    border:none !important;
+    background-image: url("../../assets/images/horizontal.png");
+    width: 20px;
+    height: 20px;
+}
+.text_user_right p{
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 13px;
+    text-transform: capitalize;
+    color: #7B798E;
+    margin: 0px;
+    vertical-align: super;
+}
+.like_reply_div{
+    padding:10px 5px 0px;
+}
+.like_reply_div p{
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #3D3B52;
+}
+
+.reply_div{
+    position: relative;
+}
+.reply_div:before{
+    position: absolute;
+    content:"";
+    border-left: 1px solid #E6E5EB;
+    width: 15px;
+    height: 14px;
+    left: 10px;
+    top: 2px;
+}
+.reply_div .reply_first{
+    padding-left: 17px;
+}
+.reply_div .reply_two{
+    position: relative;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #3D3B52;
+    padding-left: 17px;
+}
+.reply_div .reply_two:before{
+    position: absolute;
+    content: "";
+    background: #3D3B52;
+    width: 2px;
+    height: 2px;
+    left: 8px;
+    top: 8px;
+}
+.more_reply{
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #2F80ED;
+    padding-left: 5px;
+    cursor: pointer;
+}
+.text_user_right {
+    float: right;
+    overflow: hidden;
+    padding-right: 10px;
+}
+.count_follow .media_textarea .MuiInput-root {
+    display: block;
+}
+.count_follow .media_textarea .MuiInput-input{
+    display: block;
+    width: 100%;
+    padding: 8px;
+}

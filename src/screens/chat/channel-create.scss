@@ -1,0 +1,100 @@
+.channel-container {
+  display: flex;
+  margin: 5%;
+}
+.channel-name {
+  font-family: Geomanist;
+  margin: 2%;
+  font-style: normal;
+  font-size: large;
+}
+.channel-container input {
+  border: 1px solid #1f1e2c;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 18%;
+  color: #7b798e;
+  height: 50px;
+}
+.channel_btn {
+  background: #1f1e2c;
+  border-radius: 100px;
+  line-height: 46px;
+  color: #fff;
+  width: 70%;
+  border: 0;
+  margin-left: 15%;
+}
+
+.channel_header {
+  padding: 15px;
+  border-bottom: 1px solid #7b798e;
+  position: relative;
+}
+
+.create-channel-modal h1 {
+  font-family: Geomanist medium;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000000;
+}
+.channel_body {
+  padding: 0px;
+  position: relative;
+}
+.channel_header img {
+  position: absolute;
+  right: 14px;
+  top: 12px;
+}
+.create-channel-modal .channel_body label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: #7b798e;
+  // font-family: Geomanist;
+  // font-style: normal;
+  // font-weight: normal;
+  // font-size: 14px;
+  // line-height: 20px;
+  // text-transform: capitalize;
+  // color: #000000;
+}
+.create-channel-modal .channel_body form {
+  padding: 15px;
+}
+.create-channel-modal .channel_body .MuiFormControl-root.MuiTextField-root {
+  width: 100%;
+  //   border-bottom: 1px solid #e6e5eb;
+}
+.create-channel-modal .channel_body .modal_btn {
+  background: #2f80ed;
+  border-radius: 10px;
+  font-family: Geomanist;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  color: #ffffff;
+  height: 50px;
+}
+// for validation
+.create-channel-modal .channel_body .validate_btn{
+  opacity: 0.5;
+}
+.MuiDrawer-paper-bottom-bar .MuiPaper-root {
+  height: auto !important;
+}

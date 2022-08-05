@@ -1,0 +1,9 @@
+.yoga_para.event_para span.read-more-less{
+    position: relative;
+    display: inline-block;
+    color: #7B798E;
+    justify-content: flex-end;
+    background: #fff;
+    width: 80px;
+    padding-left: 10px;
+}

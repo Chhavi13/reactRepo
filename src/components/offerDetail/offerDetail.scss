@@ -1,0 +1,677 @@
+@import "../../sass/variable.scss";
+.hk-price {
+    font-weight: bold;
+}
+
+.date-pic-icon {
+    width: 18px !important;
+    margin-top: -4px !important;
+}
+
+.location-pin {
+    width: 18px !important;
+    margin-top: -4px !important;
+}
+
+.date-time {
+    margin-left: 12px;
+}
+
+.location-date-time {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 0px 12px;
+    line-height: normal;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #7B798E;
+    display: flex;
+}
+
+.location-date-time .location {
+    display: flex;
+}
+
+.location-date-time svg {
+    margin-right: 5px;
+}
+
+.mobilemaincontainer {
+    background: #ccc;
+    height: 100% !important;
+}
+
+.mobile_container {
+    /*width: 375px;
+      background: #fff;
+      margin: 0 auto;*/
+    /* height: 100vh; */
+}
+
+.mobheader {
+    /* border: 1px solid #E0E0E0; */
+    padding: 19px 19px 6px 19px;
+}
+
+img.headerimg {
+    width: 32px;
+    height: 32px;
+    background: #ccc;
+    border-radius: 50px;
+    z-index: 9999;
+    border: 2px solid #fff;
+}
+
+.mobsecondimg {
+    margin-left: -10px;
+}
+
+.mobsearch {
+    margin-top: 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.mobsearch p {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 0 !important;
+}
+
+.mobsearchcontainer {
+    padding: 0 19px 10px 19px;
+    height: 66px;
+}
+
+.mobsearchimg {
+    float: right;
+    cursor: pointer;
+}
+
+.mobsearchimg img {
+    margin-top: 8px;
+    width: 24px;
+}
+
+.mobsearch p span {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+    text-transform: capitalize;
+    /* dark blue */
+    color: #1f1e2c;
+}
+
+.yogatext {
+    font-family: $fontFamily;
+    font-size: 11px;
+    line-height: 12px;
+    text-transform: capitalize;
+    color: #7B798E;
+}
+
+.sbrinaprofileimg,
+.sbrinacontainer,
+.yoga_trainer {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.bigimgshowcontainer {
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    margin-bottom: 0px;
+    margin-top: 6px;
+}
+
+.bigimgshowcontainer svg {
+    width: 24px;
+    height: 24px;
+}
+
+.sbrinacontainer p {
+    /* margin-bottom: 0 !important; */
+}
+
+.sbrina_container {
+    // padding: 15px;
+    padding: 0.5rem !important;
+}
+
+img.sbrinaprofileimg {
+    width: 35px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.trainer_img {
+    width: 100%;
+}
+
+.booknowcontainer {
+    margin-top: -7px;
+    background: #2f80ed;
+    padding: 8px 15px;
+    color: #fff;
+    margin-bottom: 0 !important;
+    cursor: pointer;
+}
+
+.booknowcontainer p {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+
+.bookarrowimg {
+    float: right;
+    margin-top: 3px;
+}
+
+.dolar_text {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 10px!important;
+    vertical-align: top;
+    text-transform: uppercase;
+    color: #1f1e2c;
+    margin: 0 2px;
+}
+
+.booknowhkcontainer {
+    margin-top: 0px;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #1F1E2C;
+    padding: 24px 16px;
+    margin-bottom: 0!important;
+}
+
+.remainingtext {
+    font-family: $fontFamily !important;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: right;
+    color: #eb5757;
+    display: inline-block;
+    float: right;
+}
+
+.small_group {
+    font-family: $fontFamily;
+    font-size: 14px;
+    line-height: 18px;
+    color: #1f1e2c;
+    padding: 0 15px;
+    margin-bottom: 0px !important;
+}
+
+.yoga_session {
+    /* padding: 0 16px; */
+    margin-top: -2px;
+    border-bottom: 1px solid #e6e5eb;
+}
+
+.yoga_session p span {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #7b798e;
+    padding: 0 20px;
+    position: relative;
+}
+
+.yoga_session p span:first-child {
+    padding-left: 0 !important;
+}
+
+.yoga_session p span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    width: 1px;
+    height: 18px;
+    top: 0;
+    bottom: 0;
+    background: #e6e5eb;
+}
+
+.tamer_park:after {
+    background: none !important;
+}
+
+.tamar_text {
+    padding: 0 16px;
+}
+
+.footer_container {
+    padding: 21px 25px 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 375px;
+    bottom: 0;
+    background: #fff;
+}
+
+.footer_container p {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.footer_container p img {
+    width: 30px;
+}
+
+.footer_container span {
+    width: 16px;
+    height: 16px;
+    color: #fff;
+    font-size: 12px;
+    background: #eb5757;
+    border-radius: 50px;
+    position: absolute;
+    text-align: center;
+    right: 0;
+}
+
+.available-items {
+    overflow-x: hidden;
+    overflow-y: auto !important;
+    height: 490px;
+}
+
+.available-items::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(202, 92, 92, 0.3) !important;
+    background-color: #f5f5f5 !important;
+    border-radius: 10px !important;
+}
+
+.available-items::-webkit-scrollbar {
+    width: 5px !important;
+    background-color: #f5f5f5 !important;
+}
+
+.available-items::-webkit-scrollbar-thumb {
+    border-radius: 5px !important;
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.72, rgb(198, 198, 199)), color-stop(0.72, rgb(198, 198, 199)), color-stop(0.72, rgb(198, 198, 199))) !important;
+}
+
+.yogatrainercontainer:last-child {
+    margin-bottom: 77px;
+}
+
+.yoga_para {
+    font-family: $fontFamily;
+    position: relative!important;
+    margin: 0px;
+    padding: 16px 0px!important;
+    line-height: 16px!important;
+}
+
+.yoga_para.text {
+    color: #1F1E2C;
+    display: block;
+    font-size: 14px;
+    word-break: break-all;
+    /* width:calc(100% - 70px); */
+}
+
+.yoga_para span:after {
+    display: none;
+}
+
+.yoga_session h5 {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    text-transform: capitalize;
+    color: #1f1e2c;
+}
+
+.tip_rate p {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #1f1e2c;
+}
+
+.clock_icon1{
+    margin-top:-1px;
+}
+
+
+/*tabs*/
+
+.mobile_container.dash_tabs .navdash.nav-tabs {
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.mobile_container.dash_tabs .navdash.nav-tabs .nav-item {
+    width: 50%;
+    margin: 0px;
+    padding: 0px !important;
+}
+
+.mobile_container.dash_tabs .navdash.nav-tabs .nav-link {
+    background: #fff !important;
+    font-family: $fontFamily;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-size: 12px !important;
+    line-height: 25px !important;
+    text-transform: capitalize;
+    color: #7b798e !important;
+    border-radius: 0px !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.mobile_container.dash_tabs .navdash.nav-tabs .nav-link.active {
+    border-bottom: 2px solid #1f1e2c !important;
+    color: #1f1e2c !important;
+}
+
+.lock_image {
+    cursor: pointer;
+}
+
+.lockimg_section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    padding-top: 28%;
+}
+
+.lockimg_section img {
+    margin: 0 auto;
+}
+
+.slick-initialized .slick-slide {
+    position: relative;
+}
+
+.sabrinamainscroll .yogatrainercontainer .datecontainerbotfix {
+    padding-bottom: 24px;
+}
+
+.sabrinamainscroll .yogatrainercontainer .datecontainerbotfix.fixbottomgap {
+    padding-bottom: 8px;
+}
+
+.sabrinamainscroll .yogatrainercontainer .datecontainerbotfix .location-date-time {
+    padding-top: 8px!important;
+    padding-bottom: 0px!important;
+}
+
+.sabrinamainscroll .yogatrainercontainer .datecontainerbotfix .location-date-time:first-child {
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+}
+
+.footer_container {
+    display: flex;
+}
+
+.footer_container a:hover {
+    color: #000!important;
+}
+
+
+/*new*/
+.yogatrainercontainer.new_dash1{
+    border-bottom: 10px solid #c6c6c7;
+    padding-bottom: 0;
+    // margin-bottom: 10px;
+}
+
+.sbrinatext_name {
+    cursor: pointer;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #1F1E2C;
+    margin-top: 8px;
+    width: 55%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+}
+.new_dash1 .yoga_trainer{
+    width: calc(100% - 83px);
+}
+.new_dash1 .sbrinacontainer{
+    width: calc(100% - 46px);
+}
+.new_dash1 .sbrina_subscribe{
+    background: #F2994A;
+    border-radius: 100px;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    padding: 4px 9px;
+    margin-top: 5px;
+    display: inline-block;
+    vertical-align: top;
+}
+.detail_dash{
+    overflow-x: hidden;
+}
+.new_dash1 .first_section{
+    padding:0 10px;
+}
+.new_dash1 .yogatrainercontainer {
+    border-bottom: 1px solid #E6E5EB;
+    // padding-block: 10px;
+    margin-bottom: 10px;
+}
+.new_dash1 .deatil_tag{
+    // background: #27AEA6;
+    border-radius: 100px;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: inline-block;
+    padding: 4px 15px 2px;
+}
+
+.new_dash1 .days_count {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 19px;
+    text-align: right;
+    text-transform: capitalize;
+    color: #7B798E;
+    margin: 5px 0 0 0;
+}
+.new_dash1 .description_para{
+    padding: 18px 5px;
+    position: relative;
+    width: 100%;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    text-transform: capitalize;
+    color: #1F1E2C;
+    margin:0px;
+}
+.new_dash1 .description_para span{
+    position: absolute;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #7B798E;
+    right: 10px;
+    top: auto;
+    bottom: auto;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+.new_dash1 .btn_div_dash {
+    padding: 3px 0px 25px 0px;
+}
+
+.new_dash1 .detail_type_btn{
+    background: #5D5FEF;
+    border-radius: 100px;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    line-height: 20px;
+    padding: 7px 15px 7px;
+    margin-right: 5px;
+}
+.new_dash1 .stock_btn {
+    background: #FFFFFF;
+    border: 1px solid #c6c6c7;
+    box-sizing: border-box;
+    border-radius: 100px;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    text-transform: capitalize;
+    color: #000000;
+    line-height: 20px;
+    padding: 7px 15px 7px;
+}
+.new_dash1 .like_commment_section{
+    // padding: 10px 5px;
+    border-top: 1px solid #dee2e6;
+    padding: 0;
+}
+.new_dash1 .like_commment_btn {
+    // background: #FFFFFF;
+    // border: 1px solid #E6E5EB;
+    box-sizing: border-box;
+    border-radius: 15px;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 13px;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 10px 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+.new_dash1 .like_commment_btn img{
+    vertical-align: middle;
+}
+.new_dash1 .lock_btn img{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .available-items {
+        overflow-x: hidden;
+        overflow-y: auto !important;
+        height: calc(100vh - 200px);
+    }
+    /* .mobilemaincontainer {
+          height: 100vh!important;
+      } */
+}
+
+@media only screen and (max-width: 767px) {
+    .mobile_container {
+        width: 100%;
+        /* height: 100vh !important; */
+    }
+    .footer_container,
+    .remainingContainer {
+        width: 100% !important;
+    }
+    .yogatrainercontainer:last-child {
+        margin-bottom: 0;
+    }
+    .dashscroll.available-items {
+        height: calc(100vh - 240px);
+    }
+    .horizontal_box {
+        overflow-x: hidden;
+    }
+}
+
+.skelton-div {
+    padding: 5px;
+}
+
+.blur-image {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+.primary-img {
+    width: 18px;
+    height: 18px;
+}
+.secondry-tags-offer {
+    padding-top: 11px;
+}

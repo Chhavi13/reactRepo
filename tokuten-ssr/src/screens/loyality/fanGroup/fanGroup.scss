@@ -1,0 +1,87 @@
+@import "../../../sass/variable.scss";
+.plus_icon {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+}
+
+.fan_content {
+    padding: 10px 12px;
+    border-bottom: 1px solid #E6E5EB;
+}
+
+.fan_content h4 {
+    font-family: Geomanist medium;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: capitalize;
+    color: #1F1E2C;
+    margin: 0px;
+    padding: 7px 0px 0px 7px;
+}
+
+.fan_content p {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #1F1E2C;
+    margin: 0px;
+    padding-top: 3px;
+}
+
+.fan_image {
+    position: relative;
+    margin-top: -5px;
+    overflow: hidden;
+}
+
+.fan_image img {
+    position: absolute;
+    height: 33px;
+    width: 33px;
+    left: 0px;
+    padding: 2px;
+    border-radius: 100px;
+    overflow: hidden;
+    object-fit: cover;
+    background-color: #fff;
+}
+
+.fan_image img:nth-child(1) {
+    z-index: 99;
+}
+
+.fan_image img:nth-child(2) {
+    left: 20px;
+    z-index: 9;
+}
+
+.fan_image img:nth-child(3) {
+    left: 40px;
+    top: 1px;
+}
+
+.fan_image .css-1ytufz-MuiAvatarGroup-root .MuiAvatar-root {
+    height: 33px;
+    width: 33px;
+    font-size: 14px;
+}
+
+/**************** Group list css start ****************/
+.group-list-icon {
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+/*************** Group list css end *****************/
+
+.avtar Avatar{
+    height: 30px!important;
+    width: 30px!important;
+}

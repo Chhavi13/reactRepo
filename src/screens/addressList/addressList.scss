@@ -1,0 +1,142 @@
+@import "../../sass/variable.scss";
+.header_address {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.header_address h1 {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #1F1E2C;
+}
+
+.address_section h5 {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 15px;
+}
+
+.search_section {
+    background: #FFFFFF;
+    border-top: 1px solid #E6E8ED;
+    border-bottom: 1px solid #E6E8ED;
+    box-sizing: border-box;
+    border-radius: 0px;
+    padding: 10px;
+    display: block;
+    width: 100%;
+}
+
+.search_section .input-group-text {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0px 4px;
+}
+
+.search_section input,
+.search_section input:focus {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 7px 5px;
+    height: auto;
+}
+
+.search_section input::-webkit-input-placeholder {
+    color: #C6C8CC;
+}
+
+.address_box {
+    background: #FFFFFF;
+    border: 1px solid #E6E8ED;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 20px 15px;
+}
+
+.address_box h6 {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.address_box p {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 171.43%;
+    color: #000000;
+    margin: 0px;
+}
+
+.btn_group_address .btn_edit1,
+.btn_group_address .btn_remove1 {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 50%;
+    padding: 15px;
+    background: #FFFFFF;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+}
+
+.btn_group_address .btn_edit1 {
+    color: #1F1E2C;
+}
+
+.btn_group_address .btn_remove1 {
+    color: #7B798E;
+}
+
+.address_main {
+    padding-bottom: 80px;
+    display: block;
+}
+
+.address_main .addnew_btn,
+.address_main .addnew_btn:hover {
+    display: block;
+    width: 100%;
+    background: #1F1E2C;
+    border-radius: 10px;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+.add-address-fab {
+    display: flex;
+    justify-content: flex-end;
+}

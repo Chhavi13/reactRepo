@@ -1,0 +1,44 @@
+
+@import "../../sass/variable.scss";
+
+.agreement_content h1{
+    font-family: $fontFamily;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    color: #000;
+}
+.agreement_content h2{
+    font-family: $fontFamily;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000;
+}
+.agreement_content p{
+    font-family: $fontFamily;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: #000;  
+    margin: 5px 0px 10px 0px;  
+}
+.agreement_content .bold_font{
+    font-weight: bold;
+}
+.agreement_content ul li{
+    font-family: $fontFamily;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: #000;  
+    margin: 5px 0px 0px 0px;  
+    list-style-type: none;
+}
+
+@media screen and (max-width:576px){
+    .agreement_content h1{
+        font-size: 24px;
+        line-height: 34px;
+    }
+}

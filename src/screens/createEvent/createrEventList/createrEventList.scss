@@ -1,0 +1,62 @@
+.event-container{
+    min-height: 70px !important;
+    border-top: 1px solid #E6E5EB;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    padding: 0px 12px;
+}
+
+.event-name{
+    font-family: Geomanist;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #1F1E2C;
+    margin: 0px;
+    padding: 22px 0px;
+    min-height: 70px;
+}
+
+.event-time{
+    font-family: Geomanist light;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1F1E2C;
+    padding: 22px 0px;
+    text-align: center;
+}
+.time_container .nice-dates-navigation, .time_container .nice-dates-grid_container.-origin-top{
+    padding:0px 15px;
+}
+.time_container .nice-dates-week-header{
+    padding:0px 15px 20px;
+}
+.time_container .nice-dates-grid{
+    padding: 15px;
+}
+.time_container .nice-dates-day{
+    height:49px !important;
+}
+.time_container .nice-dates-navigation .nice-dates-navigation_current{
+    font-family: Geomanist;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    color: #151522;
+}
+.calendar_container p{
+    font-family: Geomanist;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    color: #151522;
+    margin:6px 0px;
+}
+.event-container .event_right{
+    border-left: 1px solid #E6E5EB;
+}

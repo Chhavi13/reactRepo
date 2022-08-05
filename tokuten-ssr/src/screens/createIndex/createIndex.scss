@@ -1,0 +1,35 @@
+@import "../../sass/variable.scss";
+
+.sabrinamainscroll p{
+    font-family: $fontFamily;
+}
+.sabrinamainscroll span{
+    font-family: $fontFamily;
+}
+.sabrinamainscroll .row{
+    flex-wrap: unset;
+}
+.stoks_data svg.MuiSvgIcon-root.MuiChip-deleteIcon{
+    margin-top: -30px;
+}
+.rebalance_frequency{
+}
+.rebalance_frequency .MuiSelect-outlined.MuiSelect-outlined{
+    padding-left: 10px;
+}
+
+.rebalance_frequency .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-formControl{
+    height: 35px;
+}
+
+.index_name .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-formControl{
+    height: 30px;
+}
+
+.about_index .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-formControl.MuiInputBase-multiline.MuiOutlinedInput-multiline{
+    padding: 10px;
+}
+
+.about_index.MuiFormControl-root.MuiTextField-root{
+    width: 100%;
+}

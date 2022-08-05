@@ -1,0 +1,46 @@
+@import "../../sass/variable.scss";
+
+
+.portfolio-container {
+    padding: 15px;
+}
+.portfolio-container h4{
+    font-family: $fontFamily;
+}
+.portfolio-container .MuiButton-label{
+    font-family: $fontFamily;
+}
+
+.high-low-val {
+    font-family: $fontFamily;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btc-val {
+    font-family: $fontFamily;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.btc-val-full {
+    font-family: $fontFamily;
+    font-size: 22px;
+}
+.positive.MuiButton-containedPrimary {
+    background-color: #27282a;
+}
+// .MuiButton-containedPrimary:hover
+.positive.MuiButton-containedPrimary:hover {
+    background-color: #27282a;
+}
+.negitive.MuiButton-containedPrimary {
+    background-color: #c1c1c1;
+}
+.negitive.MuiButton-containedPrimary:hover {
+    background-color: #27282a;
+}
+
+.currency-div {
+    margin: 15px 0 15px 0px;
+}

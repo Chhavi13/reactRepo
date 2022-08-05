@@ -1,0 +1,24 @@
+.mobsearchinput{
+    border: none!important;
+    display: inline-block!important;
+    width: 94%!important;
+}
+.searchcontainer{
+    width: 92%!important;
+    display: inline-block!important;
+}
+.mobsearchinput:focus{
+    box-shadow: none!important;
+}
+
+.overlapimg{
+    display: none!important;
+}
+
+.mobsearchcontainer{
+    padding-bottom: 0 !important;
+}
+
+.searchcontainer img{
+    display: inline-block!important;
+}

@@ -1,0 +1,17 @@
+.chitagchips.active {
+  background: #2f80ed;
+  border: 1px solid #e6e5eb;
+}
+.chips.active.MuiChip-clickable:focus {
+  background: #2f80ed;
+}
+.chips.MuiChip-clickable:focus {
+  background-color: #fff;
+}
+
+.chips.chip_avatar {
+  text-transform: uppercase;
+}
+.asset-tag-chips {
+  margin-bottom: 5px;
+}

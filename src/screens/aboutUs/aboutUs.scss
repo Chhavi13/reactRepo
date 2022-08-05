@@ -1,0 +1,165 @@
+@import "../../sass/variable.scss";
+
+.about_header.header_full {
+  position: fixed;
+  top: 0px;
+  padding: 23px 0px 0px;
+}
+.about_content {
+  position: relative;
+  margin-top: 10%;
+}
+
+.about_content img {
+  max-width: 100%;
+}
+
+.about_content h1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 20px;
+  color: #000000;
+}
+.about_content p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 35px;
+  color: #7b798e;
+}
+.about_content h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 20px;
+}
+.mission_img img {
+  max-width: 100%;
+}
+.mission_bg {
+  position: relative;
+  background-image: url("../../../src/assets/images/about/mission.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+}
+.about_space {
+  margin-top: 100px;
+  height: 80vh;
+}
+.about_member h2 {
+  color: #2f80ed;
+}
+.about_builder h2 {
+  color: #f2994a;
+}
+.about_asset h2 {
+  color: #27ae60;
+  line-height: 55px;
+}
+.about_content .faq_accordion .MuiAccordionSummary-content p {
+  position: relative;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 20px;
+  color: #000000;
+  padding:0px 0px 0px 30px;
+}
+.about_content .faq_accordion .MuiAccordionSummary-content p:before{
+  position: absolute;
+  content: "";
+  background-image: url("../../assets/images/add.png");
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
+  left: 0px;
+  background-position: center;
+  top: 1px;
+}
+.about_content .faq_accordion .MuiAccordionSummary-content.Mui-expanded p {
+  color: #ff7e65;
+}
+.about_content .faq_accordion .MuiAccordionDetails-root p {
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  color: #828e99;
+}
+.faq_accordion .MuiAccordion-root {
+  border: none;
+  box-shadow: none;
+  border-top: 1px solid #c2c7cc;
+  padding: 10px 0px;
+}
+.faq_accordion .MuiAccordionSummary-root {
+  background-color: transparent;
+  border: none;
+}
+@media screen and (max-width: 767px) {
+  .about_header.header_full {
+    height: 75px;
+  }
+  .about_mission {
+    height: 75vh;
+    margin-top: 100px;
+  }
+  .mission_bg {
+    background-image: none;
+    height: auto;
+  }
+  .about_content h1 {
+    font-size: 30px;
+    line-height: 20px;
+  }
+  .about_content p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .about_content h2 {
+    font-size: 30px;
+    line-height: 20px;
+  }
+  .about_space {
+    margin-top: 50px;
+  }
+  .about_asset h2 {
+    line-height: 35px;
+  }
+  .about_content .faq_accordion .MuiAccordionSummary-content p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .about_content .faq_accordion .MuiAccordionDetails-root p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .faq_accordion .MuiAccordion-root{
+    padding:0px;
+  }
+  .faq_accordion .MuiAccordionDetails-root{
+    padding:0px 16px 10px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1170px !important;
+  }
+  .about_space {
+    margin-top: 50px;
+    height: 100vh;
+  }
+}

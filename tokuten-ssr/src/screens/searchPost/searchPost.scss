@@ -1,0 +1,50 @@
+@import "../../sass/variable.scss";
+
+.search-data .MuiOutlinedInput-adornedEnd {
+    background-color: rgba(0, 0, 0, 0.11);
+}
+
+.search-arrow {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.trending-ticker {
+    padding: 15px 15px;
+    border-bottom: 10px solid #c6c6c7;
+}
+
+.main-container {
+    padding: 15px 15px;
+}
+.high {
+    color: green;
+}
+.low {
+    color: red;
+}
+
+.main-container h3 {
+    font-family: $fontFamily;
+}
+.main-container h5{
+    font-family: $fontFamily;
+}
+.main-container p {
+    font-family: $fontFamily;
+}
+.main-container span {
+    font-family: $fontFamily;
+}
+
+.open-high-low p {
+    margin-bottom: 0;
+}
+.open-high-low .col-md-5.col-5{
+    color: #939393;
+}
+.flex-end{
+    display: flex;
+    justify-content: flex-end;
+}

@@ -1,0 +1,100 @@
+@import "../../sass/variable.scss";
+.thank_head {
+    padding: 10px 15px;
+}
+
+.thank_head h1 {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 23px;
+    text-transform: capitalize;
+    color: #1F1E2C;
+}
+
+.thank_head p {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 19px;
+    text-align: right;
+    text-transform: capitalize;
+    color: #7B798E;
+    margin-bottom: 5px;
+}
+
+.thank_content {
+    padding: 50px;
+}
+
+.thank_img {
+    position: relative;
+}
+
+.user_thank {
+    height: 250px;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.hand_thank {
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 999999;
+    height: 41px;
+    width: 41px;
+}
+
+.thank_para {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7B798E;
+}
+
+.thank_content_main {
+    padding: 10px 20px 15px;
+}
+
+.thank_id {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1F1E2C;
+}
+
+.thank_id span {
+    font-weight: 600;
+}
+
+.thank_page {
+    padding-bottom: 20px;
+}
+
+.thank_page .list_buy h5 {
+    margin: 7px 0px 7px;
+}
+
+.thank_img .slick-slider,
+.thank_img .slick-list,
+.thank_img .slick-track {
+    border-radius: 20px;
+}
+
+.thank_page .slick-dots {
+    bottom: 20px;
+}

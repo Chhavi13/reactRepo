@@ -1,0 +1,2 @@
+export { getOfferReducer } from "./getOfferReducer";
+

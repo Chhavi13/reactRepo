@@ -1,0 +1,11 @@
+.header{
+    height: 55px !important;
+    border-bottom: 1px solid #e0e0e0;
+}
+.subtitle{
+    font-size: 10px;
+}
+.next_text {
+    font-size: 14px !important;
+    line-height: 23px !important;
+}

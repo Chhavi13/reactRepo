@@ -1,0 +1,29 @@
+// .tier_box_third .list_tier_loyal.MuiListItem-gutters{
+//     padding:0px;
+// }
+.tier_box_third .list_tier_loyal .MuiListItemText-multiline span{
+    font-family: Geomanist;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: capitalize;
+    color: #1F1E2C;
+}
+.tier_box_third .list_tier_loyal .MuiListItemText-multiline p{
+    font-family: Geomanist light;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: lowercase;
+    color: #1F1E2C;
+}
+.tier_box_third .list_tier_loyal svg.group-list-icon{
+    border: 1px solid #E6E5EB;
+    border-radius: 10px;
+    color: #7B798E;
+    width:36px;
+    height: 36px;
+    padding: 6px;
+}

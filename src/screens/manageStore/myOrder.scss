@@ -1,0 +1,179 @@
+@import "../../sass/variable.scss";
+.accept-btn {
+    color: #fff !important;
+    background: #7b798e !important;
+    padding: 2px 7px !important;
+}
+
+.reject-btn {
+    color: #fff !important;
+    background: #eb5757 !important;
+    padding: 2px 7px !important;
+}
+
+.tab_scroll {
+    overflow-x: hidden;
+}
+
+.tab_scroll header {
+    background: #ffffff;
+    border: 1px solid #e6e5eb;
+}
+
+.tab_scroll .MuiAppBar-positionStatic {
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+.tab_scroll .MuiTab-textColorPrimary {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #7b798e;
+    min-width: 81px;
+    min-height: 10px;
+    height: 37px;
+    margin: 10px 0px;
+}
+
+.tab_scroll .MuiTab-textColorPrimary.Mui-selected {
+    background: #1f1e2c;
+    border-radius: 6px;
+    border: none;
+    color: #ffffff;
+}
+
+.tab_scroll .MuiTabs-indicator {
+    display: none;
+}
+
+.order_content_top {
+    border-bottom: 1px solid #e6e5eb;
+    padding-bottom: 7px;
+}
+
+.left_content h5 {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 23px;
+    text-transform: capitalize;
+    color: #1f1e2c;
+    margin: 0px;
+}
+
+.left_content p {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: capitalize;
+    color: #1f1e2c;
+    margin: 0px;
+}
+
+.left_content span {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: capitalize;
+    color: #7b798e;
+}
+
+.tab_scroll .MuiBox-root {
+    padding: 10px 10px;
+}
+
+.amount_middle {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    text-transform: capitalize;
+    color: #1f1e2c;
+}
+
+.order_main_list ul {
+    max-width: 100%;
+}
+
+.order_main_list ul li.MuiListItem-gutters {
+    padding: 2px 4px;
+    margin: 10px 0px 0px;
+}
+
+.order_main_list ul .head_spantext span.MuiListItemText-primary {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 23px;
+    text-transform: capitalize;
+    color: #1f1e2c;
+}
+
+.order_main_list .MuiTypography-root.text_paradiv {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: capitalize;
+    color: #1f1e2c;
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.text_right_amt {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: capitalize;
+    color: #1f1e2c;
+    padding: 23px 0px 0px;
+    margin: 0px;
+}
+
+.order_main_list .address_text {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: capitalize;
+    color: #7b798e;
+    display: block;
+    width: 100%;
+}
+
+.order_main_list .MuiDivider-inset {
+    margin-left: 49px;
+}
+
+@media (min-width: 600px) {
+    .tab_scroll .MuiTab-root {
+        min-width: 80px;
+    }
+}
+
+.loader-tabs {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: -webkit-translate(-50%, -50%);
+    transform: -moz-translate(-50%, -50%);
+    transform: -ms-translate(-50%, -50%);
+}

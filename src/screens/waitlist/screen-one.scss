@@ -1,0 +1,146 @@
+.login-pageform.signup_1 {
+  text-align: left;
+  justify-content: left;
+  background-color: #E0DDF0;
+}
+.second-screen {
+  font-family: Geomanist;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  color: #1f1e2c;
+  padding: 0px 0px 15px;
+}
+// .mobile_container1 {
+//   height: 100vh !important;
+// }
+// .mobilemaincontainer {
+//   height: 100vh !important;
+// }
+.sign_left_img1 {
+  position: absolute;
+  left: 7%;
+  right: auto;
+  top: 20px;
+  width: 250px;
+}
+.sign_left_img2 {
+  position: absolute;
+  right: 0;
+  left: auto;
+  top: 20px;
+}
+.sign_left_img3 {
+  position: absolute;
+  left: 0;
+  right: auto;
+  bottom: 55px;
+}
+.sign_left_img4 {
+  position: absolute;
+  left: auto;
+  right: 24%;
+  bottom: 45%;
+}
+.sign_left_img5 {
+  position: absolute;
+  left: auto;
+  right: 3%;
+  bottom: 11%;
+}
+.about-yourselfdiv h3 {
+  font-family: Geomanist medium;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
+  padding: 16px 16px;
+  margin: 0;
+}
+.about-yourselfdiv {
+  background: #ffffff;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 0px;
+}
+.chips.MuiChip-root {
+  box-sizing: border-box;
+  border-radius: 100px !important;
+  margin: 0px 4px;
+  min-width: 94px;
+  height: 40px;
+  line-height: 36px;
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid #e6e5eb;
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+.chips.active {
+  background: #2f80ed;
+  border: 1px solid #e6e5eb;
+}
+.chips img {
+  display: inline-block;
+  height: 22px;
+  text-align: left;
+}
+.chips .MuiChip-label {
+  margin: 0;
+  display: inline-block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  //   line-height: 10px;
+  text-transform: capitalize;
+  color: #000;
+  padding-left: 12px;
+}
+.chips.active .MuiChip-label {
+  color: #ffffff;
+}
+.grey-contentarea {
+  background: #f1eff7;
+  border: 1px solid #e6e5eb;
+  box-sizing: border-box;
+  border-radius: 0px 0px 10px 10px;
+  padding: 15px 7px;
+}
+.about-yourselfdiv h4 {
+  font-family: Geomanist light;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  align-items: center;
+  color: #000000;
+  padding: 10px 10px 0px;
+}
+.chip_avatar.MuiChip-root .MuiChip-avatar {
+  display: inline-block;
+  vertical-align: super;
+}
+
+.page_skip {
+  display: block;
+  width: 100%;
+  text-align: right;
+  color: #2f80ed;
+  padding-right: 9px;
+  text-decoration: underline;
+  font-size: 15px;
+}
+.chips.active.MuiChip-clickable:focus {
+  background: #2f80ed;
+}
+.chips.MuiChip-clickable:focus {
+  background-color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .signup_1 {
+    background: #fff;
+  }
+}

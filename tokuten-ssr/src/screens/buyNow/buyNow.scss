@@ -1,0 +1,409 @@
+@import "../../sass/variable.scss";
+@font-face {
+    font-family: $fontFamily;
+    src: url("../../font/Geomanist-Book.otf");
+}
+
+@font-face {
+    font-family: Geomanist light;
+    src: url("../../font/Geomanist-Regular.otf");
+}
+
+@font-face {
+    font-family: Geomanist medium;
+    src: url("../../font/Geomanist-Medium.otf");
+}
+
+@font-face {
+    font-family: Geomanist normal-light;
+    src: url("../../font/Geomanist-Light.otf");
+}
+
+.signupmobcontainer {
+    height: 100vh;
+}
+
+.session_small {
+    padding: 16px;
+}
+
+.border_small {
+    border-bottom: 1px solid #e6e5eb;
+}
+
+.smallsessiongroup {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+}
+
+.small_group p {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    text-transform: capitalize;
+    color: #1f1e2c;
+}
+
+.date_session {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+    text-align: right;
+}
+
+.date_session p {
+    margin: 0;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 19px;
+    text-align: right;
+    text-transform: capitalize;
+    color: #7b798e;
+}
+
+.leftarrowimg {
+    margin-bottom: 20px;
+}
+
+.loginformtab .nav-link {
+    padding-left: 0 !important;
+    text-align: center;
+}
+
+.loginformtab nav.nav.nav-tabs a {
+    width: 50%;
+}
+
+.loginformtab .nav-tabs {
+    border: 1px solid #e6e5eb;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 3px;
+    margin: 12px 0px 0 0px;
+}
+
+.loginformtab .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    background: #1f1e2c !important;
+    border-radius: 6px !important;
+    border: none !important;
+    font-family: $fontFamily !important;
+    font-size: 14px !important;
+    text-align: center !important;
+    text-transform: capitalize !important;
+    color: #ffffff !important;
+    line-height: 36px !important;
+}
+
+.nav-tabs .nav-link {
+    font-family: $fontFamily !important;
+    font-size: 14px !important;
+    text-align: center !important;
+    text-transform: capitalize !important;
+    color: #7b798e !important;
+    line-height: 36px !important;
+    border: 0 !important;
+}
+
+.loginformtab .nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    border: none !important;
+}
+
+
+/*.loginformtab {
+      height: calc(100vh - 240px);
+      overflow-y: scroll;
+  }*/
+
+.mobileloginform {
+    padding: 0 15px;
+}
+
+.mobileloginform .input-wrapper {
+    position: relative;
+    line-height: 14px;
+     margin: 0 10px; 
+    display: inline-block;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.mobileloginform label {
+    position: absolute !important;
+    z-index: 2;
+    left: 20px !important;
+    top: 11px !important;
+    padding: 0 2px !important;
+    pointer-events: none;
+    background: #fff;
+    transition: transform 100ms ease;
+    transform: translateY(-20px);
+    font-family: $fontFamily !important;
+    font-size: 13px !important;
+    line-height: 18px !important;
+    text-transform: capitalize;
+    color: #5c5c5c !important;
+}
+
+.mobileloginform input {
+    font-size: 13px;
+    color: #555;
+    outline: none;
+    padding: 10px 20px;
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e6e5eb;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+}
+
+.mobileloginform select {
+    font-size: 13px;
+    color: #555;
+    outline: none;
+    padding: 10px 20px;
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e6e5eb;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    -webkit-appearance: none;
+}
+
+
+ .mobileloginform input:invalid + label {
+      transform: translateY(0);
+} 
+
+.mobileloginform input:focus {
+    border-color: #e6e5eb;
+}
+
+.mobileloginform input:focus+label {
+    color: #5c5c5c;
+    transform: translateY(-20px);
+}
+
+.mobile_loginbtn {
+    margin-top: 20px;
+}
+
+.mobile_loginbtn button {
+    background: #1f1e2c;
+    border-radius: 10px;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #ffffff;
+    height: 40px;
+    width: 100%;
+}
+
+.signinformpadding {
+    padding-right: 5px !important;
+}
+
+.signinformpaddingleft {
+    padding-left: 5px !important;
+}
+
+
+/*common section*/
+
+.pay_type {
+    padding: 0px 7px;
+}
+
+.common_payment {
+    border-bottom: 1px solid #e6e5eb;
+}
+
+.payment {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: #7b798e;
+}
+
+.payment_div .dollar-sup {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #1f1e2c;
+}
+
+.payment_div span {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #1f1e2c;
+}
+
+.pay_amount {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #1f1e2c;
+}
+
+.pay_img {
+    height: 68px;
+    width: 68px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: #ffffff;
+    border: 1px solid #e6e5eb;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.pay_para {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: #7b798e;
+}
+
+.option_para {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #7b798e;
+}
+
+.option_para span {
+    font-weight: bold;
+    color: #000;
+}
+
+.pay_form h4 {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 23px;
+    color: #1f1e2c;
+}
+
+.select_img {
+    position: relative;
+}
+
+.select_img:after {
+    position: absolute;
+    content: "";
+    background-image: url(../../assets/images/mobileimages/down.svg);
+    background-repeat: no-repeat;
+    right: 10px;
+    top: 10px;
+    height: 28px;
+    width: 28px;
+}
+
+.mobile_continuebtn button {
+    box-shadow: none;
+    background: #ffffff;
+    border: 1px solid #1f1e2c;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    color: #1f1e2c;
+    height: 40px;
+}
+
+@media screen and (max-width: 767px) {
+    .loginformtab {
+        height: calc(100vh - 210px);
+        overflow-y: scroll;
+    }
+}
+
+.mobile_loginbtntab button {
+    background: #1f1e2c;
+    border-radius: 10px;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    color: #ffffff;
+    border: 0;
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.loginformtab.mobileloginform {
+    height: auto;
+    overflow-y: inherit;
+    background: #fff;
+    /* padding-bottom: 90px; */
+}
+
+.payment-widtharea {
+    width: 280px;
+    margin: 0 auto !important;
+}
+
+.address-pin {
+    margin-right: 5px;
+}
+
+.current-address {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.finish-btn {
+    justify-content: center;
+    display: flex;
+}

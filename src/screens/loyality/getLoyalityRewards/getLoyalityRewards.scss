@@ -1,0 +1,197 @@
+@import "../../../sass/variable.scss";
+
+.tier_label {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #1F1E2C;
+}
+
+.no_tier {
+    padding: 15px;
+}
+
+.no_tier .MuiButton-outlined.btn_count {
+    background: #FFFFFF;
+    border: 1px solid #E6E5EB;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 36px;
+    height: 36px;
+    padding: 0px;
+    min-width: auto;
+}
+
+.no_tier p {
+    font-family: $fontFamily;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: lowercase;
+    color: #1F1E2C;
+    margin: 0px 13px;
+}
+
+.select_icon {
+    position: relative;
+}
+
+.select_icon:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 3px;
+    background-image: url("../../../assets/images/mobileimages/down.svg");
+    height: 28px;
+    width: 28px;
+}
+
+.no_tier .form-control {
+    padding: 0px 10px;
+    font-family: $fontFamily;
+    font-weight: normal;
+    height: 40px;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: capitalize;
+    color: #1F1E2C;
+    -webkit-appearance: none;
+}
+
+.main_content {
+    padding: 15px;
+}
+
+.choose_section h3 {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #1F1E2C;
+}
+.image_select1{
+    height: 70px;
+    width: 70px;
+    margin-top: -10px;
+}
+
+
+/*tabs*/
+
+.main_content .tab_loyal .MuiTabs-flexContainer {
+    display: block;
+    width: 100%;
+    padding: 5px 7px;
+}
+
+.main_content .tab_loyal .MuiAppBar-colorPrimary {
+    background: #FFFFFF;
+    border: 1px solid #E6E5EB;
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+.main_content .tab_loyal .MuiAppBar-colorPrimary .MuiTab-root {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #7B798E;
+    height: 37px;
+    padding: 0px;
+    min-height: auto;
+}
+
+.main_content .tab_loyal .MuiAppBar-colorPrimary .MuiTab-textColorInherit.Mui-selected {
+    background: #1F1E2C;
+    border-radius: 6px;
+    color: #FFFFFF;
+}
+
+.main_content .tab_loyal .MuiTabs-indicator {
+    display: none;
+}
+
+.tab_loyal_content .MuiBox-root {
+    padding: 0px;
+}
+
+.tab_loyal_content .mobileloginform label {
+    top: 13px;
+}
+
+.input_group1 {
+    position: relative;
+}
+
+.input_group1 span {
+    position: absolute;
+    left: 7px;
+    top: 6px;
+    z-index: 9;
+    border-right: 1px solid #E6E5EB;
+}
+
+.input_group1 .form-control {
+    height: 40px;
+}
+
+.top_benefit .profile_content .mobileloginform label {
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+    top: 12px;
+    padding: 0 2px;
+    pointer-events: none;
+    background: #fff;
+    transition: transform 100ms ease;
+    transform: translateY(-20px);
+    font-family: $fontFamily;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: capitalize;
+    color: #5C5C5C;
+    width: auto;
+}
+
+.top_benefit .profile_content .mobileloginform textarea {
+    height: 70px;
+}
+
+.actual_point {
+    padding: 0px 15px;
+}
+
+.input_group1 .form-control.input_form{
+    padding: 0px 0px 0px 50px;
+}
+.drop_select1 .MuiFormControl-root{
+    width: 100%;
+    text-align: left;
+}
+
+@media screen and (min-width: 600px){
+    .drop_select1 .MuiFormControl-root{
+        width: 100%;
+        text-align: left;
+    }
+        
+    .main_content .tab_loyal .MuiTab-root {
+        min-width: 110px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .main_content .tab_loyal .MuiTab-root {
+        min-width: 110px;
+    }
+}

@@ -1,0 +1,7 @@
+export const GET_ADDRESS_REQUEST: string = "GET_ADDRESS_REQUEST";
+export const GET_ADDRESS_SUCCESS: string = "GET_ADDRESS_SUCCESS";
+export const GET_ADDRESS_FAIL: string = "GET_ADDRESS_FAIL";
+
+export const GET_ADDRESS_REQUEST_BY_ID: string = "GET_ADDRESS_REQUEST_BY_ID";
+export const GET_ADDRESS_SUCCESS_BY_ID: string = "GET_ADDRESS_SUCCESS_BY_ID";
+export const GET_ADDRESS_FAIL_BY_ID: string = "GET_ADDRESS_FAIL_BY_ID";

@@ -1,0 +1,401 @@
+// @import "../../sass/variable.scss";
+
+.margin_input {
+  margin-top: 35px;
+}
+.select_material {
+  background: #ffffff;
+  border: 1px solid #e6e5eb !important;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: none;
+  font-family: "Roboto-Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #7b798e;
+  height: 50px;
+}
+
+.select_material input:focus {
+  border: 0px !important;
+  height: 35px;
+}
+.content-div .select_material input {
+  height: 39px;
+}
+.height_div .MuiFormControl-root{
+  height: auto;
+}
+.agree_label .MuiTypography-root{
+  font-size: 14px;
+}
+
+.user_passowrd2 .MuiOutlinedInput-adornedEnd{
+  padding-right: 0px;
+}
+.user_passowrd2 .MuiInputAdornment-positionEnd{
+  position: absolute;
+    right: 3px;
+    top: 25px;
+}
+.user_passowrd2 .MuiInputAdornment-positionEnd svg{
+  font-size: 18px;
+}
+// .registration-pageform {
+//   width: 375px;
+//   height: 100vh;
+//   margin: 0 auto;
+//   max-width: 100%;
+// }
+
+// .registration-pageform .top-header {
+//   background: #ffffff;
+//   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+//   position: absolute;
+//   width: 375px;
+//   height: 69px;
+//   max-width: 100%;
+// }
+
+// /* .registration-pageform .content-bg {
+//     margin: 5% auto;
+// } */
+
+// .content-bg.set {
+//   position: relative;
+//   // top: 32%;
+//   // left: 50%;
+//   // transform: translate(-50%, -50%);
+// }
+
+// .registration-pageform .top-header img.toggle-bar {
+//   float: right;
+//   font-size: 18px;
+//   cursor: pointer;
+//   margin-top: -1px;
+// }
+
+// .registration-pageform .inner-head {
+//   position: relative;
+//   top: 23px;
+// }
+
+// .registration-pageform {
+//   // background-image: url("../../assets/images/loginbg.png");
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: 100% 100%;
+//   background-color: #fff;
+// }
+
+// .registration-pageform .content-div {
+//   position: relative;
+//   bottom: 0;
+//   width: 375px;
+//   max-width: 100%;
+// }
+
+// .signupformarea {
+//   padding: 0 15px;
+//   width: 100%;
+//   margin-top: 15%;
+//   /* bottom: 0; */
+//   /* margin: 0 auto; */
+//   /* position: relative; */
+// }
+
+// .signupformarea .user-inputfeild {
+//   padding-left: 94px !important;
+// }
+
+// .signupformarea .tokuten-user-name {
+//   position: absolute;
+//   top: 48.5%;
+//   left: 18%;
+//   transform: translate(-50%, -50%);
+//   z-index: 9999;
+//   font-family: $fontFamily;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 16px;
+//   line-height: 26px;
+//   text-transform: lowercase;
+//   color: #1f1e2c;
+// }
+
+// .registration-pageform .content-div h3 {
+//   font-style: normal;
+//   font-size: 35px;
+//   text-align: center;
+//   color: #1f1e2c;
+//   font-family: "Helvetica-Bold";
+// }
+
+// .registration-pageform .content-div p.support-text {
+//   font-family: $fontFamily;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 18px;
+//   line-height: 23px;
+//   text-align: center;
+//   text-transform: capitalize;
+//   color: #1f1e2c;
+// }
+
+// .registration-pageform .content-div input {
+//   /*background: #ffffff;
+//   border: 1px solid #1f1e2c;
+//   box-sizing: border-box;
+//   border-radius: 5px;
+//   box-shadow: none;
+//   font-family: $fontFamily;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 14px;
+//   line-height: 18px;
+//   color: #7b798e;
+//   height: 47px;*/
+//   background: #ffffff;
+//   border: 1px solid #e6e5eb;
+//   box-sizing: border-box;
+//   border-radius: 5px;
+//   color: #7b798e;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 13px;
+//   line-height: 18px;
+// }
+
+// .registration-pageform .formarea {
+//   /* padding: 35px 30px 0px 30px; */
+// }
+
+// .registration-pageform .content-div .forgot-pass p {
+//   float: right;
+//   padding: 10px 0px;
+//   font-family: $fontFamily;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 13px;
+//   line-height: 18px;
+//   text-transform: capitalize;
+//   color: #1f1e2c;
+//   text-align: right;
+// }
+
+// .registration-pageform .login_btn {
+//   //   background: #1f1e2c;
+//   //   border-radius: 100px;
+//   background: #2f80ed;
+//   border-radius: 10px;
+//   height: 50px;
+//   //   font-family: $fontFamily;
+//   //   font-style: normal;
+//   //   font-weight: normal;
+//   //   font-size: 14px;
+//   //   line-height: 46px;
+//   //   align-items: center;
+//   //   text-align: center;
+//   //   text-transform: uppercase;
+//   //   color: #fff;
+//   //   width: 100%;
+//   //   border: 0;
+//   //   height: 40px;
+//   /* margin-top: 45px; */
+//   font-family: Geomanist;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 14px;
+//   line-height: 20px;
+//   display: flex;
+//   align-items: center;
+//   text-align: center;
+//   text-transform: capitalize;
+//   color: #ffffff;
+// }
+
+// .registration-pageform .dont-account {
+//   font-family: $fontFamily;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 13px;
+//   line-height: 18px;
+//   text-align: center;
+//   text-transform: capitalize;
+//   color: #1f1e2c;
+//   margin: 0;
+//   padding: 18px 0px 0px 0px;
+// }
+
+// .registration-pageform .signup-tokuten {
+//   cursor: pointer;
+//   font-family: $fontFamily;
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 18px;
+//   text-align: center;
+//   text-transform: capitalize;
+//   color: #1f1e2c;
+//   padding: 10px 0px 0px 0px;
+// }
+
+// .registration-pageform .content-bg {
+//   background: radial-gradient(
+//       50% 50% at 50% 50%,
+//       #ffffff 0%,
+//       rgba(255, 255, 255, 0) 100%
+//     ),
+//     radial-gradient(
+//       49.24% 49.24% at 50% 59.42%,
+//       #ffffff 0%,
+//       rgba(255, 255, 255, 0) 83.54%
+//     );
+// }
+
+// .registration-pageform .login_btn:focus {
+//   outline: none;
+// }
+
+// // ----------- new css -------------------
+// h3.join-wishlisthead {
+//   font-style: normal;
+//   font-weight: bold;
+//   font-size: 18px !important;
+//   line-height: 20px !important;
+//   text-align: center;
+//   color: #1f1e2c;
+//   padding-top: 20px;
+// }
+// // placeholder animation
+// .fieldset .label-before,
+// .fieldset .field input:focus + .fieldset label::before,
+// .fieldset .field input:valid + .fieldset label::before {
+//   line-height: 20px;
+//   font-size: 12px;
+//   top: -10px;
+//   background: #fff;
+//   padding: 0 6px;
+//   left: 9px;
+// }
+
+// .fieldset .field {
+//   position: relative;
+//   margin-bottom: 15px;
+// }
+// .fieldset .field label::before {
+//   content: attr(title);
+//   position: absolute;
+//   top: 0;
+//   left: 15px;
+//   line-height: 40px;
+//   font-size: 14px;
+//   color: #777;
+//   transition: 300ms all;
+//   width: 100%;
+//   text-align: left;
+// }
+// .fieldset .field input {
+//   width: 100%;
+//   line-height: 40px;
+//   padding: 0 15px;
+//   box-sizing: border-box;
+//   font-size: 14px;
+//   color: #222;
+//   border: 1px solid #ccc;
+//   border-radius: 3px;
+// }
+// .fieldset .field input:focus {
+//   outline: 0;
+//   border-color: blue;
+// }
+// .fieldset .field input:valid + .fieldset label::before {
+//   content: attr(data-title);
+// }
+// .fieldset .field input:focus + .fieldset label::before {
+//   color: blue;
+// }
+
+// select.login-selectcity {
+//   background: #ffffff;
+//   border: 1px solid #e6e5eb;
+//   box-sizing: border-box;
+//   border-radius: 5px;
+//   height: 50px;
+//   color: #7b798e;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 13px;
+//   line-height: 18px;
+// }
+// .registration-ui .user-inputfeild {
+//   padding: 0 !important;
+//   /* position: relative; */
+//   text-indent: 15px !important;
+// }
+// .registration-ui form.setfeild {
+//   position: relative !important;
+//   padding: 10% 3% 0%;
+// }
+// /* ---------------------responsive---------- */
+
+// @media screen and (max-width: 767px) {
+//   .registration-pageform {
+//     width: 100%;
+//   }
+//   .registration-pageform .top-header {
+//     width: 100%;
+//   }
+//   .registration-pageform .content-div {
+//     width: 100%;
+//   }
+//   .registration-pageform .content-div .forgot-pass p {
+//     margin: 0;
+//   }
+// }
+
+// @media (min-width: 200px) and (max-width: 320px) {
+//   /* .registration-pageform .content-div {
+//         top: 15%;
+//     } */
+//   .registration-pageform .top-header {
+//     height: 70px;
+//   }
+//   .registration-pageform .inner-head {
+//     position: relative;
+//     top: 23px;
+//   }
+//   /* .registration-pageform .content-div h3 {
+//         font-size: 27px;
+//         line-height: 31px;
+//     } */
+//   .registration-pageform .content-div p.support-text {
+//     font-size: 16px;
+//     line-height: 21px;
+//   }
+// }
+
+// @media (max-width: 320px) {
+//   .content-bg {
+//     top: 25% !important;
+//   }
+// }
+
+// /* .registration-pageform .content-bg {
+//     margin: 18% auto;
+// } */
+
+// @media (min-width: 50px) and (max-width: 767px) {
+//   form.setfeild input {
+//     margin-bottom: 8px;
+//   }
+//   .registration-pageform .content-bg {
+//     margin: 0% auto;
+//   }
+//   .registration-pageform .content-div h3 {
+//     font-size: 24px;
+//     line-height: 1.2;
+//   }
+// }

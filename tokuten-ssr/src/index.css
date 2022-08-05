@@ -1,0 +1,25 @@
+.logo_img {
+    width: 120px;
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus,
+.input-wrapper textarea:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+.mobileloginform .input-wrapper {
+    width: 99%;
+    margin-left: 3px;
+}
+
+p:first-letter {
+    text-transform: capitalize;
+}
+span:first-letter {
+    text-transform: capitalize;
+}

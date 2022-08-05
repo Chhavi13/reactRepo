@@ -1,0 +1,52 @@
+@import "../../sass/variable.scss";
+.mobilemaincontainer .yogatrainercontainer .datecontainerbotfix .location-date-time {
+    padding-top: 8px!important;
+    padding-bottom: 0px!important;
+}
+
+.mobilemaincontainer .yogatrainercontainer .datecontainerbotfix .location-date-time:first-child {
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+}
+
+.hvh_100 {
+    height: 100vh;
+}
+
+.list_preview_back {
+    position: absolute;
+    top: 14px;
+    left: 3px;
+}
+
+.list_bg {
+    height: 265px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img_bg {
+    position: relative;
+}
+
+.list_share {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.list_buy {
+    background: #2F80ED;
+    padding: 5px 10px;
+}
+
+.list_buy h5 {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin: 7px 0px 0px;
+}

@@ -1,0 +1,79 @@
+.unlock_modal{
+    padding:0px;
+}
+.unlock_modal .modal_header{
+    position: relative;
+    border-top: 1px solid #E6E5EB;
+    height: 36px;
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin: 60px 0px 10px;
+}
+.unlock_modal .modal_header img{
+    position: absolute;
+    top: -26px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.unlock_modal .modal_body{
+    padding:10px 20px;
+}
+.unlock_modal .modal_body h1{
+    font-family: Geomanist;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #7B798E;
+    margin: 0px 0px 40px;
+}
+.unlock_modal .modal_body h2{
+    font-family: Geomanist;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 20px;
+    text-align: center;
+    color: #1F1E2C;
+}
+.unlock_modal .modal_body sup{
+    font-weight: normal;
+    padding-right: 7px;
+}
+.unlock_modal .modal_body .MuiFormControlLabel-root .MuiFormControlLabel-label{
+    font-family: Geomanist;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: #7B798E;
+}
+.unlock_modal .modal_body .MuiCheckbox-colorPrimary.Mui-checked{
+    color: #2F80ED !important;
+}
+.unlock_modal .modal_body .MuiButton-containedPrimary{
+    background: #2F80ED;
+    border-radius: 10px;
+    font-family: Geomanist;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 14px 0px;
+}
+
+
+@media screen and (min-width:768px){
+    .unlock_modal .modal_body .MuiFormControlLabel-root .MuiFormControlLabel-label{
+        padding-top: 14px;
+    }
+}

@@ -1,0 +1,324 @@
+@import "../../sass/variable.scss";
+.sentiment-very-satisfied-outlined-icon {
+    width: 45px !important;
+    height: 45px !important;
+}
+
+// .content{
+//   width: 100%;
+//   height: 500px;
+//   overflow-y: scroll;
+// }
+
+.emoji-outlined-icon {
+    width: 45px !important;
+    height: 45px !important;
+}
+
+.mobilemaincontainer {
+    background: #ccc;
+    height: 100% !important;
+}
+
+.mobile_container {
+    /*width: 375px;
+    background: #fff;
+    margin: 0 auto;*/
+    /* height: 100vh; */
+}
+
+.mobheader {
+    /* border: 1px solid #E0E0E0; */
+    padding: 19px 19px 6px 19px;
+}
+
+img.headerimg {
+    width: 32px;
+    height: 32px;
+    background: #ccc;
+    border-radius: 50px;
+    z-index: 9999;
+    border: 2px solid #fff;
+}
+
+.mobsecondimg {
+    margin-left: -10px;
+}
+
+.mobsearch {
+    margin-top: 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.mobsearch p {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 0 !important;
+}
+
+.mobsearchcontainer {
+    padding: 0 19px 10px 19px;
+    height: 66px;
+}
+
+.mobsearchimg {
+    float: right;
+    cursor: pointer;
+}
+
+.mobsearchimg img {
+    margin-top: 8px;
+    width: 24px;
+}
+
+.mobsearch p span {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+    text-transform: capitalize;
+    /* dark blue */
+    color: #1f1e2c;
+}
+
+.footer_container {
+    padding: 21px 25px 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 375px;
+    bottom: 0;
+    background: #fff;
+}
+
+.footer_container p {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.footer_container p img {
+    width: 30px;
+}
+
+.footer_container span {
+    width: 16px;
+    height: 16px;
+    color: #fff;
+    font-size: 12px;
+    background: #eb5757;
+    border-radius: 50px;
+    position: absolute;
+    text-align: center;
+    right: 0;
+}
+
+.available-items {
+    overflow-x: hidden;
+    overflow-y: auto !important;
+    height: 490px;
+}
+
+.available-items::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(202, 92, 92, 0.3) !important;
+    background-color: #f5f5f5 !important;
+    border-radius: 10px !important;
+}
+
+.available-items::-webkit-scrollbar {
+    width: 5px !important;
+    background-color: #f5f5f5 !important;
+}
+
+.available-items::-webkit-scrollbar-thumb {
+    border-radius: 5px !important;
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.72, rgb(198, 198, 199)), color-stop(0.72, rgb(198, 198, 199)), color-stop(0.72, rgb(198, 198, 199))) !important;
+}
+
+.yogatrainercontainer:last-child {
+    margin-bottom: 77px;
+}
+
+.yoga_para.event_para{
+    margin: 0px 1px !important;
+}
+
+.yoga_para.event_para span{
+    font-family: 'Roboto-Regular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: capitalize;
+}
+
+.detail_dash .yoga_para.event_para{
+    font-family: 'Roboto-Regular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: capitalize;
+}
+
+
+/* .paracontent .yoga_para {
+    position: relative;
+}
+
+.paracontent .yoga_para span:after {
+    display: none;
+} */
+
+.yoga_session h5 {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    text-transform: capitalize;
+    color: #1f1e2c;
+}
+
+.tip_rate p {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #1f1e2c;
+}
+
+
+/*tabs*/
+
+.mobile_container.dash_tabs .navdash.nav-tabs {
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.mobile_container.dash_tabs .navdash.nav-tabs .nav-item {
+    width: 50%;
+    margin: 0px;
+    padding: 0px !important;
+}
+
+.mobile_container.dash_tabs .navdash.nav-tabs .nav-link {
+    background: #fff !important;
+    font-family: $fontFamily;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-size: 12px !important;
+    line-height: 25px !important;
+    text-transform: capitalize;
+    color: #7b798e !important;
+    border-radius: 0px !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.mobile_container.dash_tabs .navdash.nav-tabs .nav-link.active {
+    border-bottom: 2px solid #1f1e2c !important;
+    color: #1f1e2c !important;
+}
+
+.lock_image {
+    cursor: pointer;
+}
+
+.lockimg_section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    padding-top: 28%;
+}
+
+.lockimg_section img {
+    margin: 0 auto;
+}
+
+.slick-initialized .slick-slide {
+    position: relative;
+}
+
+.yoga_section_more {
+    width: 84%;
+}
+
+.yoga_section_see {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+/*new*/
+.nav_none{
+    display: none !important;
+}
+
+.search_haeder_top {
+    padding: 20px 15px 15px 15px;
+    border-bottom: 1px solid #c6c6c7;
+    // margin-bottom: 10px;
+}
+
+.search_haeder_top .MuiFormControl-fullWidth{
+    margin: 0px;
+    padding: 0px;
+}
+.search_haeder_top .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"]{
+    padding: 0px;
+}
+.search_header img{
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .available-items {
+        overflow-x: hidden;
+        overflow-y: auto !important;
+        height: calc(100vh - 200px);
+    }
+    /* .mobilemaincontainer {
+        height: 100vh!important;
+    } */
+}
+
+@media only screen and (max-width: 767px) {
+    .mobile_container {
+        width: 100%;
+        /* height: 100vh !important; */
+    }
+    .footer_container,
+    .remainingContainer {
+        width: 100% !important;
+    }
+    .yogatrainercontainer:last-child {
+        margin-bottom: 0;
+    }
+    .dashscroll.available-items {
+        height: calc(100vh - 240px);
+    }
+    .horizontal_box {
+        overflow-x: hidden;
+    }
+}
+
+.skelton-div {
+    padding: 5px;
+}
+
+.blur-image {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+.MuiAutocomplete-popupIndicator {
+    transform: rotate(360deg) !important;
+}

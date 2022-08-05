@@ -1,0 +1,110 @@
+@import "../../sass/variable.scss";
+.popup_benefit .popup_head {
+    position: relative;
+    padding: 15px;
+}
+
+.popup_benefit .popup_head img {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.popup_benefit h1 {
+    font-family: $fontFamily;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #000000;
+}
+
+.MuiDrawer-paperAnchorDockedLeft,
+.MuiPaper-root.MuiDrawer-paper {
+    background: #fff;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.popup_section {
+    padding: 20px 15px;
+}
+
+.popup_section .left_section .head_content {
+    width: calc(100% - 40px);
+    display: inline-block;
+    padding-left: 13px;
+    float: right;
+}
+
+.popup_section .left_section img {
+    vertical-align: top;
+    height: 40px;
+    width: 40px;
+}
+
+.popup_section .left_section .head_content h5 {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #828282;
+}
+
+.popup_section .left_section .head_content span {
+    display: block;
+    font-family: $fontFamily;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #7B798E;
+}
+
+.popup_section .right_border {
+    position: relative;
+}
+
+.popup_section .right_border:before {
+    position: absolute;
+    content: "";
+    border: 1px solid #E6E5EB;
+    left: 2px;
+    height: 100%;
+    width: 1px;
+}
+
+.popup_section .right_section h4 {
+    font-family: $fontFamily;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: capitalize;
+    color: #1F1E2C;
+}
+
+.popup_section .right_section h4 span {
+    font-family: $fontFamily;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #7B798E;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.right_section .MuiListItem-root.MuiListItem-gutters {
+    padding: 0px;
+}
+
+.MuiListItem-root.MuiListItem-gutters span {
+    font-family: $fontFamily;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: capitalize;
+    color: #7B798E;
+}

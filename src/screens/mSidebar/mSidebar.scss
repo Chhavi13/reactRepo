@@ -1,0 +1,233 @@
+@import "../../sass/variable.scss";
+.menu-tag {
+    font-family: $fontFamily;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: -10px;
+    font-weight: bold;
+}
+
+.mobile_container {
+    width: 375px;
+    background: #fff;
+    margin: 0 auto;
+    position: relative;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.mobilemaincontainer {
+    background: #ccc;
+    height: 100%!important;
+}
+
+.mobsidebarContainer {
+    width: 307px;
+    background: pink;
+    position: absolute;
+    right: 0;
+    height: 100vh;
+}
+
+.mobsidebarContainer {
+    width: 307px;
+    background: transparent;
+}
+
+.profilebgsign {
+    width: 100%;
+}
+
+.sidebarprofilecontainer {
+    background: #fff;
+    /* border-radius: 30px 30px 0 0; */
+    height: 100%!important;
+}
+
+.mobmarginscreen {
+    margin-top: -80px;
+    position: relative;
+}
+
+.profileheader_containerone {
+    /* background-image: url(../../assets/images/mobileimages/profilebg.svg); */
+    background-size: 100%;
+    height: 158px;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.profileimgmaincontainer {
+    position: relative;
+    margin-top: 4px;
+}
+
+.imagesshow {
+    text-align: right;
+    padding: 10px 22px;
+}
+
+.imagesshow img {
+    margin-left: 17px;
+}
+
+.sbrinaprofilereview {
+    width: 90px;
+    margin-top: -38px;
+}
+
+.sbrinatext {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #1F1E2C;
+    margin-top: 4px!important;
+    margin-bottom: 0;
+}
+
+.yoga_trainertext {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #7B798E;
+}
+
+.number_fans span {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #9f9ca4;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.border_bottomline {
+    border-bottom: 1px solid #E6E5EB;
+}
+
+.sidebarmenu {
+    /* padding: 22px; */
+}
+
+.sidebarmenu ul {
+    padding: 0;
+    list-style: none;
+}
+
+.sidebarmenu ul li span {
+    width: 10%;
+    margin-right: 24px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.sidebarmenu ul li {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #000000;
+    margin-top: 20px;
+    padding: 0 16px;
+}
+
+.sidebarrightarrow {
+    float: right;
+}
+
+.logouttokuten {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #7B798E;
+}
+
+.sidebarmenuist {
+    margin-bottom: 20px;
+    /* padding: 0 16px!important; */
+}
+
+.mobsidebarContainer {
+    height: inherit;
+}
+
+.logout_section {
+    border-top: 2px solid #E6E5EB;
+}
+
+.logout_section p {
+    display: inline-block;
+}
+
+.logout_section ul {
+    padding: 0 5px;
+}
+
+.socialreach_menu {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.socialreach_menu:after {
+    content: '';
+    height: 1px;
+    width: 248px;
+    background: #E6E5EB;
+    position: absolute;
+    right: 0;
+    bottom: -28px;
+    /* border-bottom: 1px solid #E6E5EB; */
+}
+
+.profileband {
+    /* border-right: 1px solid #E6E5EB;
+    padding-right: 12px; */
+}
+
+@media screen and (max-width:767px) {
+    .mob-overflow .mobilemaincontainer {
+        overflow: inherit;
+        height: 100vh !important
+    }
+    .MuiDrawer-paperAnchorDockedLeft,
+    .MuiPaper-root.MuiDrawer-paper {
+        /* background: transparent !important; */
+    }
+    .MuiDrawer-paper-sidebar .MuiPaper-root {
+        background: #fff !important;
+    }
+    .logout_section {
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .mob-overflow .mobile_container {
+        width: 307px !important;
+    }
+    .MuiDrawer-paperAnchorDockedLeft,
+    .MuiPaper-root.MuiDrawer-paper {
+        /* background: transparent !important; */
+    }
+    .MuiDrawer-paper-sidebar .MuiPaper-root {
+        background: #fff !important;
+    }
+}

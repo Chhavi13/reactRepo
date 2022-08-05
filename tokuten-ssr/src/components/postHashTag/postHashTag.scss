@@ -1,0 +1,20 @@
+.MuiFormControl-fullWidth .add-tag {
+  padding: 0px 12px !important;
+  min-width: 50px !important;
+  font-size: 12px !important;
+}
+
+.MuiDrawer-paper-bottom-bar .MuiPaper-root {
+  height: 50% !important;
+}
+.MuiDrawer-root.MuiDrawer-modal{
+  z-index: 99999 !important;
+}
+
+@media screen and (min-width: 768px) {
+  .MuiDrawer-paperAnchorDockedLeft,
+  .MuiPaper-root.MuiDrawer-paper {
+    width: 360px;
+    margin: auto;
+  }
+}

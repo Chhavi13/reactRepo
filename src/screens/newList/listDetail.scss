@@ -1,0 +1,71 @@
+@import "../../sass/variable.scss";
+.list_detail_page {
+    background-color: #fff;
+}
+
+.list_detail_page .box_list {
+    padding: 10px 20px 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #E6E5EB;
+    border-radius: 0px;
+}
+
+.list_detail_page .detail_Col {
+    margin-top: -10px !important;
+}
+
+.list_detail_page .box_list p.detail_text {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #1F1E2C;
+    margin-bottom: 0px;
+}
+
+.list_detail_page .box_list .detail_content1 {
+    border-bottom: 1px solid #E6E5EB;
+}
+
+.list_detail_page .box_list .detail_content1:last-child {
+    border: none;
+}
+
+.list_detail_page .box_list .detail_content1 h6 {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #1F1E2C;
+}
+
+.list_detail_page .box_list .detail_content1 p {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: right;
+    text-transform: capitalize;
+    color: #1F1E2C;
+}
+
+.list_detail_page .box_list .detail_content1 p.font_text {
+    font-family: $fontFamily;
+}
+
+.list_detail_page .additional_textarea p {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: capitalize;
+    color: #7B798E;
+    margin: 15px 0px;
+}

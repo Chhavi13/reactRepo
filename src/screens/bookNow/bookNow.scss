@@ -1,0 +1,106 @@
+@import "../../sass/variable.scss";
+@font-face {
+    font-family: $fontFamily;
+    src: url('../../font/Geomanist-Book.otf');
+}
+
+.profileimgmaincontainer {
+    position: relative;
+}
+
+.remainingcontainer {
+    background: #fceced;
+    padding: 4px 17px;
+    margin: 0;
+}
+
+.remainingcontainer span img {
+    margin-right: 8px;
+}
+
+.remainingcontainer span,
+.bookarrowimg {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #EB5757;
+}
+
+.join_other {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0 16px;
+    color: #7B798E;
+}
+
+.notes_container {
+    padding: 0 16px;
+    margin-top: 14px;
+}
+
+.notes_container span {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #1F1E2C;
+    margin-top: 14px;
+}
+
+.notes_container p {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: #1F1E2C;
+    margin: 0;
+}
+
+.booknowbtn button {
+    background: #2F80ED;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    height: 40px;
+    color: #fff;
+    margin-top: 14px;
+    margin-bottom: 77px;
+}
+
+.remainingContainer {
+    background: none;
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    width: 375px;
+}
+
+.remainingContainer .imagesshow {
+    float: right;
+}
+
+.userprofilemainyoga {
+    margin-bottom: 0!important;
+}
+
+.book_scroll.available-items {
+    overflow-x: hidden;
+    overflow-y: auto !important;
+    height: calc(100vh - 350px);
+}
+
+@media screen and (max-width:767px) {
+    .book_scroll.available-items {
+        height: calc(100vh - 450px);
+    }
+}

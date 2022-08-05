@@ -1,0 +1,543 @@
+@import "../../sass/variable.scss";
+.MuiFormControl-root .MuiTextField-root .MuiFormControl-fullWidth label {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    padding: 0;
+}
+
+.MuiAutocomplete-inputRoot .MuiAutocomplete-input {
+    border: 0px solid #e6e5eb;
+}
+
+.media-file-upload {
+    display: none;
+}
+
+.create_page h1 {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 23px;
+    text-transform: capitalize;
+    color: #1f1e2c;
+    letter-spacing: 0.5px;
+    // box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.avatar-preview.imgpreview .profile-user-img {
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+}
+
+.profile-user-img {
+    width: 100%;
+}
+
+.bg_image .avatar-upload {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    height: 153px;
+    overflow: hidden;
+}
+
+.bg_image .avatar-upload .avatar-edit {
+    position: absolute;
+    right: 45px;
+    z-index: 1;
+    top: 15px;
+}
+.bg_image .avatar-upload .avatar-preview{
+    height: 153px;
+}
+.bg_image .avatar-upload .profile-user-img{
+    width: 100%;
+    object-fit: unset;
+    height: 153px;
+}
+
+.bg_image .avatar-upload .avatar-edit input {
+    display: none;
+}
+
+.bg_image .avatar-upload .avatar-edit input+label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-image: url(../../assets/images/mobileimages/camera.svg);
+    background-repeat: no-repeat;
+}
+
+
+/*user image*/
+
+.user_image .avatar-upload {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    height: 83px;
+}
+
+.user_image .avatar-preview {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 100px;
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    text-align: center;
+    top: -25px;
+    border: 1px solid #fffdfd;
+}
+
+.user_image .avatar-upload .avatar-edit {
+    position: absolute;
+    right: 42%;
+    z-index: 1;
+    top: 11px;
+}
+
+.user_image .avatar-upload .avatar-edit input {
+    display: none;
+}
+
+.user_image .avatar-upload .avatar-edit input+label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-image: url(../../assets/images/mobileimages/cameragrey.svg);
+    background-repeat: no-repeat;
+}
+
+.profile_content {
+    background: #ffffff;
+    margin-top: -37px;
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 99;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.account_span {
+    background: #2f80ed;
+    border-radius: 100px;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    padding: 13px 10px 13px 20px;
+}
+
+.account_span img {
+    float: right;
+    margin-top: -4px;
+}
+
+.mobileloginform textarea {
+    font-size: 13px;
+    color: #555;
+    outline: none;
+    padding: 10px 20px;
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e6e5eb;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+    height: 100px;
+}
+
+.profile_content .available-items {
+    height: calc(100vh - 303px);
+    padding-bottom: 20px;
+}
+
+.profile_content h5 {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    display: block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #7b798e;
+}
+
+.profile_content .custom-control-input {
+    position: absolute;
+    left: auto;
+    right: 0;
+    z-index: -1;
+    width: 1rem;
+    height: 1.25rem;
+    opacity: 0;
+}
+
+.profile_content .custom-control-label {
+    position: relative;
+    margin-bottom: 0;
+    padding-top: 12px;
+    width: 100%;
+    text-align: left;
+    left: 0px;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #1f1e2c;
+}
+
+.profile_content .custom-control.custom-switch {
+    width: 100%;
+    display: block;
+    padding: 9px 0px 9px 7px;
+}
+
+.profile_content .custom-control-input:checked~.custom-control-label::before {
+    background: #2f80ed;
+    // box-shadow: 0px 4px 4px rgb(50 50 71 / 8%), 0px 4px 8px rgb(50 50 71 / 6%);
+}
+
+.profile_content .custom-switch .custom-control-label::before {
+    left: auto;
+    right: 0.75rem;
+    width: 72px;
+    height: 35px;
+    border-radius: 50px;
+    border: 1px solid #adb5bd !important;
+    border-color: transparent !important;
+    background: #d9d9d9;
+    //box-shadow: 0px 4px 4px rgb(50 50 71 / 8%), 0px 4px 8px rgb(50 50 71 / 6%);
+}
+
+.profile_content .custom-switch .custom-control-label::after {
+    left: auto;
+    right: 14%;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    top: 6px;
+    background: #fff;
+}
+
+.profile_content .custom-switch .custom-control-input:checked~.custom-control-label::after {
+    background: #ffffff;
+    right: 28px;
+}
+
+.profile_content h5.linkhead {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #5c5c5c;
+    text-transform: inherit;
+}
+
+.gradient1 {
+    background: linear-gradient(91.89deg, #fdd923 -32.79%, #e80122 38.63%, #b900b0 106.85%);
+    border-radius: 100px !important;
+    display: inline;
+    width: 100%;
+    text-align: left;
+    color: #fff !important;
+    padding: 8px 0px 8px 14px !important;
+}
+
+.gradient1 .MuiButton-label,
+.gradient2 .MuiButton-label {
+    display: block;
+    padding-top: 2px;
+}
+
+.gradient1 span,
+.gradient2 span {
+    float: right;
+}
+
+.gradient2 {
+    background-color: #e93939 !important;
+    border-radius: 100px !important;
+    display: inline;
+    width: 100%;
+    text-align: left;
+    color: #fff !important;
+    padding: 8px 0px 8px 14px !important;
+}
+
+h6 {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #1f1e2c;
+}
+
+.passion_content {
+    font-size: 13px;
+    color: #555;
+    outline: none;
+    padding: 10px 10px 10px 20px;
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e6e5eb;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+}
+
+.passion_list li {
+    display: inline-block;
+    background: #ffffff;
+    border: 1px solid #e6e5eb;
+    box-sizing: border-box;
+    border-radius: 100px;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 13px;
+    text-transform: capitalize;
+    color: #000000;
+    padding: 10px 20px;
+    margin: 15px 15px 0px 0px;
+}
+
+.discount p {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #1f1e2c;
+    margin: 10px 7px;
+}
+
+.discount .rate {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: lowercase;
+    color: #1f1e2c;
+}
+
+.discount .default_btn2.MuiButtonBase-root.MuiButton-root.MuiButton-contained {
+    background: #ffffff;
+    border: 1px solid #e6e5eb;
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: none;
+    min-width: 36px;
+    width: 36px !important;
+    height: 36px;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px 7px 0px 5px !important;
+}
+
+.section_border {
+    border-bottom: 1px solid #7b798e;
+    opacity: 0.3;
+}
+
+.btn-right {
+    float: right;
+    margin: 10px 15px !important;
+}
+
+
+/*media section*/
+
+.mediaprofile_section {
+    background: #f1eff7;
+    border: 3px solid #ffffff;
+    box-sizing: border-box;
+    position: relative;
+    width: 168px;
+    height: 168px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+}
+
+.mediaprofile_section span {
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: 38%;
+    text-align: center;
+}
+
+.image_upload {
+    position: relative;
+    height: 100%;
+}
+
+.image_upload .media1 {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.image_upload .cross_img {
+    position: absolute;
+    right: 4px;
+    top: 8px;
+    cursor: pointer;
+    text-align: right;
+}
+
+.default_btn1.MuiButtonBase-root.MuiButton-root.MuiButton-contained {
+    background: #ffffff;
+    border: 1px solid #e6e5eb;
+    box-sizing: border-box;
+    border-radius: 100px;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7b798e;
+    box-shadow: none;
+    width: 100%;
+    padding: 15px 10px;
+}
+
+.mediaprofile_section video {
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.loyalty_reward_section p {
+    display: block;
+    width: 100x;
+    padding-left: 10px;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #1f1e2c;
+}
+
+/*material input*/
+.mobileloginform_material .MuiFormControl-root label{
+    /* position: absolute !important; */
+    /* z-index: 2 !important; */
+    /* left: 11px !important; */
+    /* top: 11px !important; */
+    /* padding: 0 2px !important; */
+    pointer-events: none;
+    background: #fff;
+    transition: transform .1s ease;
+    /* transform: translateY(-20px); */
+    font-family: "Roboto-Regular";
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: capitalize;
+    color: #5c5c5c;
+}
+.datepicker_select input{ 
+    background: transparent !important;
+}
+.datepicker_select .MuiFormControl-root.MuiTextField-root.MuiFormControl-marginNormal{
+width: 100%;
+}
+.mobileloginform_material input, .mobileloginform_material select {
+    font-size: 13px;
+    color: #555;
+    outline: none;
+    padding: 10px 13px;
+    position: relative;
+    background: #fff;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+}
+.mobileloginform_material textarea {
+    font-size: 13px;
+    color: #555;
+    outline: none;
+    padding: 0px;
+    position: relative;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+}
+.mobileloginform_material .MuiOutlinedInput-notchedOutline {
+    border-color: #e6e5eb;
+}
+.select_material.material_select_input{
+    border:none !important;
+}
+.select_material.material_select_input #country-select-demo{
+    height: 32px !important;
+}
+@media screen and (max-width: 767px) {
+    .profile_content .available-items {
+        height: calc(100vh - 309px);
+    }
+}
+
+input#country-select-demo {
+    background: transparent;
+}
+.text-fieldcustom fieldset.PrivateNotchedOutline-root-3.MuiOutlinedInput-notchedOutline{
+  border:0 !important;
+}
+
+.error-spanfeild{
+  position: relative;
+  top: 11px;
+  padding-left: 5px;
+}
+
+.datepicker_select .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    width: 100%;
+}

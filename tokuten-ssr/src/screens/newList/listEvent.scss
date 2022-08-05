@@ -1,0 +1,96 @@
+@import "../../sass/variable.scss";
+.spinner-offer {
+    margin-top: -8px;
+}
+
+.event_para {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #7B798E;
+    padding: 8px 18px;
+}
+
+.list_event {
+    position: relative;
+}
+
+.list_event:before {
+    position: absolute;
+    content: "";
+    background: #EB5757;
+    opacity: 0.1;
+    height: 40px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.list_event h5,
+.list_event span {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #EB5757;
+}
+
+.event_notes {
+    padding: 10px 18px;
+}
+
+.event_notes h4 {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #1F1E2C;
+}
+
+.event_notes ol {
+    padding: 10px 18px;
+}
+
+.event_notes ol li {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: #1F1E2C;
+}
+
+.slick-dots {
+    bottom: 10px;
+}
+
+.slick-dots li {
+    width: 6px;
+    height: 14px;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #fff;
+    background: #fff;
+}
+
+.slick-dots li button:before {
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    content: '';
+    text-align: center;
+    opacity: 1;
+    color: #000;
+    border: 1px solid #fff;
+    border-radius: 100px;
+}

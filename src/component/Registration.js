@@ -22,7 +22,7 @@ const Registration = () => {
   const inputHandler = (e) => {
     const { name, value } = e.target
     setInputField({ ...inputField, [name]: value })
-    console.log(inputField)
+    // console.log(inputField)
   }
   const submitButton = async(e) => {
     e.preventDefault();
@@ -40,7 +40,7 @@ const Registration = () => {
       try{
     //   debugger
           let response =await axios.post('http://localhost:4000/users/register',inputField)
-          console.log(response)
+          // console.log(response)
           clearState()
           if(response.status == 200){
            alert(" registered successfully")
@@ -48,7 +48,6 @@ const Registration = () => {
             navigate("/login")
            }, 1000);
           }
-          
       }catch(error){
      //   debugger
         console.log(error)

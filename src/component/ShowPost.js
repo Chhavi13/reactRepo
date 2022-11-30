@@ -4,19 +4,16 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { UserContext } from '../App';
 
 
-
-
-
 const ShowPost = () => {
     const navigate = useNavigate()
     const [data, setData] = useState([])
     const { state, dispatch } = useContext(UserContext)
-    // console.log("state", state)
+    console.log("state", state)
     const FetchData = async () => {
 
 
         try {
-            
+     
             console.log("yess home ", localStorage.getItem('token'))
             const token = localStorage.getItem('token')
             let url = "http://localhost:4000/posts/getallposts"
@@ -25,7 +22,7 @@ const ShowPost = () => {
                 axios.get(url, { headers: { Authorization: AuthStr } })
                     .then(response => {
                         // If request is good...
-                        console.log("only postid aarhi h puri detail ni arhi h post table ki ", response);
+                        // console.log("only postid aarhi h puri detail ni arhi h post table ki ", response);
                         setData(response.data)
                     })
                     .catch((error) => {
@@ -49,7 +46,7 @@ const ShowPost = () => {
 
     const likepost = (id) => {
         try {
-            console.log("post like ", localStorage.getItem('token'))
+            // console.log("post like ", localStorage.getItem('token'))
             const token = localStorage.getItem('token')
             let url = "http://localhost:4000/posts/likes"
             if (token) {
@@ -69,7 +66,7 @@ const ShowPost = () => {
                             }
                         })
                         setData(newData)
-                        console.log("newdata", newData)
+                        // console.log("newdata", newData)
                     })
                     .catch((error) => {
                         console.log('error ' + error);
@@ -240,7 +237,7 @@ const ShowPost = () => {
                 <div className="card-body"style={{ marginTop: "50px", marginLeft: "20px" }}>
 
                     {data.map((item) => {
-                        //  debugger
+                         debugger
                         return (
                             
                             <div className="card" key={item._id} >
@@ -252,7 +249,7 @@ const ShowPost = () => {
                                 <div ><img src={item.image} alt="image" style={{ maxWidth: '50%', marginLeft: "10px" }} /></div><br></br>
                                 <p ><span style={{ marginLeft: "10px", fontFamily: 'fantasy', color: 'darkred' }} ></span><span style={{ color: "darkslateblue" }}><span style={{ color: "black" }}>{item.postedBy.name}</span>&nbsp;{item.content}</span></p>
                                 <div style={{ marginLeft: "15px", height: "30px", color: "blue", maxwidth: "40%" }}>
-                                    {item.likes.includes(state._id)
+                                    {item.likes.includes(state?._id)
                                         ? <i className="large material-icons" onClick={() => { unlikepost(item._id) }}>thumb_down</i>
                                         :
                                         <i className="large material-icons" onClick={() => { likepost(item._id) }} >thumb_up</i>

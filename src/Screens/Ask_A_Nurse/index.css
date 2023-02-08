@@ -1,0 +1,13 @@
+.close {
+    display: block;
+    opacity: 0.2;    
+    font-size: 20px;
+    background-color: #c2e0ff;
+    border: none;
+    margin-left: 400px;
+}
+.alert-info{
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}

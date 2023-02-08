@@ -1,0 +1,136 @@
+@import "../../global.css";
+@import "../../global-componant.css";
+
+.faq-details{
+    .faq-question-selected{
+        p{
+            color: var(--white);
+            font-size: 18px;
+            font-weight: var(--font-wt700);
+            margin: 0;
+            padding: 0; 
+            font-family: var(--base-font-family);
+        }
+        border-radius: 5px 30px 30px 30px;
+        background: var(--primary-clr);
+        padding: 1rem 2rem;
+        color: var(--white);
+        img{
+            width:100px;
+            height: auto;
+        }
+    }
+    .selected-faq-answer{
+        background: var(--white);
+        border:solid 1px var(--secondary-clr);
+        border-radius: 30px 30px 5px 30px;
+        padding: 1rem 2rem;
+        margin: 3rem 0 2rem 0;
+        .nurse-info{
+            .nurse-profile{
+                width:72px;
+                height: 72px;
+                border-radius: 50%;
+                border: solid 2px var(--secondary-clr);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-color: lightgrey;
+            }
+        }
+        .nurse-personalinfo{
+            .nurse-name{
+                font-family: var(--font-smedium);
+                font-size: var(--font-16);
+                color:var(--primary-clr);
+            }
+            .register-tag{
+                font-family: var(--font-bold);
+                font-size: var(--font-14);
+                color:var(--secondary-clr);
+            }
+        }
+    }
+    .like-count-container{
+        .like-count{
+            font-family: var(--font-smedium);
+            font-size: var(--font-14);
+        }
+    }
+    .register-tag-icon{
+        position: absolute;
+        top:-20px;
+        right:45px
+    }
+}
+
+.Faq-details + .container-fluid{
+    margin-top: 20px !important;
+}
+
+.pale-yellow-bg{
+    background: var(--bg-paleyellow-clr);
+}
+
+.other-services-main{
+    background: var(--pastel-purple);
+    border-radius: 14px;
+    div{
+        padding: 1rem 3rem;
+        font-family:var(--font-sbold);
+        font-size: var(--font-18);
+        color: var(--step-txt-clr);
+    }
+    h3, h5{
+        margin-bottom: 0;
+    }
+}
+
+.related-course-main{
+    background: var(--bg-paleyellow-clr);
+    border-radius: 14px;
+    h2.section-heading{
+        color:var(--primary-clr);
+    }
+}
+
+@media (max-width: 575.98px) { 
+    
+ }
+
+
+@media (max-width: 767.98px) { 
+    .other-services-main .d-flex{
+        flex-direction: column;
+        text-align: center;
+    }
+    .Faq-details{
+        padding-left: 26px !important;
+        padding-right: 26px !important;
+    }
+
+    .paddingLR-0{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .related-course-main{
+        border-radius: 0;
+    }
+    
+ }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+    
+ }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { 
+    
+ }
+
+// X-Large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) { 
+    
+ }

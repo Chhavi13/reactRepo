@@ -1,0 +1,786 @@
+@import "../../global.css";
+@import "../../global-componant.css";
+
+.time-btn {
+    background: var(--white);
+    border: .5px solid var(--grey-shade-3) !important;
+    color: var(--primary-text);
+    padding: 10px 20px !important;
+ 
+    margin: 0 5px 10px 5px !important;
+    line-height: 18px !important;
+    box-shadow: 0px 2px 5px rgba(148, 148, 148, 0.1);
+}
+
+.time-btn:hover {
+    background: var(--secondary-clr);
+    border: .5px solid var(--secondary-clr) !important;
+    color: var(--white) !important;
+
+}
+
+.time-btn:first-child {
+    margin-left: 0;
+}
+
+.btn-container-css {
+    position: absolute;
+    right: 19px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn-container-css.open-btn {
+    position: absolute;
+    right: 50%;
+    top: unset;
+    transform: translateX(50%);
+    bottom: 25px;
+}
+
+.steps-section .main-step1 {
+    background-image: urlurl("../../Assets/img/login/yourself-Vector.svg");
+    background-position: 0px 50px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.private-consult{
+    .MuiAutocomplete-root .MuiOutlinedInput-input{
+        padding: 0.375rem 2rem 0.375rem 1rem !important;
+    }
+}
+
+.section-navigation {
+    button.next {
+        background: var(--secondary-clr) !important;
+        border: solid 2px var(--secondary-clr) !important;
+    }
+
+    button.next:hover {
+        background: var(--white) !important;
+        border: solid 2px var(--secondary-clr) !important;
+        color: var(--secondary-clr) !important;
+    }
+}
+
+.step-container {
+    width: 590px;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 15px;
+    font-family: var(--base-font-family);
+    .primary-blue-small-btn-40{
+        min-width: unset;
+        // pointer-events: none;
+    }
+
+    .consult-section-heading {
+        h3 {
+            font-family: var(--base-font-family);
+            font-size: var(--font-h2-34);
+            line-height: 36px;
+            color: var(--primary-clr);
+        }
+
+        h5 {
+            font-family: var(--font-base-bold);
+            font-size: 14px;
+            color: var(--secondary-clr);
+        }
+    }
+
+    .radio-area,
+    .delivery_type {
+        h4 {
+            font-family: var(--base-font-family);
+            color: var(--primary-clr);
+            font-weight: var(--font-wt700);
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: -0.02em;
+            margin-bottom: 10px;
+        }
+    }
+
+    .agreement-container {
+        border-top: 1px solid var(--primary-border) !important;
+        border-bottom: 1px solid var(--primary-border) !important;
+        .custom-radio{
+            display: flex !important;
+            label {
+                margin: 0;
+                font-family: var(--base-font-family);
+                font-weight: normal;
+                font-size: 14px;
+    
+                a {
+                    font-family: var(--font-base-bold);
+                    color: var(--primary-clr);
+                    letter-spacing: 0;
+                }
+    
+                a:hover {
+                    text-decoration: none;
+                    
+                }
+            }
+        }
+    }
+}
+
+.step-container.step1 {
+    p {
+        margin-bottom: .5rem;
+    }
+
+    p.consult-inner-section {
+        font-family: var(--font-sbold);
+        font-size: 18px;
+    }
+
+    .consult-card-container {
+        border: 1px solid var(--grey-shade-3);
+        border-radius: 10px;
+        margin-bottom: 40px;
+        background: var(--white);
+        cursor: pointer;
+        position: relative;
+
+        .consult-info {
+            .time-projection {
+                background: var(--pastel-purple);
+                border-radius: 3px;
+                color: #fff;
+                padding: 2px 10px;
+                font-family: var(--base-font-family);
+                margin-right: 10px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            .availablity {
+                font-family: var(--font-base-bold);
+                color: var(--monthly-clr);
+            }
+
+            .consult-date {
+                font-family: var(--base-font-family);
+                font-size: var(--font-26);
+                color: var(--primary-clr);
+                line-height: 42px !important;
+                font-weight: bolder;
+                margin: 0;
+                padding: 0;
+            }
+
+            .primary-blue-small-btn {
+                min-width: 80px;
+            }
+
+            .consult-time {
+                font-family: var(--base-font-family);
+                font-size: 18px;
+                color: var(--secondary-clr);
+            }
+
+            .author-name, .host-name{
+                // font-family: var(--font-sbold);
+                font-size: 16px;
+                color: var(--primary-text);
+                ;
+            }
+        }
+
+        .author-name{
+            font-size: 16px;
+            color: var(--primary-text);;
+        }
+
+        .show-class-tm{
+            a{
+                font-family: var(--font-sbold);
+                color: var(--primary-clr);
+                cursor: pointer;
+            }
+        }
+
+        .consult-price {
+            .price {
+                margin-top: 15px;
+                font-family: var(--font-base-bold);
+                font-size: var(--font-h2-34);
+                color: var(--primary-clr);
+                word-break: keep-all;
+                line-height: 42px;
+            }
+        }
+
+        .mu-custom-fields input#class-id,  .mu-custom-fields input#slot-id{
+            width: 100% !important;
+            padding: 0.375rem 2rem 0.375rem 1rem !important;
+        }
+
+        .class-list .MuiOutlinedInput-root {
+            padding: 0 !important;
+        }
+
+        .class-list {
+            label {
+                color: var(--primary-text);
+            }
+
+            .class-container, .appointment-container{
+                width:45%;
+            }
+
+            .price-container{
+                width: 10%;
+            }
+
+            .additional-cost {
+                font-size: var(--font-20);
+                color: var(--primary-clr);
+                word-break: keep-all;
+                .actual-price,
+                .reduced-price {
+                    word-break: keep-all;
+                    --webkit-hyphens: none;
+                }
+            }
+        }
+
+        .total-amount {
+            font-size: var(--font-26);
+            font-family: var(--font-base-bold);
+            color: var(--primary-clr);
+            .total-actual-value{
+                font-weight: 300;
+                font-family: var(--base-font-family);
+            }
+        }
+
+        .add-head {
+            font-family: var(--font-base-bold);
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 24px;
+        }
+        .additional-class-discount{
+            font-family: var(--base-font-family);
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+            color: var(--secondary-clr);
+        }
+
+
+        .consultant-profile {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: lightgrey;
+        }
+
+        .consultant-name {
+            p {
+                font-family: var(--font-sbold);
+                font-size: 20px;
+                color: var(--primary-clr);
+                margin-bottom: 0;
+            }
+        }
+
+        .calender-container {
+            .react-datepicker {
+                border-radius: 0;
+                font-family: var(--base-font-family);
+                border: none;
+                -webkit-box-shadow: 0 0 5px 1px #A6A6A6;
+                box-shadow: 0 0 5px 1px #A6A6A6;
+
+                .react-datepicker__navigation {
+                    .react-datepicker__navigation-icon {
+                        top: 14px;
+                    }
+                }
+
+                .react-datepicker__header {
+                    background-color: transparent;
+                    padding-top: 0;
+                    border-bottom: none;
+                }
+
+                .react-datepicker__day-name {
+                    font-weight: bolder;
+                }
+
+                .react-datepicker__day-name,
+                .react-datepicker__day,
+                .react-datepicker__time-name {
+                    width: 3rem;
+                    line-height: 3rem;
+                }
+
+                .react-datepicker__current-month {
+                    background: var(--pastel-purple);
+                    padding: 1rem 0;
+                    color: var(--white);
+                }
+
+                .react-datepicker__month {
+                    margin: .5rem 1rem;
+                }
+
+                .react-datepicker__navigation-icon::before {
+                    border-color: #fff;
+                    border-width: 1px 1px 0 0;
+                }
+
+                .react-datepicker__navigation-icon--next {
+                    left: -10px;
+                }
+
+                .react-datepicker__navigation-icon--previous {
+                    right: -10px;
+                }
+
+                .react-datepicker__day--keyboard-selected:hover,
+                .react-datepicker__day--keyboard-selected,
+                .react-datepicker__day--selected:hover,
+                .react-datepicker__day--selected {
+                    background-color: var(--primary-clr) !important;
+                }
+
+                .react-datepicker__day--highlighted {
+                    background: rgba(76, 195, 176, .5);
+                }
+
+                .react-datepicker__day{
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .time-btn {
+            background: var(--white);
+            border: .5px solid var(--grey-shade-3) !important;
+            color: var(--primary-text);
+            padding: 10px 20px !important;
+            margin: 0 10px 10px 0px !important;
+            line-height: 18px !important;
+            box-shadow: 0px 2px 5px rgba(148, 148, 148, 0.1);
+            font-family: var(--font-sbold);
+            font-size: 16px;
+            -webkit-box-shadow: 0 0 2px 1px #A6A6A6;
+            box-shadow: 0 0 2px 1px #A6A6A6;
+        }
+
+        .time-btn:hover,
+        .time-btn.selected {
+            background: var(--secondary-clr);
+            border: .5px solid var(--secondary-clr) !important;
+            color: var(--white) !important;
+        }
+
+        .time-btn:last-child {
+            margin-left: 0;
+        }
+
+        .time-btn:disabled {
+            background: var(--secondary-clr);
+            border: .5px solid var(--secondary-clr) !important;
+            color: var(--white) !important;
+            opacity: 1;
+        }
+
+        .card-container-inner+.calender-container {
+            margin-top: 1rem;
+        }
+
+        .error-msgtext.bottom {
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+        }
+    }
+}
+
+.step-container.step2 {
+    .due_dt_container {
+        .due-date-field {
+            border: 1px solid var(--primary-border) !important;
+            border-radius: 40px;
+            background: #fff;
+
+            input {
+                border: none !important;
+                border-radius: 40px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .delivery_type {
+        margin-bottom: 1rem;
+
+        .form-check {
+            min-width: 200px;
+        }
+
+        .form-check-input[type=checkbox] {
+            margin-bottom: .5rem;
+        }
+    }
+    .agreement-container {
+        border-top: 1px solid var(--primary-border) !important;
+        border-bottom: 1px solid var(--primary-border) !important;
+
+        label {
+            margin: 0;
+            font-family: var(--base-font-family);
+            font-weight: var(--font-wt700);
+            font-size: 14px;
+            color:var(--primary-text);
+            a {
+                font-weight: bolder;
+            }
+        }
+    }
+
+    input[type=checkbox] + label{
+        font-family: var(--base-font-family) !important;
+        color: var(--primary-text);
+        line-height: 24px;
+    }  
+
+    input[type='radio'] {
+        width: 1.5em !important;
+        height: 1.5em !important;
+        margin-right: 10px;
+        cursor: pointer;
+        position: relative;
+        opacity: 1;
+        vertical-align: top;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        border: 1px solid rgba(0, 0, 0, .25);
+        border-radius: 50%;
+        margin-bottom: 0rem;
+    }
+
+    input[type='radio']:checked:before {
+        background: #4CC3B0 !important;
+        border: #949494 !important;
+    }
+
+    input[type='checkbox'],
+    input[type='single_checkbox'] {
+        width: 1.5em !important;
+        height: 1.5em !important;
+        margin-right: 10px;
+        cursor: pointer;
+        position: relative;
+        opacity: 1;
+        vertical-align: top;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        border: 1px solid rgba(0, 0, 0, .25);
+        -webkit-appearance: none;
+        border-radius: 4px;
+        margin-bottom: 1.5rem;
+        float: left;
+    }
+
+    input[type=checkbox]+label {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    input[type='checkbox']:checked {
+        background:#4CC3B0 url("../../Assets/img/checkbox-check.svg") no-repeat center center;
+        border: #949494 !important;
+        margin-bottom: 0.5rem !important;
+    }
+}
+
+.step-container.step3 {
+    .selected-consult-container {
+        border: 1px solid var(--grey-shade-3);
+        border-radius: 10px;
+        margin-bottom: 20px;
+        background: var(--white);
+
+        .selected-consult-title {
+            font-family: var(--font-base-bold);
+            font-size: 20px;
+            color: var(--primary-clr);
+        }
+
+        .consult-date {
+            font-family: var(--base-font-family);
+            font-size: 18px;
+            color: var(--secondary-clr);
+            font-weight: bolder;
+            line-height:24px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .consult-time {
+            font-family: var(--base-font-family);
+            font-size: 18px;
+            color: var(--secondary-clr);
+        }
+
+        .change-date {
+            font-family: var(--font-base-bold);
+            font-size: 14px;
+            color: var(--monthly-clr);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .consult-cost {
+            h2 {
+                font-family: var(--font-base-bold);
+                font-size: 26px;
+                color: var(--primary-clr);
+                margin: 0;
+                padding: 0;
+                word-break: keep-all;
+            }
+        }
+
+        .subtotal {
+
+            // border-top:1px solid var(--primary-border);
+            h2 {
+                font-family: var(--font-base-bold);
+                font-size: 26px;
+                color: var(--primary-clr);
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .additional-class-container {
+            h3 {
+                font-family: var(--font-base-bold);
+                font-size: var(--font-20);
+                color: var(--primary-clr);
+                margin: 0;
+                padding: 0;
+            }
+
+            .Show-details {
+                font-family: var(--font-base-bold);
+                font-weight: 700;
+                font-size: var(--font-14);
+                line-height: 18px;
+                color: #51CCB8;
+                color: black;
+                margin: 0 0 0 0 !important;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            .additional-cost {
+                font-family: var(--base-font-family);
+                color: var(--primary-clr);
+                font-size: var(--font-20);
+
+                span {
+                    word-break: keep-all;
+                }
+            }
+        }
+
+        .apply-couponcode {
+            .apply-heading {
+                font-size: var(--font-16);
+                font-family: var(--font-base-bold);
+                color: var(--primary-tex);
+            }
+
+            button {
+                width: 30%;
+                max-width: 150px;
+            }
+        }
+    }
+
+    .bill-details {
+        border: 1px solid var(--primary-clr);
+        background: var(--white);
+        border-radius: 10px;
+
+        h6 {
+            background-color: var(--primary-clr);
+            border-radius: 10px 10px 0 0;
+            font-size: var(--font-20);
+            color: var(--white);
+            padding: 20px 30px;
+            margin-bottom: 0;
+        }
+
+        ul.first {
+            // padding: 0px 30px;
+            // margin-top: 15px;
+            margin-bottom: 0;
+
+            li {
+                padding: 10px 0px;
+                border-top: 1px SOLID #ADADAD;
+
+            }
+
+            :first-child {
+                border-top: none;
+            }
+
+            span:first-child {
+                font-family: var(--font-sbold);
+                font-size: 16px;
+                line-height: 22px;
+                color: var(--primary-text);
+            }
+
+            span:last-child {
+                font-family: var(--font-base-bold);
+                font-size: 16px;
+                line-height: 22px;
+                color: var(--primary-clr)
+            }
+        }
+
+        ul.pay-list {
+            // padding: 15px 30px;
+
+            li {
+                border-top: 1px SOLID #ADADAD;
+                padding: 20px 0px 15px 0;
+
+                .payspan,
+                .pay-total {
+                    font-family: var(--font-base-bold);
+                    font-size: 26px;
+                    line-height: 22px;
+                    color: var(--primary-clr);
+                }
+            }
+        }
+    }
+}
+
+.private-consult {
+    margin-top: 120px !important;
+    .due-date-field,
+    .preferred-dt,
+    .preferred-tm {
+        border: 1px solid var(--primary-border) !important;
+        border-radius: 40px;
+
+        input {
+            border: none !important;
+        }
+    }
+
+    .preferred-tm {
+        display: flex;
+    }
+}
+
+
+.MuiAutocomplete-hasPopupIcon .MuiOutlinedInput-root, .MuiAutocomplete-hasClearIcon .MuiOutlinedInput-root {
+    padding: 0px !important;
+}
+
+@media (max-width: 380px) {
+    .btn-container-css{
+        // position: relative !important;
+        // right: 0 !important;
+        // top: 0 !important;
+        // transform: none !important;
+        // margin-top: 15px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    // .step-container{
+    //     padding: 0 !important;
+    // }
+
+    .step-container.step1 {
+        .consult-card-container {
+            .calender-container {
+                .react-datepicker {
+
+                    .react-datepicker__day-name,
+                    .react-datepicker__day,
+                    .react-datepicker__time-name {
+                        width: 1.9rem;
+                        line-height: 1.9rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .consult-info+.btn-container,
+    .consult-info+.button-container-expandable {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .step-container.step1 {
+        .consult-card-container {
+            .calender-container {
+                .react-datepicker {
+
+                    .react-datepicker__day-name,
+                    .react-datepicker__day,
+                    .react-datepicker__time-name {
+                        width: 3.2rem;
+                        line-height: 3.2rem;
+                    }
+                }
+            }
+            .class-list{
+                .class-container,  .appointment-container, .price-container{
+                    width:100%;
+                }
+            }
+        }
+    }
+    .step-container.step2{
+        input[type=checkbox] + label
+        {
+            margin-right:0;
+            
+        }    
+    }
+    .step-container.step3{
+        .selected-consult-container{
+            .apply-couponcode{
+                button{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px) {}
+
+@media (max-width: 1199.98px) {}
+
+@media (max-width: 1399.98px) {}

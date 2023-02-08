@@ -1,0 +1,69 @@
+@import "../../global.css";
+@import "../../global-componant.css";
+
+.askN-tabs-main{
+    div.d-flex{
+        margin: 0 auto;
+    }
+    .MuiTab-root{
+        background: var(--white);
+        border: solid 1px var(--secondary-clr);
+        color: var(--secondary-clr);
+        overflow: visible;
+        width: 250px;
+        padding: 0 30px;
+        border-radius: 0;
+        text-transform: capitalize;
+        font-size: var(--font-16);
+    }
+    .MuiTab-root:first-child{
+        border-radius: 50px 0 0 50px;
+    }
+    .MuiTab-root:last-child{
+        border-radius: 0 50px 50px 0;
+    }
+    .css-1ujnqem-MuiTabs-root {
+        overflow: visible;
+    }
+    button.Mui-selected{
+        background: var(--secondary-clr);
+        color:var(--white);
+    }
+    
+}
+
+.MuiTabs-indicator{
+    display: none;
+}
+
+
+@media (max-width: 1399.98px) {  }
+
+@media (max-width: 1199.98px) {  }
+
+@media (max-width: 991.98px) {  }
+
+@media (max-width: 767.98px) {
+    .askN-tabs-main{
+        .MuiTab-root{
+            width: auto;
+        }
+        div.d-flex {
+            width: 100%;
+        }
+        // .MuiTab-root{
+        //     padding: 0 15px;
+        //     font-size: 12px;
+        // }
+    }
+}
+
+@media (max-width: 575.98px) {
+    // .askN-tabs-main{
+    //     .MuiTab-root{
+    //         padding: 0 10px;
+    //         font-size: 12px;
+    //     }
+    // }
+}
+

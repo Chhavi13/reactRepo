@@ -1,0 +1,48 @@
+Developmental Milestones for 3-6months{
+    .MuiDialogContent-root {
+        width: 612px;
+        height: 505px;
+        // overflow: hidden;
+        padding: 2rem 4rem !important;
+    }
+    .MuiPaper-elevation {
+        overflow: hidden;
+        background: #FFFFFF;
+        box-shadow: 0px 15px 58px rgba(0, 0, 0, 0.13);
+        border-radius: 3px;
+    }
+    h1.email-head {
+        font-family: 'Isidora Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+        text-align: center;
+        color: #4D4D4D;
+    }
+    p.sent-msg {
+        font-family: 'Isidora Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        color: #000000;
+    }
+    .sign-inbtn:hover {
+        color: #fff;
+    }
+}
+
+@media (max-width: 575px) {
+    Developmental Milestones for 3-6months.MuiDialogContent-root {
+        padding: 64px 30px 0 !important;
+        width: 100%;
+    }
+    .login-inner {
+        // width: 100%;
+        padding: 0;
+    }
+}
+
+@media (max-width: 375px) {}

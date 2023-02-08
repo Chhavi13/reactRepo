@@ -1,0 +1,38 @@
+
+.login-inner{
+    h1{
+        padding-bottom: 20px;
+    }
+}
+
+// .signup-popup{
+//     margin: 9% auto;
+    
+   
+// }
+.sign-pop form{
+    padding: 0px 25px;
+}
+.signup-poupmodal{
+    .MuiTypography-root.MuiTypography-body1{
+       width: 612px;
+       max-width: 100%;
+    }
+    .MuiDialogContent-root{
+        padding: 0;
+        overflow-x: hidden;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .sign-pop form {
+        padding: 0px 0;
+    }
+    h1.heading{
+        font-size: 20px !important;
+    }
+    .checkbox-area label{
+        font-size: 13px !important;
+    }
+}

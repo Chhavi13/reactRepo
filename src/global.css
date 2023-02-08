@@ -1,0 +1,96 @@
+@font-face {
+  font-family: Isidora Sans Regular;
+  src:
+    url(../src/fonts/Isidora-Sans/IsidoraSans-Regular.ttf) format("truetype");
+  
+}
+@font-face {
+  font-family: Isidora Sans bold;
+  src:
+
+    url(../src/fonts/Isidora-Sans/IsidoraSans-Bold.ttf) format("truetype");
+
+}
+@font-face {
+  font-family: Isidora Sans semibold;
+  src:
+
+    url(../src/fonts/Isidora-Sans/IsidoraSans-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Isidora Sans light;
+  src:
+
+    url(../src/fonts/Isidora-Sans/IsidoraSansAlt-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Isidora Sans medium;
+  src:
+
+    url(../src/fonts/Isidora-Sans/IsidoraSans-Medium.ttf) format("truetype");
+}
+:root {
+  --primary-clr: #30426D;
+  --secondary-clr:#4CC3B0;
+  --primary-text:#4D4D4D;
+  --primary-border: #949494;
+  --form-label-size:16px;
+  --base-font-family:"Isidora Sans medium";
+  --font-base-bold:"Isidora Sans bold";
+  --font-sbold:"Isidora Sans semibold";
+  --font-smedium:"Isidora Sans medium";
+  --font-light:"Isidora Sans light";
+  --white:#ffffff;
+  --font-wt300:300;
+  --font-wt500:500;
+  --font-wt700:700;
+  --font-wt900:900;
+  --font-wt1000:1000;
+  --font-16:16px;
+  --font-14:14px;
+  --font-18:18px;
+  --font-20:20px;
+  --font-24:24px;
+  --font-26:26px;
+  --font-28:28px;
+  --font-h1-42:42px;
+  --font-h2-34:34px;
+  --br-radius-40:40px;
+  --head-bold:1000;
+  --step-txt-clr:#FBF8EF;
+  --bg-paleyellow-clr:#FBF8EF;
+  --monthly-clr:#F57D7D;
+  --pink:#F57D7D;
+  --quaterly-clr:#4CC3B0;
+  --teel:#4CC3B0;
+  --halfyearly-clr:#B693C8;
+  --pastel-purple:#B693C8;
+  --metal-blue:#4283DF;
+  --search-bg:#F9F9F9;
+  --grey-shade-3:#949494;
+  --chat-bubble-receiver:#DAF5F0;
+  --chat-bubble-sender:#EEEEEE;
+  --orange:#F5CF70;
+  /*--border-grey:#DFE5EE;
+  --placeholders:#B7C0CD;
+  --black:#000000;
+  --frm-focus:#ced4da;
+  --box-border:#B7C0CD;
+  --cust-red:#E50826;
+  --bg-grey:#f4f6f7;
+  --base-font:16px;
+  --base-font-18:18px;
+  --base-font-14:14px;
+  --grey-var2:#7F8FA4;
+  --primary-transparent:#dbeeef;
+  --donation-primary:#222D34;
+  --grey-var3:#4A4A4A;
+  --grey-var4:#EFF3F6;
+  --thumbSize: 18px;
+  --trackSize: 3px;
+  --thumbBg: #fff;
+  --progressBg: #0dd6b5;
+  --webkitProgressPercent: 0%; */
+  }

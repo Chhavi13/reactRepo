@@ -1,0 +1,42 @@
+@import "../../global.css";
+@import "../../global-componant.css";
+
+.filter_content{
+    .filter_type{
+        .radio-area{
+            .custom-radio{
+                display: inline-block;
+                min-width: 250px;
+                margin-bottom: 10px;
+                .custom-control-input {
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
+        h4{
+            font-size: var(--font-18);
+            line-height: 34px;
+            font-family: var(--base-font-family);
+            color: var(--primary-clr);
+        }
+    }
+    .primary-blue-small-btn{
+        height: 40px;
+        line-height: 14px !important;
+        padding: 10px 30px !important;
+        min-width: 160px;
+    }
+    .primary-outline-btn{
+        min-width: 160px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .filter_content{
+        .primary-outline-btn, .primary-blue-small-btn{
+            min-width: 120px;
+        }
+    }
+    
+}

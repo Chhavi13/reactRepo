@@ -1,0 +1,81 @@
+.instructor {
+    margin-top: 180px;
+
+    .back {
+        width: 74px;
+        height: 14px;
+        cursor: pointer;
+        font-family: 'Isidora Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        /* identical to box height, or 100% */
+
+        text-decoration-line: underline;
+
+        color: #50CCB8;
+
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+
+    .img-section img {
+        width: 499px;
+        // height: 538.89px;
+        border-radius: 10px;
+        max-width: 100%;
+        height: 100%;
+    }
+
+
+    .content-area p {
+        font-family: 'Isidora Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #4D4D4D;
+    }
+
+    .instructor-name {
+        margin-top: 41px;
+    }
+
+    .instructor-name h3 {
+        font-family: 'Isidora Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+        color: #30426D;
+    }
+
+    .instructor-name p {
+        font-family: 'Isidora Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 130%;
+        color: #30426D;
+    }
+    
+}
+
+@media (max-width: 1399.98px) {  }
+
+@media (max-width: 1199.98px) {  }
+
+@media (max-width: 991.98px) {  }
+
+@media (max-width: 767.98px) { }
+
+@media (max-width: 575.98px) { 
+    .instructor-container{
+        padding: 0 !important;
+    }
+}

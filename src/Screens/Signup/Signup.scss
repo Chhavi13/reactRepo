@@ -1,0 +1,172 @@
+@import "../../global.css";
+@import "../../global-componant.css";
+
+// .signup-page{
+//     // background: url("../../Assets/img/login/signup-bg.svg") no-repeat;
+//     // background-position: 0 -100px;
+//     // hr{
+//     //     margin: 31px 0px;
+//     //     background: #CACACA;
+//     // }
+// }
+
+.checkbox-area {
+    position: relative;
+    h4 {
+        font-family: var(--base-font-family);
+        color: var(--primary-clr);
+        font-weight: var(--font-wt700);
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        margin-bottom: 8px;
+    }
+    // label {
+    //     font-family: Isidora Sans;
+    //     font-style: normal;
+    //     font-weight: normal;
+    //     font-size: 16px;
+    //     line-height: 25px;
+    //     color: #4d4d4d;
+    //     text-indent: 10px;
+    //     vertical-align: middle;
+    //     padding-top: 3px;
+    //     cursor: pointer;
+    //     padding-left: 33px;
+    //     overflow: hidden;
+    // }
+    .custom-checkbox .custom-control-label::after {
+        height: 24px;
+        width: 24px;
+        left: 10px;
+        top: 8px;
+    }
+    .custom-checkbox .custom-control-label::before {
+        height: 24px;
+        width: 24px;
+        border: 1px solid #4d4d4d;
+        box-sizing: border-box;
+        border-radius: 4px;
+        left: 10px;
+        top: 4px;
+        background: #fff;
+    }
+    .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+        color: #fff;
+        border-color: #50ccbb;
+        background-color: #50ccbb;
+    }
+    .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+        background-image: url("../../Assets/img/signup/check.png");
+    }
+    // .custom-control {
+    //     background: #ffffff;
+    //     border: 0.8px solid #4d4d4d;
+    //     box-sizing: border-box;
+    //     border-radius: 6px;
+    //     height: 41px;
+    //     padding: 5px 10px 5px 0px;
+    //     display: inline-block;
+    //     margin: 0px 10px 10px 0px;
+    // }
+}
+.bottom-createaccount {
+    padding-top: 20px;
+    h2 {
+        font-family: Isidora Sans;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+        color: #4D4D4D;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    p {
+        font-family: Isidora Sans;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        color:#4D4D4D;
+        padding: 0px 0px 0px 0px;
+    }
+    a{
+        // text-decoration: underline!important;
+        cursor: pointer;
+        font-weight: 1000;
+    }
+}
+// .next-button {
+//     height: 48px;
+//     background: #30426d !important;
+//     border-radius: 41px !important;
+//     font-family: Isidora Sans;
+//     font-style: normal;
+//     font-weight: 600!important;
+//     font-size: 16px !important;
+//     line-height: 20px!important;
+//     align-items: center;
+//     letter-spacing: -0.02em;
+//     color: #ffffff!important;
+//     width: 100%;
+//     margin: 47px 0px 40px 0px;
+// }
+
+.create_pass{
+    position: relative;
+    // .eye-passimg {
+    //     position: absolute;
+    //     top: 47px;
+    //     right: 9px;
+    //     cursor: pointer;
+    // }
+}
+// .next-button {
+//     height: 48px;
+//     background: #30426d;
+//     border-radius: 41px !important;
+//     font-family: Isidora Sans;
+//     font-style: normal;
+//     font-weight: 600;
+//     font-size: 16px !important;
+//     line-height: 20px!important;
+//     align-items: center;
+//     letter-spacing: -0.02em;
+//     color: #ffffff;
+//     width: 100%;
+//     margin: 47px 0px 40px 0px;
+// }
+
+
+@media (max-width: 575.98px) { 
+
+ }
+
+
+@media (max-width: 767.98px) { 
+    
+ }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+    
+ }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { 
+    
+ }
+
+// X-Large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) { 
+    
+ }
+.no-spin::-webkit-inner-spin-button, .no-spin::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+}
+
+.no-spin {
+    -moz-appearance:textfield !important;
+}

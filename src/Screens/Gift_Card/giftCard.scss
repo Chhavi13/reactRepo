@@ -1,0 +1,534 @@
+@import "../../global.css";
+@import "../../global-componant.css";
+
+.giftcard-banner{
+    .gft-banner{
+        background: url("../../Assets/img/giftcard/gift-card-banner.png") no-repeat;
+        min-height: 639px;
+        border-radius: 14px;
+    }
+}
+
+.naps-gift-card{
+    .custom-lead{
+        font-size: 1.8rem;
+        line-height: 34px;
+    }
+
+    .naps-gift-container{
+        background: #4CC3B0 url(../../Assets/img/giftcard/naps-gift-card-bg.svg) no-repeat;
+        border-radius: 14px;
+        .gift-feaatured_img{
+            border-radius: 76px;;
+        }
+        .naps-card-info{
+            h3{
+                font-weight: 700;
+                font-size: 42px;
+                line-height: 50px;
+                color: #FBF8EF;
+            }
+            p{
+                color:var(--white);
+            }
+        }
+    }
+}
+
+.naps-gift-card{
+    .gift-friend-caption{
+        font-weight: 500;
+        font-size: 42px;
+        color: #636363;
+        .strong{
+            font-weight: 700;
+            font-family: var(--font-base-bold);
+        }
+        .red{
+            color: var(--monthly-clr);
+        }
+    }
+
+    .support-title{
+        font-weight: 500;
+        font-size: 38px;
+        line-height: 46px;
+        color: #4D4D4D;
+        .creative{
+            color:var(--monthly-clr);
+        }
+        .membership{
+            color:var(--halfyearly-clr);
+        }
+        .lift{
+            color:var(--quaterly-clr);
+        }
+        .gift{
+            color:var(--orange);
+        }
+    }
+
+    .gift-support-img{
+        border-radius: 15px;
+    }
+}
+
+.gift-friend{
+    .gift-friend-caption{
+        font-weight: 500;
+        font-size: 42px;
+        color: #636363;
+        .strong{
+            font-weight: 700;
+            font-family: var(--font-base-bold);
+        }
+        .teal{
+            color: var(--secondary-clr);
+        }
+        .red{
+            color: var(--monthly-clr);
+        }
+    }
+
+    .sec-title{
+        font-family: 'Isidora Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        color: #636363;
+        padding: 0 0 20px 0;
+    }
+    
+    .custom-gift-card{
+        .gift-card-container{
+        background: #B693C8 url('../../Assets/img/giftcard/gift.svg');
+        background-repeat: no-repeat;
+        background-position: right center;
+        border-radius: 14px;
+        
+            .gift-card-info{
+                width:75%;
+            }
+            h3{
+                font-weight: 600;
+                font-size: 28px;
+                line-height: 36px;
+                color: #FFFFFF;
+            }
+            p{
+                color: #FFFFFF;
+            }
+           
+            .amount-field-container{
+                padding-left:0px;
+                position: relative;
+                .amount-field{
+                    background: var(--white);
+                    border: dashed 1px #4D4D4D !important;
+                    border-radius: 30px;
+                    height:auto;
+                    width:350px;
+                    font-size: 12px;
+                    padding:0;
+                    .MuiInput-input{
+                        background: transparent;
+                        border: none !important;
+                        border-radius: 30px;
+                        height: 44px;
+                        width:350px;
+                        font-size: 12px;
+                        padding: .375rem 1.5rem .375rem 2rem;
+                    }
+                    
+                    .MuiInputAdornment-root{
+                        font-size: 20px !important;
+                        font-family: var(--base-font-family);
+                        position: absolute;
+                        left: 15px;
+                        color:var(--primary-text);
+                            .css-ittuaa-MuiInputAdornment-root{
+                                font-size: 30px;
+                                color: rgba(255, 255, 255, 1);
+                            }
+                        }
+                        &::before, &::after{
+                        border: none;
+                        }
+                    }
+               
+                }
+            
+                .send-gift{
+                    background: var(--primary-clr);
+                    color:var(--white);
+                    border-radius: 30px;
+                    padding: 7px 30px;
+                    font-size: 12px !important;
+                    line-height: 28px;
+                }
+                .send-gift:hover{
+                    background: #fff;
+                    color:var(--primary-clr);
+                    outline: solid 2px var(--primary-clr);
+                    outline-offset: -2px;
+                    
+                }
+        }
+    }
+    
+    
+    .card.gift-card{
+        min-height: unset;
+        cursor: pointer;
+        transform: scale(1);
+        transition: all 200ms ease-in;
+        .card-inner{
+            img{
+                border-radius: 20px 20px 0 0;
+            }
+        }
+        .card-body{
+            padding: 1rem 1rem 1rem 1rem;
+        }
+        .card-title{
+            min-height: unset;
+        }
+       .card-text {
+        font-weight: 600;
+        font-size: 18px;
+        color:var(--primary-text);
+        }
+        .button-container{
+            padding: 15px 0;
+            margin-top: 15px;
+            border-top: solid 1px #EEEEEE;
+        }
+    }
+
+    .card.gift-card:hover, .member_plan:hover{
+        -webkit-box-shadow: 0 0 3px 3px rgba(000,000,0000,.1);
+        box-shadow: 0 0 3px 3px rgba(000,000,0000,.1);
+        // transform: scale(1.05);    
+    }
+
+    .card.gift-card.selected{
+        outline: solid 2px var(--primary-clr);
+        outline-offset: -2px;
+        transform: scale(1.05);
+    }
+
+    .your-membership-main{
+        .your-membership{
+            .ur-membership-container{
+                background: var(--pink);
+                border-radius:14px;
+                p{
+                    color: var(--white);
+                }
+                .plan-price{
+                    font-family: var(--font-base-bold);
+                    font-size: 44px;
+
+                }
+            }
+            
+        }
+        .upgrade-membership{
+            .upgrade-msg{
+                font-family: var(--base-font-family);
+                font-size: 20px;
+                color: var(--primary-clr);
+            }
+        }
+    }
+
+    .upgrade-membership{
+        .member_plan {
+            border-radius: 10px;
+            height: 100%;
+            background: #fff;
+            transform: scale(1);
+            transition: all 200ms ease-in;
+            cursor: pointer;
+            .plan_head{
+              margin-bottom: 0px;
+              border-radius: 10px 10px 0px 0px;
+              text-align: left;
+              h3{
+                font-weight:200;
+                margin-bottom: 0;
+                color:var(--white);
+                font-size: 24px;
+                line-height: 24px;
+                .plan-nm{
+                    color:var(--white);
+                    font-size: 26px;
+                    font-weight: 900;
+                    line-height: 24px;
+                    margin-right: 0px;
+                }
+              }
+            }
+            .Plan-price-main{
+              padding-bottom:15px;
+              margin-bottom: 15px;
+              border-bottom: solid .5px var(--chat-bubble-sender);
+              min-height: 112px;
+              .pCost-old{
+                font-family: var(--base-font-family);
+                font-size: var(--font-h2-34);
+                text-decoration: line-through;
+                color:var(--primary-clr);
+                margin-right: 5px;
+                font-weight: var(--font-wt300);
+              }
+              .pCost{
+                font-family: var(--base-font-family);
+                font-size: var(--font-h2-34);
+                color:var(--primary-clr);
+                font-weight: var(--font-wt900);
+              }
+              .membership-cycle{
+                font-family: var(--base-font-family);
+                font-size: var(--font-16);
+                line-height: 50px;
+                margin-left: 5px;
+              }
+              .plan-price-Total{
+                font-family: var(--base-font-family);
+                color:var(--primary-text);
+                font-size: var(--font-14);
+              }
+            }
+            p {
+              font-family: var(--base-font-family);
+            //   font-weight: var(--font-wt900);
+              font-size: var(--font-16);
+              line-height: 22px;
+              color: #4D4D4D;
+              padding: 0px 0px;
+            }
+
+            .plan_content {
+                // padding: 10px 30px;
+                .plan-details-list{
+                  
+                  p{
+                    ul{
+                      li{
+                        margin:10px 0;
+                        // background:url('../../Assets/img/login/membership-bullets.svg') no-repeat;
+                        padding-left: 2rem;
+                        line-height: 30px;
+                        font-weight: normal;
+                        word-break: keep-all;
+                      }
+                      padding-left: 0;
+                    }
+                  }
+                }
+              }
+            .monthly-dtls-list{
+              padding: 0 !important;
+              li{
+                padding: 10px 0;
+                font-family: var(--base-font-family);
+                display: table;
+                color: var(--primary-text);
+                img{
+                  margin-right: 10px;
+                  // display: table-column;
+                  // monthy-planfloat: left;
+                }
+                p{
+                  font-weight: normal;
+                  margin: 0;
+                }
+              }
+            }
+        }
+
+        .plan-option0{
+            position: relative;
+            .plan-saving{
+                color:var(--monthly-clr);
+                min-height: 24px;
+            }
+            .plan_head {
+                background: var(--monthly-clr);
+                }
+            .btn_trial{
+                background: var(--monthly-clr);
+                width: auto;
+                border:solid 2px var(--monthly-clr);
+                border-radius: 14px;
+            }
+            .btn_trial:hover{
+                background: var(--white);
+                width: auto;
+                border:solid 2px var(--monthly-clrr);
+                color:var(--monthly-clr);
+            }
+        }
+        .plan-option0.selected
+        {
+            outline: 2px solid var(--monthly-clr);
+            outline-offset: -2px;
+            transform: scale(1.05);
+        }
+
+        .plan-option1{
+            position: relative;
+            .plan-saving{
+                color:var(--quaterly-clr);
+                min-height: 24px;
+            }
+            .plan_head {
+                background: var(--quaterly-clr);
+                }
+            .btn_trial{
+                background: var(--quaterly-clr);
+                width: auto;
+                border:solid 2px var(--quaterly-clr);
+                border-radius: 14px;
+            }
+            .btn_trial:hover{
+                background: var(--white);
+                width: auto;
+                border:solid 2px var(--quaterly-clr);
+                color:var(--quaterly-clr);
+            }
+        }
+        .plan-option1.selected
+        {
+            outline: 2px solid var(--quaterly-clr);
+            outline-offset: -2px;
+            transform: scale(1.05);
+        }
+
+        .plan-option2{
+            position: relative;
+            .plan-saving{
+            color:var(--halfyearly-clr);
+            min-height:24px;
+            }
+            .plan_head {
+            background: var(--halfyearly-clr);
+            }
+            .btn_trial{
+            background: var(--halfyearly-clr);
+            width: auto;
+            border:solid 2px var(--halfyearly-clr);
+            border-radius: 14px;
+            }
+        }
+
+        .plan-option2.selected
+        {
+            outline: 2px solid var(--halfyearly-clr);
+            outline-offset: -2px;
+            transform: scale(1.05);
+        }
+    }
+
+    .primary-blue-small-btn-40{
+        min-width: 300px;
+    }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .gift-friend {
+        .custom-gift-card {
+            .gift-card-container {
+                background:#B693C8;
+                .amount-field-container, .amount-container, .btn-container {
+                    width:100%;
+                    .amount-field, .send-gift{
+                        width:100%;
+                    }
+                }
+                .gift-card-info{
+                    width: 100% !important;
+                }
+            }
+        }
+
+        .upgrade-membership{
+            .membership-col-container{
+                margin-bottom: 20px !important;
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    .gift-friend {
+        .membership-col-container{
+            margin-bottom: 20px;
+        }
+        .custom-gift-card {
+            .gift-card-container {
+                background:#B693C8;
+                .amount-field-container, .amount-container, .btn-container {
+                    width:100%;
+                    .amount-field, .send-gift{
+                        width:100%;
+                    }
+                }
+                .gift-card-info{
+                    width: 100% !important;
+                }
+                // .send-gift{
+                //     width: 100%;
+                // }
+            }
+        }
+    }
+
+    .giftcard-banner{
+        .gft-banner {
+            min-height: 150px;
+        }
+       
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    .gift-friend{
+        .membership-col-container{
+            margin-bottom: 20px;
+        }
+        .custom-gift-card{
+            .gift-card-container{
+                background-size: 130px;
+                .gift-card-info {
+                    width: 83%;
+                }
+                .amount-field{
+                    width:100%;
+                }
+            }
+        }
+    }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+    .giftcard-banner{
+        .gft-banner{
+            background-size: 100%;
+        }
+    }
+}
+
+// X-Large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) {
+    .giftcard-banner{
+        .gft-banner{
+            background-size: 100%;
+        }
+    }
+}

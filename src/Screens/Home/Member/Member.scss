@@ -1,0 +1,285 @@
+@import "../../../global.css";
+@import "../../../global-componant.css";
+
+
+.cursive {
+    font-family: 'Respondent';
+}
+.w-45 {
+    width: 45%;
+}
+
+.banner{
+    background-image: url("../../../Assets/img/homepage/banner-1.png");
+    background-size: cover;
+    min-height: 615px;
+    background-repeat: no-repeat;
+    border-radius: 14px;
+    h1{
+        text-align: left;
+        font-weight: var(--font-wt700);
+        width:210px;
+        padding-bottom: 0;
+    }
+    .header-text{
+        .spoiler {
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.offerings{
+    section.offerings .pre-baby .section-img-container:after {
+        content: '';
+        position: absolute;
+        background-image: url("../../../Assets/img/homepage/bootcamp.svg");
+        background-repeat: no-repeat;
+        width: 368px;
+        height: 183px;
+        right: 100px;
+        bottom: 25px;
+    }
+    
+    section.offerings .moms-survival-grp .section-img-container:after {
+        content: '';
+        position: absolute;
+        background-image: url("../../../Assets/img/homepage/new-mom.svg");
+        background-repeat: no-repeat;
+        width: 250px;
+        height: 270px;
+        left: 6px;
+        bottom: -42px;
+    }
+    
+    section.offerings .consultations .section-img-container:after {
+        content: '';
+        position: absolute;
+        background-image: url("../../../Assets/img/homepage/pre-baby.png");
+        background-repeat: no-repeat;
+        width: 191px;
+        height: 293px;
+        right: 115px;
+        bottom: -45px;
+        margin-bottom: 50px;
+    }
+
+    .btn-bg-pink {
+        background-color: var(--pink) !important;
+    }
+    .btn-bg-orange {
+        background-color: #F5CF70 !important;
+    }
+    .btn-bg-green {
+        background-color: #4CC3B0 !important;
+    }
+
+    .btn:hover {
+        background-color: #fff !important;
+        border: 2px solid #e77b77 !important;
+        color: #e77b77  !important;
+    }
+    
+    a.btn.btn-bg-orange:hover {
+        background-color: #fff !important;
+        border: 2px solid #e9c369 !important;
+        color:#e9c369 !important;
+
+    }
+    
+    a.btn.btn-bg-green:hover {
+        background-color: #fff;
+        border: 2px solid #3caf9c !important;
+        color:#3caf9c !important;
+    }
+    // a.btn.blue-bg:hover {
+    //     background-color: #26365c;
+    //     border: 1px solid transparent;
+    // }
+    // a.btn.pink-border:hover {
+    //     border: 2px solid #e77b77;
+    //     color: #ffffff;
+    // }
+}
+
+.blog{
+    background-color: var(--step-txt-clr);
+}
+
+
+
+.green {
+    color: var(--teel);
+}
+.pink {
+    color:var(--pink);
+}
+.pink-border {
+    border: 2px solid var(--pink) !important;
+    border-radius: 50px !important;
+}
+
+.orange {
+    color: var(--orange);
+}
+.lavender {
+    color: var(--pastel-purple);
+}
+.font-80 {
+    font-size: 80px !important;
+}
+.blue-text {
+    color: var(--primary-clr);
+}
+
+.blue-bg {
+    background-color: var(--primary-clr) !important;
+}
+.dark-grey {
+    color: var(--primary-text);
+}
+
+.section-bg {
+    background-color: #FBF8EF;
+}
+.perfect-parent p, section.services h2, span.number, section.we-seen h2, section.corporate h2, .corporate-program p, section.unswaddled .unswaddled-content h2, section.blog h2, section.sponser h2 {
+    font-family: var(--base-font-family);
+}
+.perfect-parent p span, section.services h2 span, section.we-seen h2 span, section.corporate h2 span, section.unswaddled .unswaddled-content h2 span, .blog-content a, section.blog h2 span, section.sponser h2 span {
+    font-family: var(--font-sbold);
+}
+
+.spoiler:before {
+    content: '';
+    background-image: url("../../../Assets/img/homepage/border-top.svg");
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+}
+.spoiler:after {
+    content: '';
+    background-image: url("../../../Assets/img/homepage/border-btm.svg");
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    background-repeat: no-repeat;
+}
+.section-header h2, section.services h3, section.offerings h3,.unswaddled-content h2, .unswaddled-content p.cursive {
+    font-size: 50px !important;
+}
+.service-block:nth-child(odd) {
+    margin-bottom: 50px;
+}
+.btn-radius {
+    border-radius: 50px !important;
+}
+sup {
+    font-size: 1.2rem;
+    top: -20px;
+}
+section.we-seen h2 span:after {
+    content: '';
+    bottom: -10px;
+    width: 87%;
+    height: 4px;
+    background-color: #B693C8;
+    position: absolute;
+    left: 7%;
+}
+section.we-seen p.content {
+    font-size: 1.85rem;
+    font-family: var(--base-font-family);
+}
+section.unswaddled:before {
+    content: '';
+    background-color: #FC8E8A;
+    width: 35%;
+    height: 95%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    border-radius: 14px;
+    left: -20px;
+}
+section.unswaddled:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    background-image: url("../../../Assets/img/homepage/unswaddledVector.svg");
+    width: 100%;
+    height: 60%;
+    top: 50px;
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-size: contain;
+}
+section.unswaddled {
+    z-index: 1;
+}
+section.sponser:before {
+    content: '';
+    position: absolute;
+    background-image: url("../../../Assets/img/homepage/sponserVector.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 28%;
+    height: 48%;
+    top: -8.4%;
+    left: 0;
+    z-index: 0;
+}
+section.corporate {
+    background-image: url("../../../Assets/img/homepage/corporate.png");
+    min-height: 600px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.logo-items {
+    flex: 0 0 20%;
+}
+
+
+
+
+section.unswaddled .row:before {
+    content: '';
+    position: absolute;
+    background-image: url("../../../Assets/img/homepage/tune.svg");
+    width: 13%;
+    height: 40%;
+    right: 0;
+    background-repeat: no-repeat;
+    top: -50px;
+    background-size: contain;
+}
+
+@media (max-width: 1399.98px) {  }
+
+@media (max-width: 1199.98px) {  }
+
+@media (max-width: 991.98px) {  }
+
+@media (max-width: 767.98px) {
+   .become-member{
+       .container{
+           padding: 0 !important;
+           .become-member-container{
+               background-size: cover;
+               text-align: center;
+               padding-left: 30px !important;
+               padding-right: 30px !important;
+           }
+       }
+   }
+   .service-block{
+    width:50%;
+   }
+}
+
+@media (max-width: 575.98px) { 
+
+}

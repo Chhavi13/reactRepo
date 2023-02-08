@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+}
+
+@font-face {
+  font-family: Isidora Sans;
+  src:
+    url(../src/fonts/Isidora-Sans/IsidoraSans-Regular.ttf) format("truetype"),
+    url(../src/fonts/Isidora-Sans/IsidoraSans-Bold.ttf) format("truetype"),
+    url(../src/fonts/Isidora-Sans/IsidoraSans-SemiBold.ttf) format("truetype");
+}
+
+body {
+  /* font-family: 'Montserrat', sans-serif !important; */
+  font-family: Isidora Sans !important;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+ul {
+  list-style: none;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.error {
+  margin-top: 4px !important;
+  color: #ff6565 !important;
+  font-size: 12px;
+}
+
+.error-input {
+  border: 1.5px solid #ff6565 !important;
+}
+
+.page-inner-section{
+  margin-top:92px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (max-width: 575.98px) {
+  .page-inner-section {
+    margin-top: 70px;
+  }
+}
+
+
+@media (max-width: 767.98px) { 
+   
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+   
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+   
+}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) { 
+   
+}

@@ -1,0 +1,89 @@
+@import "../../global.css";
+@import "../../global-componant.css";
+// .welcome-backpopup {
+//     margin: 10% auto;
+// }
+
+// .eye-passimg {
+//     position: absolute;
+//     top: 50px;
+//     right: 9px;
+//     cursor: pointer;
+// }
+
+.welcome-modal {
+    // .MuiDialog-paper {
+    //     background: #fff;
+    //     box-shadow: 0px 15px 58px rgba(0, 0, 0, 0.13);
+    //     border-radius: 3px;
+    //     width: 500px;
+    //     // height: 697px;
+    // }
+    // h1 {
+    //     // font-family: 'Isidora Sans';
+    //     font-style: normal;
+    //     font-weight: 600;
+    //     font-size: 28px;
+    //     line-height: 36px;
+    //     text-align: center;
+    //     color: #4D4D4D;
+    //     padding-bottom: 40px;
+    // }
+    .MuiDialogContent-root {
+        padding: 2rem 4rem !important;
+    }
+    .welcom-backform {
+        width:100%;
+        .forget-password a {
+            margin: 1rem 0;
+        }
+    }
+    // .have-account {
+    //     padding-bottom: 20px;
+    //     p {
+    //         font-style: normal;
+    //         font-weight: 300;
+    //         font-size: 16px;
+    //         line-height: 24px;
+    //         text-align: center;
+    //         text-decoration-line: underline;
+    //         font-family: 'Isidora Sans';
+    //         a {
+    //             font-style: normal;
+    //             font-family: 'Isidora Sans';
+    //             font-weight: bold;
+    //             font-size: 16px;
+    //             line-height: 24px;
+    //             text-align: center;
+    //             text-decoration-line: underline;
+    //             color: var(--primary-clr);
+    //         }
+    //     }
+    // }
+}
+
+@media (max-width: 575px) {
+    .welcome-modal .MuiDialogContent-root {
+        padding: 2rem 2rem !important;
+    }
+    .welcome-modal .welcom-backform input,
+    .welcome-modal .welcom-backform .sign-inbtn {
+        width: 100%;
+    }
+    .radio-area .col-md-4 {
+        margin-bottom: 30px;
+    }
+    .lock-section img {
+        width: 5%;
+    }
+}
+
+@media (max-width: 375px) {
+    .footer .stay-loop button {
+        margin-top: 15px;
+    }
+    .save-checkbox .custom-checkbox .custom-control-label::before {
+        height: 20px;
+        width: 20px;
+    }
+}

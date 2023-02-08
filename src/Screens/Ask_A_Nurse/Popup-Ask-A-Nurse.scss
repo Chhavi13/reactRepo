@@ -1,0 +1,123 @@
+@import "../../global.css";
+@import "../../global-componant.css";
+
+.askN-question-modal{
+    padding-left: 0;
+    .modal-body{
+        text-align: left;
+        padding: 0 2.25rem !important;
+        .form-check-input{
+            margin-right: 5px;
+        }
+    }
+    .form-check-label{  
+        font-family: var(--base-font-family);
+        color: var(--primary-text);
+        font-size: var(--font-14);
+        line-height: 20px;
+        font-weight: var(--font-wt300);
+        margin-bottom: 0;
+    }
+   
+
+    .tag-container{
+        .tag-option{
+            // margin-right: 30px;
+            min-width: 25%;
+            margin-bottom: 10px;
+            .custom-control-input{
+                margin-right: 5px;
+            }
+        }
+    }
+    .category-container{
+        .category-option{
+            min-width: 25%;
+            margin-bottom: 10px; 
+        }
+    }
+    .upload-askN-main{
+        .upload-askN-q{
+            background: var(--white);
+            border: 1px solid var(--primary-border) !important;
+            box-sizing: border-box;
+            border-radius: 40px;
+            height: 50px;
+            font-family: 'Isidora Sans' !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            font-size: 16px !important;
+            line-height: 28px !important;
+            align-items: center;
+            color: var(--primary-text);
+            padding: .375rem .5rem;
+            -webkit-appearance: none;
+        }
+        .UploadASK-icon{
+            cursor: pointer;
+        }
+    }
+    .modal-header, .modal-footer{
+        border-top: none;
+        border-bottom: none;
+    }
+    .modal-footer{
+        padding: 1rem 2.25rem;
+        justify-content: flex-start;
+    }
+    .modal-dialog{
+        max-width:680px !important;
+    }
+}
+
+
+
+@media (max-width: 1399.98px) {
+    .modal-dialog{
+        max-width:680px !important;
+    }
+
+}
+
+@media (max-width: 1199.98px) { 
+    .modal-dialog{
+        max-width:600px !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .modal-dialog{
+        max-width:600px !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .askN-question-modal{
+        .modal-dialog{
+            max-width:100% !important;
+            p.px-5.mx-5{
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+            .modal-body {
+                padding: 0 1rem !important;
+            }
+        }
+        .modal-footer {
+            padding: 1rem 1rem;
+        }
+    }
+    
+}
+
+@media (max-width: 575.98px) {
+    .modal-open .modal {
+        padding-left: 0px !important;
+    }
+}
+
+.primary-blue-small-btn{
+    padding: 4px 30px !important;
+}

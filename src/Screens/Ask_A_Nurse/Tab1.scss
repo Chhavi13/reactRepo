@@ -1,0 +1,161 @@
+@import "../../global.css";
+@import "../../global-componant.css";
+
+.category-section{
+    margin: 30px 0;
+    .category-title{
+        font-family: 'Isidora Sans semiBold';
+        font-size: 26px;
+        color: var(--primary-clr);
+        // font-weight: 300;
+        font-size: 26px;
+        line-height: 26px;
+        margin-bottom: 15px;
+    }
+    .list-group{
+        .askN-questions{
+            p{
+                font-family: var(--base-font-family);
+                padding: 10px 0px 10px 0;
+                font-size: 18px;
+                color: var(--primary-clr);
+                font-weight: var(--font-wt700);
+                margin: 0;
+                padding: 0;
+            }
+        }
+        .askN-likes{
+            color: var(--primary-clr);
+            font-size: 'Isidora Sans medium';
+            font-size: var(--font-14);
+            // padding: 10px 0;
+            .like-count{
+                color: var(--primary-clr);
+                font-size: 'Isidora Sans medium';
+                font-size: var(--font-14);
+                margin:0px 0 0 5px;
+                line-height: 20px;
+            }
+        }
+
+        .list-group-item{
+            border-radius: 5px 30px 30px 5px;
+            background: var(--white) !important;
+            padding: 30px!important;
+            background: var(--white-clr);
+            border:none;
+            box-shadow: 0px 4px 14px rgba(148, 148, 148, 0.1);
+            margin: 0 0 15px 0;
+            .faq-readmore {
+                background: var(--secondary-clr);
+                border-radius: 50px;
+                min-width: 130px;
+                padding: 150x 30px;
+                color: var(--white);
+                font-size: var(--font-16);
+                font-family: var(--font-sbold);
+                // margin-top: 25px;
+              }
+            .tags-row{
+                .tags{
+                    color:var(--white);
+                    padding: 3px 7px;
+                    border-radius: 3px;
+                    font-size: var(--font-14);
+                    font-family: var(--font-sbold);
+                    margin: 0 10px 10px 0;
+                    line-height: 17px;
+                }
+                .tags:first-child{
+                    margin-left: 0;
+                }
+                .tag1{
+                    background: var(--primary-clr);
+                }
+                .tag2{
+                    background: #F57D7D;
+                }
+                .tag3{
+                    background: #4CC3B0;
+                }
+                .tag4{
+                    background: #B693C8;
+                }
+            }
+            // .askN-questions{
+            //     font-family: var(--font-bold);
+            //     font-size: var(--font-26);
+            //     color: var(--primary-clr);
+            // }
+            .askN-description{
+                font-family: var(--base-font-family);
+                font-size: var(--font-26);
+                color: var(--primary-clr)
+                // margin: 0 30px 15px 0;
+            }
+        }
+        .list-group-item:first-child{
+            margin-top: 30px;
+        }
+    }
+}
+
+
+.faq-container .faq-main-container,  .faq-container .messageboard-main-container{
+    padding: 0px;
+}
+
+@media (max-width: 1399.98px) {  }
+
+@media (max-width: 1199.98px) {  }
+
+@media (max-width: 991.98px) {  }
+
+@media (max-width: 767.98px) {
+    .list-inner{
+        flex-direction: column;
+        .tags-row{
+            flex-wrap: wrap;
+        }
+        .faq-readmore-container{
+            position: absolute;
+            right: 18px;
+            bottom: 30px;
+        }
+        .category-section .list-group .list-group-item .askN-description{
+            margin-right: 0 ;
+        }
+    }
+    .category-section .list-group .list-group-item{
+        padding: 18px !important;
+    }
+    
+    .pale-yellow-bg{
+        .container{
+            padding: 0 !important;
+        }
+    }
+
+    .faq-container .faq-main-container,  .faq-container .messageboard-main-container{
+        padding: 0px;
+    }
+
+    .asN-message-main.container-fluid{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 575.98px) { 
+    .list-inner{
+        flex-direction: column;
+        .tags-row{
+            flex-wrap: wrap;
+        }
+        .faq-readmore-container{
+            position: absolute;
+            right: 18px;
+            bottom: 30px;
+        }
+    }
+}

@@ -1,0 +1,194 @@
+.modal-lg, .modal-xl {
+    max-width: 1080px !important;
+    // margin-top: 180px !important;
+
+}
+.image_box .css-8je8zh-MuiTouchRipple-root {
+    display: none !important;
+}
+.modal-body {
+    text-align: center;
+    font-family: 'Isidora Sans';
+    // padding: 60px !important;
+    h4{
+        font-family: 'Isidora Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+        text-align: center;
+        color: #4D4D4D;
+    }
+    p{
+        // width: 471px;
+        margin: auto;
+        line-height: 22px;
+        color: #4D4D4D;
+    }
+    .person {
+        margin-top: 30px;
+        span {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 148.97%;
+            letter-spacing: 0.095em;
+            text-transform: uppercase;
+            color: #50CCB8;
+            margin-left: 15px;
+        }
+        img{
+            border: solid 1px #50CCB8;
+        }
+    }
+  .pop_up{
+      margin-top: 30px;
+    .image_box {
+        position: relative;
+        margin-bottom: 30px;
+    .css-bhp9pd-MuiPaper-root-MuiCard-root{
+        box-shadow: none !important;
+      }
+         .like_course {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            text-align: center;
+            line-height: 48px;
+            background: #FFFFFF;
+        }
+        .course_category{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: inherit;
+            font-weight: 700;
+            font-size: 10px;
+            line-height: 14px;
+            text-align: center;
+            text-transform: uppercase;
+            background: #F5CF70;
+            border-radius: 20px;
+            padding: 2px 10px;
+            color: #fff;
+        }
+    }
+    .desk_none{
+        display: none;
+    }
+
+  }
+    .card_img{
+        border-radius: 10px;
+        width: 100%;
+        height: 470px;
+        object-fit: cover;
+    }
+    .mony {
+        font-weight: 600;
+        font-size: 38px;
+        line-height: 36px;
+        color: #50CCB8;
+        text-align: left;
+    }
+    .mony_like {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: #30426D;
+        text-align: right;
+        span {
+            position: relative;
+            top: 5px;
+        }
+    }
+    .course_view{
+        text-align: left;
+        p{
+            width: inherit;
+            text-align: left;
+            font-size: 16px;
+            line-height: 26px;
+            color: #4D4D4D;
+        }
+        ul{
+            padding: 0;
+            margin-left: 16px;
+            li{
+                text-align: left;
+                list-style-type: disc;
+                color: #4D4D4D;
+            }
+        }
+        h3 {
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 36px;
+            color: #30426D;
+        }
+        h5 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 16px 0;
+        }
+        button {
+            width: 452px;
+            height: 47px;
+            right: 253px;
+            bottom: 1042px;
+            background: #30426D;
+            border-radius: 41px;
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: 16px;
+            border: none;
+            margin-top: 15px;
+        }
+       
+    }
+}
+
+@media screen and (max-width:991px){
+    .mob_none{
+        display: none;
+    }
+    .desk_none{
+        display: block !important;
+        text-align: left !important;
+        width: inherit !important;
+        margin-top: 15px;
+    }
+    .modal-body .course_view h3 {
+        margin-top: 20px;
+    }
+    .modal-body {
+        padding: 0px 15px !important;
+    }
+    .modal-body .pop_up {
+        margin-top: 15px;
+    }
+    .modal-body .course_view button {
+        margin-bottom: 15px;
+    }
+   
+   
+
+}
+@media screen and (max-width:575px){
+    .modal-body .course_view button{
+        width: 100%;
+    }
+    .modal-body .card_img {
+       height: inherit;
+    }
+    .modal-lg, .modal-xl {
+        max-width: 100% !important;
+        margin-top: 140px !important;
+        margin-left: 0 !important;
+    }
+    // .modal-open .modal{
+    //     padding-left: 10px !important;
+    // }
+}

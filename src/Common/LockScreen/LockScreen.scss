@@ -1,0 +1,33 @@
+.become-member-container{
+    background: url(../../Assets/img/course/become-member.png) no-repeat;
+    // background-size: cover;
+    border-radius: 14px;
+    .become-meber-captions{
+        h3{
+            color:var(--white);
+            font-family: var(--base-font-family);
+            font-size: var(--font-h2-34);
+            font-weight: 300;
+            span{
+                display: block;
+                font-weight: 700;
+                color: var(--secondary-clr);
+            }
+        }
+        p{
+            font-size: var(--font-14);
+            font-weight: 300;
+            color: var(--white);
+            margin: 0;
+        }
+        .price-dtls{
+            .pvalue{
+                color:var(--white);
+                font-family: var(--font-sbold);
+                font-size: var(--font-h1-42);
+                font-weight: 900;
+                font-weight: var(--font-wt900);
+            }
+        }
+    }
+}

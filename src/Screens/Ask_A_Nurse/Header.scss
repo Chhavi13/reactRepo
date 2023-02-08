@@ -1,0 +1,160 @@
+@import "../../global.css";
+@import "../../global-componant.css";
+
+.ask-nurse-headercontainer{
+    // padding-top: 1.5rem;
+    // padding-bottom: 1.5rem;
+    background: var(--secondary-clr);
+    border-radius: 14px;
+    .ask-nurse-header{
+        color:var(--white);
+        padding: 0 15px;
+        .header-inner{
+            img{
+                min-width: 150px;
+                height: auto;
+            }
+            p{
+                color:var(--white);
+            }
+
+            .askN-header-h2{
+                h2{
+                    font-size: 50px;
+                    font-style: SemiBold !important;
+                    color: var(--white);
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+            .askN-btn{
+                button{
+                    background: var(--primary-clr);
+                    border-radius: 50px;
+                    border: solid 2px var(--primary-clr);
+                    color: var(--step-txt-clr);
+                    min-width: 150px;
+                    padding: 10px 20px !important; 
+                    font-size: var(--font-16);
+                    font-weight: var(--font-sbold);
+                    font-family: var(--base-font-family);
+                }
+            }
+           
+        }
+        .back-pg{
+            color:var(--white);
+            .MuiSvgIcon-root {
+                fill:var(--white);
+            }
+        }
+    }
+}
+
+.askN-question-modal{
+    h3{
+        font-family: var(--base-font-family);
+        font-size: var(--font-20);
+        color: var(--primary-clr);
+    }
+}
+
+@media (max-width: 1399.98px) {
+    
+
+}
+
+@media (max-width: 1199.98px) {
+    .ask-nurse-headercontainer{
+        .ask-nurse-header{
+            padding-left: 15px !important;
+            padding-right:15px !important;
+            .header-inner{
+                flex-direction: column !important;
+                align-items: start !important;
+                .ps-5{
+                    padding-left: 0 !important;
+                }
+                .askN-header-caption{
+                    padding-left:0 !important;
+                    padding-right:0 !important;
+                    margin-left: 0 !important;
+                    margin-right: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .ask-nurse-headercontainer{
+        .ask-nurse-header{
+            padding-left: 15px !important;
+            padding-right:15px !important;
+            .header-inner{
+                flex-direction: column !important;
+                align-items: start !important;
+                .banner-section{
+                    margin-bottom: 30px;
+                    .askN-header-img{
+                        padding-left: 0 !important;
+                        img{
+                            min-width: unset;
+                        }
+                    }
+                    .askN-header-h2{
+                        h2{
+                            padding-left: 0 !important;
+                            font-size: 36px;
+                        }
+                    }
+                }
+                .ps-5{
+                    padding-left: 0 !important;
+                }
+                .askN-header-caption{
+                    padding-left:0 !important;
+                    padding-right:0 !important;
+                    margin-left: 0 !important;
+                    margin-right: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .ask-nurse-headercontainer{
+        .ask-nurse-header{
+            padding-left: 15px !important;
+            padding-right:15px !important;
+            .askN-btn{
+                margin-left: 0;
+                margin-right: auto;
+            }
+            .header-inner{
+                flex-direction: column !important;
+                align-items: start !important;
+                .askN-header-img{
+                    img{
+                        min-width: unset;
+                    }
+                }
+            }
+        }
+        .container{
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .ask-nurse-header{
+        
+        .askN-header-caption {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    }
+}

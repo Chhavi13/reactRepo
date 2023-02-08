@@ -1,0 +1,53 @@
+@import "../../../global.css";
+@import "../../../global-componant.css";
+.all-course-container{
+    padding-left: 0;
+    padding-right: 0;
+    .tab_course_content{
+        .tab_main_courseContent{
+            background: var(--bg-paleyellow-clr);
+            h2{
+                text-align: left;
+            }
+            
+        }
+    }
+}
+
+.all-course-container.css-13xfq8m-MuiTabPanel-root{
+    padding: 0;
+}
+
+@media (max-width: 575.98px) { 
+    
+}
+
+
+@media (max-width: 767.98px) { 
+   .paddingLR-0{
+       padding-left: 0 !important;
+       padding-right: 0 !important;
+   }
+
+   .tab_main_courseContent .container{
+       padding:  0 !important;
+   }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+   
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { 
+   
+}
+
+// X-Large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) { 
+   
+}
+
+
+

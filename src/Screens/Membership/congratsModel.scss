@@ -1,0 +1,64 @@
+@import "../../global.css";
+@import "../../global-componant.css";
+
+.membership-congrats {
+    text-align: center;
+    background: url("../../Assets/img/login/congratulation-bg.svg"), var(--secondary-clr) !important;
+    box-shadow: 0px 15px 58px rgba(0, 0, 0, 0.13) !important;
+    border-radius: 14px;
+    border: none !important;
+    width: 500px !important;
+    padding: 4rem !important;
+    background-size: 100% 100% !important;
+
+    h2 {
+        font-family: 'Isidora Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 40px;
+        color: var(--step-txt-clr);
+        margin-bottom: 30px;
+        padding-bottom: 0;
+    }
+
+    p {
+        font-family: 'Isidora Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--step-txt-clr);
+        margin-bottom: 30px;
+        padding-bottom: 0;
+    }
+
+    .charged {
+        // background: rgba(249, 202, 193, 0.45);
+        border-radius: 10px;
+        text-align: center;
+        font-size: 15px !important;
+        color: var(--step-txt-clr);
+        padding: 10px;
+        margin-top: 47px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .gotohome {
+        color: var(--white);
+        text-decoration: underline;
+    }
+
+    .gotohome:hover {
+        color: #30426D;
+        text-decoration: underline;
+    }
+
+    button.MuiButtonBase-root {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: #fff;
+    }
+}

@@ -1,0 +1,100 @@
+@import "../../global.css";
+@import "../../global-componant.css";
+
+.event-tabs-main{
+    div.d-flex{
+        // width:50%;
+        margin: 0 auto;
+    }
+    .MuiTab-root{
+        background: var(--white);
+        border: solid 1px var(--secondary-clr);
+        color: var(--secondary-clr);
+        overflow: visible;
+        width: 250px;
+        padding: 0 30px;
+        border-radius: 0;
+    }
+    .MuiTab-root:first-child{
+        border-radius: 50px 0 0 50px;
+    }
+    .MuiTab-root:last-child{
+        border-radius: 0 50px 50px 0;
+    }
+    .css-1ujnqem-MuiTabs-root {
+        overflow: visible;
+    }
+    button.Mui-selected{
+        background: var(--secondary-clr);
+        color:var(--white);
+    }
+}
+
+.MuiTabs-indicator{
+    display: none;
+}
+
+.upcoming-live-event-container, .past-event-container, .favourite-event-container{
+    padding: 0 !important;
+}
+
+.become-member-container{
+    background: url(../../Assets/img/course/become-member.png) no-repeat;
+    background-size: cover;
+    border-radius: 14px;
+    .become-meber-captions{
+        h3{
+            color:var(--white);
+            font-family: var(--base-font-family);
+            font-size: var(--font-h2-34);
+            font-weight: 300;
+            span{
+                display: block;
+                font-weight: 700;
+                color: var(--secondary-clr);
+            }
+        }
+        p{
+            font-size: var(--font-14);
+            font-weight: 300;
+            color: var(--white);
+            margin: 0;
+        }
+        .price-dtls{
+            .pvalue{
+                color:var(--white);
+                font-family: var(--font-sbold);
+                font-size: var(--font-h1-42);
+                font-weight: 900;
+                font-weight: var(--font-wt900);
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1399.98px) {  }
+
+@media (max-width: 1199.98px) {  }
+
+@media (max-width: 991.98px) {  }
+
+@media (max-width: 767.98px) {
+    .event-tabs-main{
+        .MuiTab-root{
+            width: auto;
+        }
+        div.d-flex {
+            width: 100%;
+        }
+
+    }
+}
+
+@media (max-width: 575.98px) {
+    .event-tabs-main{
+        .MuiTab-root{
+            padding: 0 15px
+        }
+    }
+}

@@ -1,0 +1,116 @@
+@import "../../global.css";
+@import "../../global-componant.css";
+
+.has-overlay::after {
+    content: "";
+    display: block;
+    position: fixed;
+    padding: 100px 0;
+    width: 100vmax;
+    height: 100vmax;
+    top: 0;
+    left: 0;
+    background-color: rgb(54, 72, 117);
+    z-index: 100;
+}
+
+.section-lock {
+    width:100%;
+    position: fixed;
+    z-index: 101;
+    left: 50%;
+    top: calc(50% + 60px);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    .lock-content{
+        .lock-icon{
+            background: url(../../Assets/img/icons/lock-icon.svg) no-repeat;
+            height: 155px;
+            width: 125px;
+        }
+        .member-title{
+            h1{
+                font-size: var(--font-h1-42);
+                font-family: var(--base-font-family);
+                color:var(--white);
+                margin-bottom: 0;
+                strong{
+                font-weight: var(--font-wt900);
+                color:var(--secondary-clr);
+                }
+            }
+        }
+        .member-description{
+            p{
+                color:var(--white);
+            }
+        }
+        .btn-container{
+            .secondary-teal-btn{
+                min-width: 300px;
+            }
+        }
+    }
+}
+
+.askN-btn{
+    button{
+        background: var(--primary-clr);
+        border-radius: 50px;
+        border: solid 2px var(--primary-clr);
+        color: var(--step-txt-clr);
+        min-width: 150px;
+        padding: 10px 20px !important; 
+        font-size: var(--font-16);
+        font-weight: var(--font-sbold);
+        font-family: var(--base-font-family);
+        border: solid 1px #fff;
+    }
+}
+
+.ask-a-nurse-mob{
+    position: fixed;
+    bottom:30px;
+    right:30px;
+}
+
+.stick{
+    position: fixed;
+    top: 90px;
+    left:0;
+    z-index: 90;
+    background:#fff;
+    padding: 15px 0;
+}
+
+.normal{
+    position: relative;
+    
+}
+
+@media (max-width: 1399.98px) {  }
+
+@media (max-width: 1199.98px) {  }
+
+@media (max-width: 991.98px) {  }
+
+@media (max-width: 767.98px) {
+    .section-lock {
+        top:50%;
+        .member-title{
+            h1{
+                font-size: 32px !important;
+            }
+        }
+    }
+
+    .stick{
+        top:56px;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+  
+}
+

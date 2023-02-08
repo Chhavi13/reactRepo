@@ -1,0 +1,168 @@
+@import "../../global.css";
+@import "../../global-componant.css";
+
+.asN-message-main{
+    .message-list{
+        .message-list-item{
+            border-radius: 5px 30px 30px 5px;
+            background: var(--white);
+            border:solid 1px var(--primary-clr);
+            padding: 20px 30px;
+            margin: 10px 0;
+            > div {
+                flex: 1 3 1;
+            }
+        }
+        .user-profile-main{
+            .user-profile{
+                width:72px;
+                height: 72px;
+                border-radius: 50%;
+                border: solid 2px var(--secondary-clr);
+                position: relative;
+                img{
+                    width:72px;
+                    height: 72px;
+                    border-radius: 50%;
+                }
+                .user-nm{
+                    // background-image: url(https://nurturebynaps-dev.s3.us-east-2.amazonaws.com/public/profile/osoZOvodr68u54NiN66thwSfMB7splyLyo99bJtC.jpg);
+                    border-radius: 50%;
+                    width: 70px;
+                    height: 70px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-color: lightgrey;
+                }
+                svg.MuiSvgIcon-root{
+                    width: 0.75em;
+                    height: 0.75em;
+                    fill:#4283DF;
+                    position: absolute;
+                }
+            }
+            .user-name{
+                color:var(--primary-clr);
+                font-size: var(--font-16);
+                font-family: var(--font-sbold);
+                margin-top: 10px;
+                text-align: center;
+            }
+        }
+        .last-message-details{
+            .msg-time-stamp{
+                color:#949494;
+                font-size: 12px;
+                font-family: 'Isidora Sans semiBold';
+            }
+            .msg-heading{
+                font-size: var(--font-24);
+                font-family: var(--font-sbold);
+                color: var(--primary-clr);
+                margin: 10px 0;
+                line-height: 20px;
+            }
+            .delete-msg{
+                color: var(--secondary-clr);
+                text-decoration: underline;
+                cursor:pointer;
+            }
+           
+            .msg-details{
+                font-family: var(--font-smedium);
+                color:var(--primary-text);
+                font-size: var(--font-16);
+            }
+        }
+        .btn-container{
+            .message-readmore{
+                background: var(--primary-clr);
+                border-radius: 50px;
+                min-width: 130px;
+                padding: 150x 30px;
+                color:var(--white);
+                font-size: var(--font-16);
+                font-family: var(--font-sbold);
+                // margin-top: 25px;
+            }
+        }
+    }
+    .filter-container{
+        .MuiFormControl-root{
+            font-family: var(--base-font-family);
+            margin: 0 !important;
+            .MuiOutlinedInput-root{
+                div.MuiSelect-select{
+                    padding-left: 0;
+                }
+                fieldset{
+                    padding: 0;
+                    font-family: var(--base-font-family);
+                }
+            }
+        }
+            
+    }
+}
+
+#delete-msg-modal{
+    max-width: 440px !important;
+    h4{
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: var(--primary-clr);
+        font-family: var(--font-base-bold);
+    }
+}
+
+// .css-13xfq8m-MuiTabPanel-root{
+//     padding:0 !important;
+// }
+
+// .css-1sumxir-MuiFormLabel-root-MuiInputLabel-root {
+//     display: none !important;
+// }
+
+// .css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
+//     color: rgba(32, 201, 151, 1) !important;
+// }
+@media (max-width: 1399.98px) {  }
+
+@media (max-width: 1199.98px) {  }
+
+@media (max-width: 991.98px) {  }
+
+@media (max-width: 767.98px) {
+    .asN-message-main{
+        .container{
+            padding: 0 !important;
+        }
+        .message-list .message-list-item {
+            padding: 15px;
+            align-items: start !important;
+        }
+        .btn-container{
+            margin-left: 0 !important;
+            margin-right: auto !important;
+        }
+        .last-message-details{
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+        .user-profile-main{
+            flex-direction: row !important;
+            margin-bottom: 10px;
+            .user-name{
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+   .message-list-item{
+       flex-direction: column;
+   }
+}

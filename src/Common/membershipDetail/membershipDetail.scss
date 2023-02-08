@@ -1,0 +1,349 @@
+@import "../../global.css";
+@import "../../global-componant.css";
+
+
+.inner-monthdiv{
+    .monthly-membership{
+        .payment-details{
+            border: 1px solid var(--monthly-clr);
+            .monthbox-head{
+            background-color: var(--monthly-clr);
+            .Plan-price{
+              .pCost-old{
+                font-size: var(--font-20);
+                font-weight: var(--font-wt300);
+                text-decoration: line-through;
+                margin-right: 3px;
+                font-family: var(--base-font-family);
+              }
+              .pCost{
+                font-size: var(--font-20);
+                font-weight: var(--font-wt600);
+                // margin-right: 3px;
+                font-family: var(--base-font-family);
+              }
+              p{
+                margin: -5px 0 0 0;
+                font-size: 12px;
+              }
+            }
+            }
+        }
+        .bill-details
+        {
+        border: 1px solid var(--monthly-clr);
+        background: var(--white);
+        h6
+        {
+            background-color: var(--monthly-clr);
+            border-radius: 10px 10px 0 0;
+        }
+        }
+    }
+
+    .quaterly-membership{
+      .payment-details{
+          border: 1px solid var(--quaterly-clr);
+          .monthbox-head{
+          background-color: var(--quaterly-clr);
+          }
+      }
+      .bill-details
+      {
+      border: 1px solid var(--quaterly-clr);
+      h6
+      {
+          background-color: var(--quaterly-clr);
+          border-radius: 10px 10px 0 0;
+      }
+      }
+    }
+
+    .halfyearly-membership{
+      .payment-details{
+          border: 1px solid var(--halfyearly-clr);
+          .monthbox-head{
+          background-color: var(--halfyearly-clr);
+          }
+      }
+      .bill-details
+      {
+      border: 1px solid var(--halfyearly-clr);
+      h6
+      {
+          background-color: var(--halfyearly-clr);
+          border-radius: 10px 10px 0 0;
+      }
+      }
+    }
+    
+    .payment-details{
+      position: relative;
+      border-radius: 10px;
+      background: #fff;
+      .monthbox-head{
+          border-radius: 10px 10px 0 0;
+          .membership-nm{
+              padding: 15px 30px;
+          }
+        }
+      .monthbox {
+        h4 {
+          font-family: 'Isidora Sans';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          // line-height: 141%;
+          color: var(--white);
+          display: inline-block;
+          margin-bottom: 0;
+        }
+        .monthbox-details{
+          ul{
+            padding-left: 0;
+            li{
+              margin: 10px 0;
+              padding-left: 2rem;
+              line-height: 30px;
+              font-weight: normal;
+              line-height: 28px;
+              word-break: keep-all;
+            }
+          }
+          .monthly-plan-details{
+            ul{
+              li{
+                background:url('../../Assets/img/login/membership-bullets.svg') no-repeat;
+              }
+            }
+          }
+          .quaterly-plan-details{
+            ul{
+              li{
+                background:url('../../Assets/img/login/3montly-membership-list.svg') no-repeat;
+              }
+            }
+          }
+          .half-plan-details{
+            ul{
+              li{
+                background:url('../../Assets/img/login/6monthly-membership.svg') no-repeat;
+              }
+            }
+          }
+        }
+  
+        // p:last-child {
+        //   font-family: 'Isidora Sans';
+        //   font-style: normal;
+        //   font-weight: 400;
+        //   font-size: 14px;
+        //   line-height: 20px;
+        //   color: #fff;
+        //   // width: 440px;
+        //   max-width: 100%;
+        //   text-align: left;
+        //   padding: 0;
+        // }
+  
+        .Plan-price{
+          color:var(--white);
+        }
+  
+        .monthbox-details{
+          padding: 30px 30px 0 30px;
+          p{
+            margin-bottom: 0 !important;
+          }
+        }
+      }
+      .apply-couponcode {
+        margin: 0 30px 30px 30px;
+        .apply-heading {
+          font-family: 'Isidora Sans';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 130%;
+          color: #4D4D4D;
+        //   padding-top: 30px;
+        }
+    
+        input {
+         width:70%;
+         max-width: 380px;
+        }
+    
+        button {
+          width:30%;
+          max-width: 150px;
+        }
+      }
+      .coupon-applied {
+        background: var(--white);
+        border-radius: 6px;
+        margin: 30px;
+        padding: 15px;
+        border: solid 1px var(--secondary-clr);
+          h6 {
+              font-family: 'Isidora Sans';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 18px;
+              line-height: 34px;
+              color:var(--secondary-clr);
+              display: inline-block;
+              margin: 0;
+          }
+
+          a.remove-link {
+              display: inline-block;
+              // float: right;
+              font-family: 'Isidora Sans';
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 28px;
+              text-align: right;
+              letter-spacing: 0.025em;
+              text-decoration-line: underline;
+              color:var(--primary-clr);
+              font-weight: 1000;
+              text-decoration: underline;
+              cursor: pointer;
+          }
+
+          p {
+              font-family: 'Isidora Sans';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 22px;
+              color: #4D4D4D;
+              padding: 0;
+              text-align: left;
+              span{
+              font-family: 'Isidora Sans';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 28px;
+              letter-spacing: 0.025em;
+              color: #30426D;
+              }
+          }
+      }
+}
+
+
+    .bill-details
+    {
+        border-radius: 10px;
+        margin-top: 30px;
+        h6
+        {
+            border-radius: 10px 10px 0 0;
+            font-size: var(--font-20);
+            color: var(--white);
+            padding: 20px 30px;
+        }
+        ul.first {
+            padding: 0px 30px;
+            margin-top: 15px;
+            margin-bottom: 0;
+      
+            li {
+              padding: 10px 0px;
+              border-top: 1px SOLID #ADADAD;
+              span{
+                font-family: 'Isidora Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                color: #4D4D4D;
+                }
+                span:first-child {
+                    display: inline-block;
+                    width: 50%;
+                }
+      
+                span:last-child {
+                    text-align: right;
+                    float: right;
+                }
+      
+                // span.headingspan {
+                //     font-family: 'Isidora Sans';
+                //     font-style: normal;
+                //     // font-weight: 600;
+                //     font-size: 16px;
+                //     line-height: 130%;
+                //     color: #4D4D4D;
+                // }
+      
+                // span.pricespan {
+                //     font-family: 'Isidora Sans';
+                //     font-style: normal;
+                //     font-weight: 600;
+                //     font-size: 16px;
+                //     line-height: 130%;
+                //     color: #4D4D4D;
+                // }
+            }
+      
+            // li.inner-spans {
+            //   span {
+            //     font-family: 'Isidora Sans';
+            //     font-style: normal;
+            //     font-weight: 400;
+            //     font-size: 16px;
+            //     line-height: 22px;
+            //     color: #4D4D4D;
+            //   }
+            // }
+            li:first-child {
+                border-top: none;
+            }
+        }
+
+        ul.pay-list {
+            padding: 15px 30px;
+            .payspan {
+              font-family: 'Isidora Sans';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 24px;
+              color: #4D4D4D;
+              display: inline-block;
+              width: 50%;
+            }
+            .pay-total {
+              font-family: 'Isidora Sans';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 170%;
+              text-align: right;
+              color: #4D4D4D;
+              // display: inline-block;
+              float: right;
+            }
+            li{
+                border-top:1px SOLID #ADADAD;
+                padding: 10px 0px;
+            }
+        }
+       
+  
+    // .bill-details {
+    //   margin-top: 30px;
+     
+    //     // li.coupon-discount {
+    //     //   border-top: 1px dashed #ADADAD;
+    //     //   border-bottom: 1px dashed #ADADAD;
+    //     // }
+    //   }
+    }
+}

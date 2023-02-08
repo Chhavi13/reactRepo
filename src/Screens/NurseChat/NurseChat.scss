@@ -1,0 +1,188 @@
+@import "../../global.css";
+@import "../../global-componant.css";
+
+.chat-expanded-view{
+    .receiver-info{
+        .nurse-profile{
+            width:72px;
+            height: 72px;
+            border-radius: 50%;
+            border: solid 2px var(--secondary-clr);
+            background: url(../../Assets/img/asknurse/profile-placeholder.png) no-repeat;
+            background-position:center center;
+            background-size: 120%;
+            img{
+                max-width: 100%;
+            }
+        }
+        .nurse-personalinfo{
+            .nurse-name{
+                font-family: var(--font-smedium);
+                font-size: var(--font-16);
+                color:var(--primary-clr);
+            }
+            .register-tag{
+                font-family: var(--font-bold);
+                font-size: var(--font-14);
+                color:var(--secondary-clr);
+                display: flex;
+                // .registered-label-tag{
+                //     content:'';
+                //     background: url(../../Assets/img/asknurse/RegisterNurseTag-sm.png) no-repeat;
+                //     width:20px;
+                //     height: 20px;
+                //     background-position: left center;
+                //     display: inline-block;
+                //     line-height: 10px;
+                // }
+            } 
+        }
+        border-bottom: solid 1px var(--grey-shade-3);
+    }
+    .time-stamp{
+        color:var(--grey-shade-3);
+        font-family: var(--font-smedium);
+        font-size: 10px;
+        text-align: center;
+        margin: 5px auto 0;
+    }
+    .askN-questions{
+        background: var(--primary-clr);
+        border-radius: 30px 5px 30px 30px;
+        color:var(--white);
+        padding: 30px;
+        font-family: var(--font-sbold);
+        font-size: var(--font-24);
+        margin-bottom: 30px;
+    }
+    .askN-questions-container{
+        .time-stamp{
+            margin: 15px auto;
+        }
+    }
+    .message-list-container{
+        .time-stamp{
+            margin: 5px auto;
+        }
+        .messanger-nurse-nm{
+            font-size: 16px;
+            color:var(--primary-text);
+            // margin-bottom: 5px;
+        }
+        .msg-list-profile{
+            width: 40px;
+            min-width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--secondary-clr);
+            img{
+                width: 40px;
+                min-width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+        }
+        .msg-list-profile+.msg-details-info{
+            margin-left: 10px;
+        }
+        .msg-details-info+.msg-list-profile{
+            margin-left: 10px;
+        }
+        .sender-inner{
+            .msg-details{
+                border-radius: 30px 3px 30px 30px;
+                background: var(--chat-bubble-sender);
+                padding: 15px 30px;
+                p{
+                    margin-bottom: 0;
+                }
+            }
+            .row{
+                justify-content: end !important;
+                .col-lg-10{
+                    .d-flex{
+                        justify-content: end !important;
+                    }
+                }
+            }
+        }
+        .receiver-inner{
+            .msg-details{
+                border-radius: 3px 30px 30px 30px;
+                background: var(--chat-bubble-receiver);
+                padding: 15px 30px;
+                p{
+                    margin-bottom: 0;
+                }
+            }
+            .row{
+                justify-content: start !important;
+                .col-lg-10{
+                    .d-flex{
+                        justify-content: start !important;
+                    }
+                }
+            }
+        }
+        
+        
+        .sender-inner + .receiver-inner{
+            margin-top: 15px;
+        }
+        .receiver-inner + .receiver-innerr{
+            margin-top: 15px;
+        }
+        .receiver-inner + .sender-inner{
+            margin-top: 15px;
+        }
+        .sender-inner + .sender-inner{
+            margin-top: 15px;
+        }
+    }
+    .chat-footer{
+        background: #EEEEEE;
+        border-radius: 14px;
+        margin: 15px 0;
+        padding: 30px 45px;
+        position: sticky;
+        position: -webkit-sticky !important;
+        bottom: 0;
+        height: 110px;
+        .chat-attachment-btn{
+            background: rgba(255, 255, 255,0.7) url(../../Assets/img/asknurse/attachment.svg);
+            width:50px;
+            height: 50px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 50%;
+        }
+        .message-send-btn{
+            background: #30426d url(../../Assets/img/asknurse/send-arrow.svg);
+            width:50px;
+            height: 50px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 50%;
+        }
+        input[type="text"]{
+            border: none !important;
+        }
+    }
+    .all-msg-thread{
+        overflow-y: auto;
+        max-height: 300px;
+    }
+    .all-msg-thread::-webkit-scrollbar {
+        width:5px;
+    }
+    .all-msg-thread::-webkit-scrollbar-track {
+        -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3); 
+        border-radius:5px;
+    }
+    .all-msg-thread::-webkit-scrollbar-thumb {
+        border-radius:5px;
+        -webkit-box-shadow: inset 0 0 6px #4CC3B0; 
+    }
+}
+
+

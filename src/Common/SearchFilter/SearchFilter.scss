@@ -1,0 +1,61 @@
+// @import "../../global.css";
+// @import "../../global-componant.css";
+
+// .search-container{
+//     margin: 30px auto;
+//     background: #F9F9F9;
+//     padding: 10px 25px;
+//     position: relative;
+//     border-radius: 30px;
+//     .filter_para {
+//         font-family: Isidora Sans medium;
+//         font-weight: 600;
+//         font-size: 16px;
+//         line-height: 20px;
+//         color: #30426D;
+//         cursor: pointer;
+//     }
+//     .search_total_div {
+//         float: right;
+//         .total_item {
+//             font-weight: 500;
+//             font-size: 14px;
+//             line-height: 20px;
+//             text-align: right;
+//             color: #30426D;
+//           }
+//     }
+//     .filter_content {
+//         position: absolute;
+//         top: 49px;
+//         background: #FFFFFF;
+//         border: 0.5px solid #4D4D4D;
+//         border-radius: 8px;
+//         width: 100%;
+//         z-index: 99;
+//         padding: 10px 30px;
+//           padding-top: 10px;
+//         left: 0px;
+//     }
+
+//     input[type="text"]
+//     {
+//         border:none !important;
+//         background: var(--search-bg);
+//         position: relative;
+//         padding-left: 60px;
+//     }
+    
+//     .searchbarS{
+//         svg{
+//             position: absolute;
+//             top: 15px;
+//             left: 25px;
+//         }
+//     }
+//     input[type="text"]::placeholder {
+//         color: #4D4D4D !important;
+//         font-size: 16px !important;
+//         margin-left: 45px !important;
+//     }
+// }

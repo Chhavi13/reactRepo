@@ -1,0 +1,205 @@
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    nav {
+        background: #ffffff;
+        box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.11);
+        height: 92px;
+    }
+    li.active a {
+        font-weight: 900;
+        // color: #4d4d4d !important;
+    }
+    li {
+        padding-right: 50px;
+        a {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 18px;
+            align-items: center;
+            letter-spacing: 0.2px;
+            color: #373f41 !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+    .login-btn {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 18px;
+        align-items: center;
+        letter-spacing: 0.2px;
+        color: #373f41;
+        text-transform: capitalize;
+        background: transparent;
+    }
+    .login-btn:hover {
+        color: black!important;
+    }
+    .startnow-btn {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #ffffff;
+        background: #30426d;
+        border-radius: 41px;
+        padding: 12px 28px;
+        // margin: 23px 0 23px 0px;
+        &:hover {
+            color: #30426d;
+            background: #fff;
+            outline: solid 2px #30426d;
+            outline-offset: -2px;
+        }
+    }
+    .startnow-btn.become-member{
+        margin: 23px 0 23px 23px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header li {
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header nav{
+        height: auto;
+        img{
+            width: 100px;
+        }
+    }
+    .navbar-collapse {
+        overflow: hidden;
+        top: 85px;
+        position: fixed;
+        height: calc(100vh - 0px) !important;
+        background: #f8f9fa;
+        left: -100vw !important;
+        width: 100% !important;
+        transition: ease all 0.5s;
+        padding: 0;
+        margin: 0;
+        display: block !important;
+        visibility: hidden;
+        z-index: 9999;
+    }
+    .navbar-collapse.show {
+        left: 0 !important;
+        transition: ease all 0.5s;
+        visibility: visible;
+    }
+    .navbar-collapse ul{
+        padding: 23px 30px 0 23px;
+    }
+    .header li {
+        padding: 10px 0px;
+    }
+    .header li a{
+        font-size: 18px;
+        color: #000 !important;
+    }
+    .header .login-btn{
+        // margin-left: 32px;
+        font-size: 18px;
+        color: #000;
+        text-align: left;
+        padding: 12px 0;
+    }
+    .startnow-btn{
+        margin: 23px 0 0 0 !important;
+    
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navbar-collapse {
+        overflow: hidden;
+        top:75px;
+        position: fixed;
+        height: calc(100vh - 0px) !important;
+        background: #f8f9fa;
+        left: -100vw !important;
+        width: 100% !important;
+        transition: ease all 0.5s;
+        padding: 0;
+        margin: 0;
+        display: block !important;
+        visibility: hidden;
+        z-index: 9999;
+    }
+    .navbar-collapse.show {
+        left: 0 !important;
+        transition: ease all 0.5s;
+        visibility: visible;
+    }
+    .navbar-collapse ul{
+        padding: 23px 30px 0 23px;
+    }
+    .header li {
+        padding: 10px 0px;
+    }
+    .header li a{
+        font-size: 18px;
+        color: #000 !important;
+    }
+    .header .login-btn{
+        font-size: 18px;
+        color: #000;
+        text-align: left;
+        padding: 12px 0;
+        margin-right: 20px;
+    }
+
+    // .top-nav-ext-btn {
+    //     padding: 0 30px 23px 30px;
+    // }
+
+    .profile-mobile-view{
+        margin-right: 10px;
+        margin-left: auto;
+    }
+
+    .top-nav-ext-btn{
+        padding: 0 30px 23px 23px;
+        width: max-content;
+        flex-direction: column !important;
+    }
+
+    .top-nav-ext-btn.flex-md-row{
+        flex-direction: column !important;
+    }
+
+    .startnow-btn {
+        margin: 23px 0 0 0 !important;
+    }
+    // .user-profile{
+    //     position: fixed;
+    //     right: 80px;
+    //     top: 5px;
+    //     z-index: 9999;
+    //     display: flex;
+
+    //     button.MuiButtonBase-root{
+    //         .MuiAvatar-circular {
+    //             width: 45px;
+    //             height: 45px;
+    //         }
+    //     }
+    // }
+}
+
+
+
+@media only screen and (max-width: 768px) and (min-width: 991.98px)  {
+    .top-nav-ext-btn{
+        flex-direction: column!important;
+        width: max-content !important;
+    }
+}

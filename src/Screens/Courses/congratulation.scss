@@ -1,0 +1,133 @@
+.custom_modal {
+	.modal-content {
+		width: 615px;
+		margin: 0px auto;
+	}
+	.modal-body {
+		padding: 30px !important;
+	}
+}
+
+.mode_heade{
+    text-align:center;
+    h3{
+         color:#4D4D4D;
+         font-size:28px;
+         font-weight: 600;
+
+    }
+    p{
+        color:#4D4D4D;
+        font-size:22px;
+    }
+}
+
+.modalcustom_area {
+    padding-top: 35px;
+    .pop_head h3{
+        font-size: 22px;
+        font-weight: 600;
+        color: #4D4D4D;
+        text-align:left;
+        margin: 0;
+    }
+    h2,h3,h4,h5,h6{
+        margin:0;
+    }
+   p{
+        width:auto;
+    }
+    .head_content p {
+        width: auto;
+        text-align: right;
+        font-size: 12px;
+        color: #30426D;
+    }
+
+    .head_content h3 {
+            font-size: 14px;
+            font-weight: 600;
+            text-align: right;
+            padding-right: 36px;
+            color: #30426D;
+            margin: 0;
+        }
+
+        .border_b{
+            border-bottom:1px solid #CACACA;
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+        .mem_head p {
+            color: #000;
+            font-size: 14px;
+        }
+        .mem_head h6 {
+            font-size: 16px;
+            color: #4D4D4D;
+            font-weight: 600;
+        }
+        .mem_head {
+            text-align: left;
+            
+        }
+        .mem_detail p {
+            width: auto;
+            text-align: right;
+            color: #000;
+            font-size: 16px;
+        }
+        .tex p {
+            text-align: left;
+        }
+
+        .total h3 {
+            color: #30426D;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: left;
+        }
+        .total p {
+            text-align: right;
+            color: #30426D;
+            font-weight: 600;
+        }
+        .total_boxx {
+            padding-top: 30px;
+        }
+        .paid_box{
+            background: #CAF0EA;
+            padding: 20px 28px 15px;
+            border-radius: 4px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            .paid_in h5{
+                font-size: 12px;
+                color: #30426D;
+                font-weight: 600;
+                text-align: left;
+            }
+            .paid_in p{
+                font-size: 12px;
+                color: #30426D;
+                font-weight: 500;
+                text-align: left;
+            }
+
+           
+        }
+        .botm-text p {
+            font-size: 18px;
+            color: #000;
+            padding-bottom: 15px;
+        }
+        .botm-text a {
+            text-decoration: underline;
+            color: #50CCB8;
+            font-weight: 600;
+            font-size: 18px;
+        }
+   
+    
+}

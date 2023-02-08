@@ -1,0 +1,13 @@
+a.showcls {
+    text-decoration: underline;
+    color: var(--primary-clr);
+    cursor: pointer;
+    font-family: var(--font-sbold);
+    font-size: 14px;
+}
+
+a.showcls:hover {
+    color: var(--primary-clr);
+    font-family: var(--font-sbold);
+    font-size: 14px;
+}

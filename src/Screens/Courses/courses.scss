@@ -1,0 +1,66 @@
+.course-tabs-main{
+    div.d-flex{
+        width:50%;
+        margin: 0 auto;
+    }
+    .MuiTab-root{
+        background: var(--white);
+        border: solid 1px var(--secondary-clr);
+        color: var(--secondary-clr);
+        overflow: visible;
+        width: 250px;
+        padding: 0 30px;
+        border-radius: 0;
+    }
+    .MuiTab-root:first-child{
+        border-radius: 50px 0 0 50px;
+    }
+    .MuiTab-root:last-child{
+        border-radius: 0 50px 50px 0;
+    }
+    .css-1ujnqem-MuiTabs-root {
+        overflow: visible;
+    }
+    button.Mui-selected{
+        background: var(--secondary-clr);
+        color:var(--white);
+    }
+    .tab_course_content .container-fluid, .course_content_page{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+.MuiTabs-indicator{
+    display: none;
+}
+
+@media (max-width: 575.98px) {
+    .course-tabs-main{
+        .MuiTab-root{
+            padding: 0 15px
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .course-tabs-main{
+        .MuiTab-root{
+            width: auto;
+        }
+        div.d-flex {
+            width: 100%;
+        }
+
+    }
+    .paddingLR-0{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+@media (max-width: 991.98px) {  }
+
+@media (max-width: 1199.98px) {  }
+
+@media (max-width: 1399.98px) {  }

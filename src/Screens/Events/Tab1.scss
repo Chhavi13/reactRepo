@@ -1,0 +1,15 @@
+@import "../../global.css";
+@import "../../global-componant.css";
+
+.live-course-main{
+    background: var(--bg-paleyellow-clr) url(../../Assets/img/liveevents/events-bg-wave.svg);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    border-radius: 0px;
+    .container{
+        padding: 0;
+    }
+    h2{
+        text-align: left;
+    }
+}

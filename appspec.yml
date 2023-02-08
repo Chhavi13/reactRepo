@@ -1,0 +1,12 @@
+version: 0.0
+os: linux 
+files:
+  - source: /
+    destination: /tmp/naps-frontend
+    overwrite: true
+
+hooks:
+  AfterInstall:
+    - location: scripts/after_install.sh
+      timeout: 300
+      runas: root

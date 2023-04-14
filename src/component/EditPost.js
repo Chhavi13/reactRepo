@@ -59,9 +59,7 @@ const EditPost = () => {
              
                     toast.success("post upadated successfully")
                     navigate("/showpost")
-                  
-               
-               
+ 
 
             } else {
                 navigate("/login")

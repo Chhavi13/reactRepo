@@ -13,7 +13,7 @@ const ShowPost = () => {
 
 
         try {
-     
+
             console.log("yess home ", localStorage.getItem('token'))
             const token = localStorage.getItem('token')
             let url = "http://localhost:4000/posts/getallposts"
@@ -22,8 +22,8 @@ const ShowPost = () => {
                 axios.get(url, { headers: { Authorization: AuthStr } })
                     .then(response => {
                         // If request is good...
-                        // console.log("only postid aarhi h puri detail ni arhi h post table ki ", response);
-                        setData(response.data)
+                        console.log("only postid aarhi h puri detail ni arhi h post table ki ", response);
+                        setData(response.data.newData)
                     })
                     .catch((error) => {
                         console.log('error ' + error);
@@ -44,6 +44,7 @@ const ShowPost = () => {
         FetchData()
     }, [])
 
+
     const likepost = (id) => {
         try {
             // console.log("post like ", localStorage.getItem('token'))
@@ -56,11 +57,13 @@ const ShowPost = () => {
                     .then(response => {
                         // If request is good...
                         // console.log("(((((((((((((((((((((", response);
+                        // setData(response.data)
+                        // debugger
                         const newData = data.map(item => {
                             // console.log('error ' + response.data._id);
                             // console.log('============ ' + item._id);
-                            if (item._id === response.data._id) {
-                                return response.data
+                            if (item._id === response?.data?.result?._id) {
+                                return response?.data?.result
                             } else {
                                 return item
                             }
@@ -94,14 +97,14 @@ const ShowPost = () => {
 
                         // If request is good...
                         // console.log("(((((((((((((((((((((", response);
-                        //setData(response.data)
+                        // setData(response.data)
 
                         const newData = data.map(item => {
                             // console.log('error ' + response.data._id);
                             // console.log('============ ' + item._id);
 
-                            if (item._id === response.data._id) {
-                                return response.data
+                            if (item._id === response?.data?.result?._id) {
+                                return response?.data?.result
                             } else {
                                 return item
                             }
@@ -131,14 +134,16 @@ const ShowPost = () => {
             if (token) {
 
                 const AuthStr = 'Bearer '.concat(token);
-                axios.put(url, { body: { postid, text } }, { headers: { Authorization: AuthStr } })
+                // axios.put(url, { body: { postid, text } }, { headers: { Authorization: AuthStr } })
+                axios.put(url,  { postid, text } , { headers: { Authorization: AuthStr } })
                     .then(response => {
 
                         // If request is good...
                         console.log("(((((((((((((((((((((", response);
-                        setData(response.data)
+                        // setData(response.data)//date 15dec
 
                         const newData = data.map(item => {
+                            // debugger
                             // console.log('error ' + response.data._id);
                             // console.log('============ ' + item._id);
 
@@ -179,7 +184,7 @@ const ShowPost = () => {
 
                         // If request is good...
                         console.log("(((((((((((((((((((((", response.data.result._id);
-                        const newData =data.filter(item=>{
+                        const newData = data.filter(item => {
                             return item._id !== response.data.result._id
                         })
                         setData(newData)
@@ -234,49 +239,50 @@ const ShowPost = () => {
         <>
             <div className="card" style={{ marginTop: "50px", marginLeft: "30px" }} >
 
-                <div className="card-body"style={{ marginTop: "50px", marginLeft: "20px" }}>
+                <div className="card-body" style={{ marginTop: "50px", marginLeft: "50px" }}>
 
-                    {data.map((item) => {
-                         debugger
+                    {data?.map((item) => {
+
                         return (
-                            
-                            <div className="card" key={item._id} >
-                                {console.log("????",item)}
-                                     <div style={{  marginLeft: "20px" }}>
-                            <span><h6 style={{ marginLeft: "5px", marginTop: "10px", color: "black" }}>{item.postedBy.name}</h6></span>
-                                <h4 ><span style={{ marginLeft: "10px", fontFamily: 'fantasy', color: 'darkred' }} ></span><span style={{ color: "darkslateblue" }}>{item.title}{item.postedBy.id == state.id && <i className="large material-icons" style={{ marginLeft:"480px"}} onClick={()=>navigate(`/posts/editpost/${item._id}`)} >edit</i>} <span style={{ color: "darkslateblue" }}>{item.postedBy.id == state.id && <i className="large material-icons" onClick={()=>deletePost(item._id)} >delete</i>}</span></span></h4>
-                          
-                                <div ><img src={item.image} alt="image" style={{ maxWidth: '50%', marginLeft: "10px" }} /></div><br></br>
-                                <p ><span style={{ marginLeft: "10px", fontFamily: 'fantasy', color: 'darkred' }} ></span><span style={{ color: "darkslateblue" }}><span style={{ color: "black" }}>{item.postedBy.name}</span>&nbsp;{item.content}</span></p>
-                                <div style={{ marginLeft: "15px", height: "30px", color: "blue", maxwidth: "40%" }}>
-                                    {item.likes.includes(state?._id)
-                                        ? <i className="large material-icons" onClick={() => { unlikepost(item._id) }}>thumb_down</i>
-                                        :
-                                        <i className="large material-icons" onClick={() => { likepost(item._id) }} >thumb_up</i>
-                                    }
-                                </div>
-                                <h6>{(item.likes.length)} like</h6>
-                                {
 
-                                    item.comments.map(record => {
+                            <div className="card" key={item?._id} >
+                                {/* {console.log("????",item)} */}
+                                <div style={{ marginLeft: "20px" }}>
+                                    <span><h6 style={{ marginLeft: "5px", marginTop: "10px", color: "black" }}>{item?.postedBy?.name}</h6></span>
+                                    <h4 ><span style={{ marginLeft: "10px", fontFamily: 'fantasy', color: 'darkred' }} ></span><span style={{ color: "darkslateblue" }}>{item?.title}{item?.postedBy?.id == state?.id && <i className="large material-icons" style={{ marginLeft: "480px" }} onClick={() => navigate(`/posts/editpost/${item?._id}`)} >edit</i>} <span style={{ color: "darkslateblue" }}>{item?.postedBy?.id == state?.id && <i className="large material-icons" onClick={() => deletePost(item?._id)} >delete</i>}</span></span></h4>
 
-                                        return <h6 key={record._id}><span style={{ fontWeight: "500",marginLeft:"10px" }}>{record.postedBy.name}</span>&nbsp;<span style={{ fontWeight: "400" }}>{record.text}</span ></h6>
-                                    })
-                                }
-                                <form onSubmit={(e) => {
-                                    e.preventDefault()
-                                    makeComment(e.target[0].value, item._id)
-                                    e.target[0].value = "";
-
-                                }}>
-                                    <div className="form-floating">
-                                        <input type="text" className="form-control"
-                                            id="floatingTextarea2" style={{ maxWidth: '50%' }} />
-                                        <label htmlFor="floatingTextarea2" style={{ fontSize: "12px" }}>Add a comment..</label>
+                                    <div ><img src={item?.image} alt="image" style={{ maxWidth: '50%', marginLeft: "10px" }} /></div><br></br>
+                                    <p ><span style={{ marginLeft: "10px", fontFamily: 'fantasy', color: 'darkred' }} ></span><span style={{ color: "darkslateblue" }}><span style={{ color: "black" }}>{item?.postedBy?.name}</span>&nbsp;{item?.content}</span></p>
+                                    <div style={{ marginLeft: "15px", height: "30px", color: "blue", maxwidth: "40%" }}>
+                                        {item?.likes?.includes(state?._id)
+                                            ? <i className="large material-icons" onClick={() => { unlikepost(item?._id) }}>thumb_down</i>
+                                            :
+                                            <i className="large material-icons" onClick={() => { likepost(item?._id) }} >thumb_up</i>
+                                        }
                                     </div>
-                                </form>
-<br></br>
-                                     </div>
+                                    <h6>{(item?.likes?.length)} like</h6>
+                                    {
+
+                                        item?.comments?.map(record => {
+
+                                            return <h6 key={record?._id}><span style={{ fontWeight: "500", marginLeft: "10px" }}>{record?.postedBy?.name}</span>&nbsp;<span style={{ fontWeight: "400" }}>{record?.text}</span ></h6>
+                                        })
+                                    }
+                                    <form onSubmit={(e) => {
+                                    
+                                        e.preventDefault()
+                                        makeComment(e.target[0].value, item._id)
+                                        e.target[0].value = "";
+
+                                    }}>
+                                        <div className="form-floating">
+                                            <input type="text" className="form-control"
+                                                id="floatingTextarea2" style={{ maxWidth: '50%' }} />
+                                            <label htmlFor="floatingTextarea2" style={{ fontSize: "12px" }}>Add a comment..</label>
+                                        </div>
+                                    </form>
+                                    <br></br>
+                                </div>
 
                             </div>
 
